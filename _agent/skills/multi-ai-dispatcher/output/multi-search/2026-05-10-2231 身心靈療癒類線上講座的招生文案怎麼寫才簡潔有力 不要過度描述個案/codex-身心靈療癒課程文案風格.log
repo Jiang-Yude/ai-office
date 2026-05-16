@@ -1,0 +1,159 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019e124d-4763-7cb1-a4ad-6712c6865d4d
+--------
+user
+搜尋主題：身心靈療癒類線上講座的招生文案怎麼寫才簡潔有力 不要過度描述個案
+角度：身心靈療癒課程文案風格
+
+任務：從「身心靈療癒課程文案風格」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 身心靈療癒課程文案風格：身心靈療癒類線上講座的招生文案怎麼寫才簡潔有力 不要過度描述個案
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-10T14:31:55.834530Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會直接查近期代表性來源，先抓「課程/講座頁文案本身」和「健康/療癒廣告合規」兩類材料，最後只保留能附 URL 的原文摘錄。
+web search: 
+web search: 身心靈 療癒 線上講座 招生 文案 課程 頁面
+web search: 
+web search: health wellness marketing testimonial avoid case studies course copy concise source
+web search: 
+web search: Meta advertising standards personal attributes health ads official personal health wellness
+web search: 
+web search: https://www.asa.org.uk/news/advertising-complementary-and-alternative-medicines-and-therapies.html
+web search: 
+web search: 'Posted on' in https://ahacademy.tw/main-course-v2/
+web search: 
+web search: https://meta-edu.academy/products/spiritual-healing
+web search: 
+web search: '提供每週線上共修' in https://www.anninnerlight.com/
+web search: 
+web search: https://www.pilothouse.co/post/meta-health-and-wellness-ad-restrictions-proactive-vs-reactive-copy
+codex
+# 身心靈療癒課程文案風格：身心靈療癒類線上講座的招生文案怎麼寫才簡潔有力 不要過度描述個案
+
+## 來源列表
+1. [Advertising complementary and alternative medicines and therapies](https://www.asa.org.uk/news/advertising-complementary-and-alternative-medicines-and-therapies.html) — 2026-03-26
+2. [Meta Health and Wellness Ad Restrictions: Proactive vs Reactive Copy](https://www.pilothouse.co/post/meta-health-and-wellness-ad-restrictions-proactive-vs-reactive-copy) — 2026-04-21 / 頁面另列 2026-03-12
+3. [身心靈療癒課程：身心覺察，讓你在家學習就能成為自己最好的療癒師](https://ahacademy.tw/main-course-v2/) — 2023-02-22，頁面顯示 2026-03-20
+4. [心靈療癒師・國際認證課程｜元宇宙身心靈國際學院](https://meta-edu.academy/products/spiritual-healing) — 頁面未標示發布日；課程日期 2026/3/7-8
+5. [光的課程｜安妞療什麼｜Ann’s Inner Light](https://www.anninnerlight.com/) — 頁面未標示發布日
+
+## 原文摘錄
+### 來源 1
+> “Claims about the relaxing nature of a therapy, its calming surroundings, or its ability to improve a sense of self are likely to be acceptable”
+
+> “testimonials may still imply that a therapy is efficacious”
+
+### 來源 2
+> “Proactive copy focuses on lifestyle enhancement, positive outcomes, and wellness goals”
+
+> “Customer testimonials need careful curation”
+
+### 來源 3
+> 這個課程，讓你在家學習就身在最好的療癒教室！
+
+> 你不需出門就能培訓自己成為身心覺察療癒師！
+
+### 來源 4
+> 生活與未來卡住，卻說不上原因
+
+> 在溫和、安全的引導中，你會慢慢找回內在的穩定與力量
+
+### 來源 5
+> 每週一次 Zoom 線上共修（共 11–12 週，可回放）
+
+> 每個人不同；多見的變化包含：更認識自己、釋放壓力與情緒、提升內在穩定與行動力、覺察力提升，以及生命中的各種啟發。
+
+## 關鍵重點
+- 整理說明：較安全的文案方向是寫「放鬆、穩定、覺察、自我連結、內在力量」這類主觀感受，不寫具體療效或病症改善。（對應來源 1、2、4、5）
+- 整理說明：招生文案可以用「生活狀態」切入，但不要把讀者診斷成有創傷、焦慮、憂鬱或特定健康問題。（對應來源 1、2、4）
+- 整理說明：代表性課程頁常用簡短利益句，例如「在家學習」「線上共修」「找回內在穩定」，比長篇個案故事更直接。（對應來源 3、4、5）
+- 整理說明：若使用學員見證，應聚焦「感受、生活方式、覺察變化」，避免把個案描述成療效證明。（對應來源 1、2、5）
+- 整理說明：近期健康與療癒廣告討論普遍提醒，避免「症狀 → 解方」式 reactive copy，改成「目標、日常、正向狀態」式 proactive copy。（對應來源 2）
+
+## 不確定點
+- 中文身心靈課程頁面多數沒有清楚標示發布日或更新日，部分只能以頁面課程日期或搜尋抓取時間判斷近期性。
+- 「不要過度描述個案」在中文課程文案中較少被直接寫成規則；較明確的可引用資料主要來自健康／輔助療法廣告規範與 Meta 健康廣告文案討論。
+- 不同地區對「療癒」「治療」「個案見證」的可用程度不同；本次資料不能直接推論台灣法規結論。
+tokens used
+78,853
+# 身心靈療癒課程文案風格：身心靈療癒類線上講座的招生文案怎麼寫才簡潔有力 不要過度描述個案
+
+## 來源列表
+1. [Advertising complementary and alternative medicines and therapies](https://www.asa.org.uk/news/advertising-complementary-and-alternative-medicines-and-therapies.html) — 2026-03-26
+2. [Meta Health and Wellness Ad Restrictions: Proactive vs Reactive Copy](https://www.pilothouse.co/post/meta-health-and-wellness-ad-restrictions-proactive-vs-reactive-copy) — 2026-04-21 / 頁面另列 2026-03-12
+3. [身心靈療癒課程：身心覺察，讓你在家學習就能成為自己最好的療癒師](https://ahacademy.tw/main-course-v2/) — 2023-02-22，頁面顯示 2026-03-20
+4. [心靈療癒師・國際認證課程｜元宇宙身心靈國際學院](https://meta-edu.academy/products/spiritual-healing) — 頁面未標示發布日；課程日期 2026/3/7-8
+5. [光的課程｜安妞療什麼｜Ann’s Inner Light](https://www.anninnerlight.com/) — 頁面未標示發布日
+
+## 原文摘錄
+### 來源 1
+> “Claims about the relaxing nature of a therapy, its calming surroundings, or its ability to improve a sense of self are likely to be acceptable”
+
+> “testimonials may still imply that a therapy is efficacious”
+
+### 來源 2
+> “Proactive copy focuses on lifestyle enhancement, positive outcomes, and wellness goals”
+
+> “Customer testimonials need careful curation”
+
+### 來源 3
+> 這個課程，讓你在家學習就身在最好的療癒教室！
+
+> 你不需出門就能培訓自己成為身心覺察療癒師！
+
+### 來源 4
+> 生活與未來卡住，卻說不上原因
+
+> 在溫和、安全的引導中，你會慢慢找回內在的穩定與力量
+
+### 來源 5
+> 每週一次 Zoom 線上共修（共 11–12 週，可回放）
+
+> 每個人不同；多見的變化包含：更認識自己、釋放壓力與情緒、提升內在穩定與行動力、覺察力提升，以及生命中的各種啟發。
+
+## 關鍵重點
+- 整理說明：較安全的文案方向是寫「放鬆、穩定、覺察、自我連結、內在力量」這類主觀感受，不寫具體療效或病症改善。（對應來源 1、2、4、5）
+- 整理說明：招生文案可以用「生活狀態」切入，但不要把讀者診斷成有創傷、焦慮、憂鬱或特定健康問題。（對應來源 1、2、4）
+- 整理說明：代表性課程頁常用簡短利益句，例如「在家學習」「線上共修」「找回內在穩定」，比長篇個案故事更直接。（對應來源 3、4、5）
+- 整理說明：若使用學員見證，應聚焦「感受、生活方式、覺察變化」，避免把個案描述成療效證明。（對應來源 1、2、5）
+- 整理說明：近期健康與療癒廣告討論普遍提醒，避免「症狀 → 解方」式 reactive copy，改成「目標、日常、正向狀態」式 proactive copy。（對應來源 2）
+
+## 不確定點
+- 中文身心靈課程頁面多數沒有清楚標示發布日或更新日，部分只能以頁面課程日期或搜尋抓取時間判斷近期性。
+- 「不要過度描述個案」在中文課程文案中較少被直接寫成規則；較明確的可引用資料主要來自健康／輔助療法廣告規範與 Meta 健康廣告文案討論。
+- 不同地區對「療癒」「治療」「個案見證」的可用程度不同；本次資料不能直接推論台灣法規結論。

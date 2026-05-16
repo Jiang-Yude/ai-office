@@ -1,0 +1,460 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019dfb2e-78cc-74b2-b9d2-03ebccfb3d7e
+--------
+user
+搜尋主題：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+角度：網友與從業者的負面評價與反駁（為何『找能解問題的專家』也不夠、認知盲點、Dunning-Kruger）
+
+任務：從「網友與從業者的負面評價與反駁（為何『找能解問題的專家』也不夠、認知盲點、Dunning-Kruger）」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 網友與從業者的負面評價與反駁（為何『找能解問題的專家』也不夠、認知盲點、Dunning-Kruger）：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-06T02:47:01.665525Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先讀取這個知識庫的 `CLAUDE.md` 確認本地規則，接著上網找來源。這次是指定單一角度的搜尋整理，我會直接做材料彙整，不新建檔案。
+exec
+/bin/bash -lc "sed -n '1,220p' CLAUDE.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+## 執行模式判斷原則
+
+### 機械性動作：直接做，不研究
+
+「排工作」「開看板」「開卡」「快速開卡」「加截止日」等看板操作 → 直接執行，不讀專案背景、不查相關資料夾、不做脈絡研究。
+
+所需最少步驟：拿時間戳 → 讀看板 → 寫卡／更新看板。不需要載入雷總管 SKILL.md，CLAUDE.md 本身的規則已足夠。
+
+只有使用者明確說「查資料」「研究一下」「幫我了解」，才進行探索性工具呼叫。
+
+**Why:** 過度研究讓簡單任務變成多輪工具呼叫，浪費時間、增加誤判風險。
+
+---
+
+## 路由規則
+
+### 技能包優先順序
+
+1. 先檢查 `_agent/skills/` 有沒有本地技能包 → 有的話用 Read 工具直接讀取
+2. 本地沒有，才調動雲端（Skill 工具）
+
+本地技能包清單：
+- `personal-director-v90` → 雷總管（技能包調度、檔案管理、專案管理、標籤管理、工作日記）
+- `spring-editor` → 春總編（脆文、方格子、講座預告、深度檢查、順稿、改標題與行銷評估、社群備份、簡報）
+- `prompt-coach-v41` → 提示詞優化教練（提示詞健檢、教學、優化、建構、問題拆解）
+- `teaching-monitor` → 教學班長（課程定位、問卷與選人、課程壓測、課後整理、學習導航）
+- `solo-startup-consultant` → 商業顧問（問題定義、目標規劃、合作對齊、營運系統、復盤）
+- `marketing-consultant` → 行銷顧問（市場驗證、客戶洞察、行銷策略、行銷心理學）
+- `admin-assistant` → 行政助理（PDF 翻譯轉檔、網頁轉知識圖譜、字幕校正翻譯、逐字稿整理）
+- `openclaw-installer` → OpenClaw 安裝器（安裝、初始化、驗證、排錯 OpenClaw 龍蝦；支援 Codex／Claude Code 直接執行，Claude Cowork／反重力改走手動教學）
+- `local-speech-to-text` → 本地語音轉文字器（純安裝型技能包：安裝、驗證、排錯 Whisper／ffmpeg；支援 Codex／Claude Code 實機安裝，反重力沿用同機手動教學；以手動指定啟動為主）
+- `bookkeeping` → 記帳（個人接案收入記帳、稅務分類、扣繳記錄、9A/9B、年度對帳）
+- `ani-assistant` → 阿妮助理（Ani 相關內容收納、短影音拍攝指令、口吻文案、設定備忘與版本管理）
+- `codex-threads-backup` → Codex 爬脆文模式（Threads 補檔、補發文看板、截圖補救、Obsidian 歸檔）
+- `threads-centaur-scout` → Threads 半人馬海巡（搜尋適合回應的貼文、產出候選回應胚胎、不代發不套版）
+- `trend-scanner` → 趨勢掃描（YouTube RSS、新聞 RSS、Product Hunt、Hacker News；三梯隊架構；手動觸發 + 排程自動）
+- `video-downloader` → 抓影片技能包（Loom、公開分享頁影片、mp4、m3u8/HLS 串流抓取與封裝）
+- `web-data-capture` → Codex 網路抓資料技能包（文章、影片、字幕、頁面原始碼、播放器來源的統一抓取入口）
+- `web-deep-research` → 網路資料深度研究（認真上網查、多輪搜尋、來源分級、交叉驗證、研究報告）
+- `multi-ai-dispatcher` → 風組長（多模型分工、交叉驗證、搜尋與整合拆工、cross-check 材料包）
+- `file-to-markdown` → 檔案轉 Markdown 轉換器（DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 轉 Markdown、統一入口路由、知識圖譜、批次轉換）
+- `ai-presentation-workflow` → AI 簡報製作流程（六階段分步驟、三層級 Prompt、簡報分類模組、搜尋策略、NotebookLM 彙整、Markdown 大綱輸出）
+- `huashu-design` → Huashu Design／花叔 Design（HTML-native 設計技能包；高保真原型、HTML 簡報、設計變體、資訊圖、動畫 Demo、MP4/GIF 輸出；適合輪播圖卡轉短影片、網頁簡報、設計方向探索；已掛載到 Claude Code；Personal Use License，商用／付費培訓需另取授權）
+- `sustainability-reporting-assistant` → 永續報告書助理（台灣主體、國際框架補充；永續報告書章節骨架、重大主題、利害關係人、揭露缺口、GRI / IFRS S1 S2 / SASB / TNFD 對照）
+- `github-ops` → GitHub 操作技能包（版控、備份、發布、半自動同步；新建 repo、掃敏感檔、寫 gitignore、commit、push、release；repo 分類前綴：my-/ai-office-/system-/digital-twin-/private-）
+- `webpage-builder` → 網頁製作技能包（江江教練品牌風格；對內草稿 Claude Code、對外精美 Claude Designer、**散文編輯**混搭對話框/金句/信件；奶茶色系設計語言、部署指南）
+- `web-novel-layout` → 網路小說版型技能包（連載小說、章回體、長篇敘事；繼承散文編輯版型四元件＋連載系統：章節封面、上下章導航、閱讀進度條、目錄頁；多 HTML 檔架構為主）
+- `mothers-day-tribute` → 母親節感恩網頁產生器（公開版／MIT；把使用者寫給媽媽的文章自動排版成有層次的網頁：散文+對話框+金句+信件；開頭「YYYY 年母親節快樂」+ 結尾署名；三種部署選項 Netlify Drop / GitHub Pages / Vercel；公開 repo：https://github.com/Jiang-Yude/mothers-day-tribute）
+- `meeting-transcript-cleaner` → 逐字稿轉檔＋清理助理（MacWhisper CLI 轉錄、逐字稿順稿、會議記錄整理；前期資料清理層，後段分析交 meeting-record-strategy）
+- `transcript-organizer` → 課程逐字稿清理組織技能包（已轉錄的原始逐字稿 → 對照課綱/簡報 → 清理為組織稿；保留原始脈絡；超詳細/很詳細/1比1 三等級；存檔時間戳+1分）
+- `notebooklm-connector` → NotebookLM 公開版連接器 v0.1.0（MIT；Claude Code & Codex 透過 MCP 連 NotebookLM；最小可用版，只做 MCP 對話查詢，砍掉個人字幕工作流）
+
+### 網頁製作觸發規則
+
+使用者說「做網頁」「做一頁」「做提案頁」「做報告頁」「做介紹頁」「對內網頁」「對外網頁」「行銷頁」「整理成網頁」「把這個做成網頁」「轉成網頁給大家看」「上 GitHub 頁面」，或情境明顯是要把內容做成可以分享的 HTML 頁面時 → 讀取 `_agent/skills/webpage-builder/SKILL.md`。
+
+webpage-builder 內三個 mode 的判斷：
+- 對內草稿 / 報告頁 / 比較頁 → 對內模式（references/02）
+- 客戶頁 / 行銷頁 / 精美版 → 對外模式（references/03）
+- **散文 / 長文 / 心情日記 / 文章** 要做成網頁，且要對話框＋金句＋信件混搭 → 散文編輯模式（references/05）
+
+分工說明：
+- 春總編的「會議報告書」模式（把會議記錄做成報告頁）仍走春總編
+- 純簡報（互動式簡報、Reveal.js）仍走春總編的簡報模式
+- 獨立的、可部署分享的 HTML 網頁 → 走 webpage-builder
+- **連載小說 / 章回體 / 多章節故事** → 走 `web-novel-layout`，不走 webpage-builder
+
+### 網路小說版型觸發規則
+
+使用者說「網路小說版型」「做網路小說」「做連載」「章回體」「做小說網頁」「長篇連載」「章節網頁」「做故事網頁」「把小說放網路上」，或情境明顯是要把多章節的故事做成可閱讀的網頁（含章節索引、上下章導航、閱讀進度）→ 讀取 `_agent/skills/web-novel-layout/SKILL.md`。
+
+判斷：
+- 一篇文章 / 散文 / 單頁 → 走 webpage-builder 散文編輯模式
+- 兩章以上 / 連載 / 章回體 → 走 web-novel-layout
+- 不確定就問使用者「會有第二章嗎？」
+
+### 母親節感恩網頁觸發規則
+
+使用者說「母親節網頁」「母親節版型」「母親節感恩」「致媽媽網頁」「給媽媽的網頁」「母親節文章排版」「把這篇給媽媽的文章做成網頁」→ 讀取 `_agent/skills/mothers-day-tribute/SKILL.md`。
+
+公開版 MIT 授權，repo 在 https://github.com/Jiang-Yude/mothers-day-tribute
+
+工作流程要先問五個問題（標題、副標、署名、配色、部署方式），預設部署推薦 Netlify Drop（30 秒拖資料夾）。三種部署選項：
+- Netlify Drop（最簡單，不會 git 的人）
+- GitHub Pages（要更新／版控）
+- Vercel（要 SSO 保護或自訂域名）
+
+### Huashu Design 觸發規則
+
+使用者說「用 Huashu Design」「花叔 Design」「做 HTML 簡報」「做網頁簡報」「做動畫 Demo」「把輪播圖卡做成影片」「圖卡轉短影音」「導出 MP4」「導出 GIF」「做設計變體」「設計方向」「設計評審」「高保真原型」「iOS 原型」「互動原型」，或情境明顯是要用 HTML 產出視覺作品、簡報、動畫、短影音素材時 → 優先讀取 `_agent/skills/huashu-design/SKILL.md`。
+
+分工說明：
+- 單純網頁建置、對外網站、部署頁 → 走 `webpage-builder`
+- 內容型簡報大綱、課程簡報企劃 → 走 `ai-presentation-workflow` 或春總編
+- HTML-native 視覺產出、網頁簡報、動畫、MP4/GIF、輪播圖卡轉短影片 → 走 `huashu-design`
+- Huashu Design 授權為 Personal Use License；付費課程、商業工作坊、客戶交付、公司內部工具鏈整合前，需先提醒使用者授權限制
+
+### GitHub 操作觸發規則
+
+使用者說「同步 GitHub」「GitHub 備份」，或情境明顯涉及把技能包、知識庫系統上 GitHub（新建 repo、掃敏感檔、打包 .skill 發 release、推送技能包、跨 repo 同步）時 → 讀取 `_agent/skills/github-ops/SKILL.md`。
+
+### 檔案轉 Markdown 觸發規則
+
+使用者說「轉 Markdown」「轉 MD」「幫我轉」「轉知識圖譜」「整理成筆記」「批次轉換」「MarkItDown」，或丟入 DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 檔案說「幫我轉」→ 讀取 `_agent/skills/file-to-markdown/SKILL.md`。
+
+與 admin-assistant 的分工：
+- DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML → 走 file-to-markdown（MarkItDown）
+- PDF → 走 admin-assistant（extract_pdf.py）
+- 網頁爬取 → 走 admin-assistant（web-to-knowledge-graph）
+- 音訊 → 走 local-speech-to-text
+- YouTube → 走 notebooklm-codex-ops
+
+### 雷總管觸發規則
+
+使用者說「雷哥」「雷總管」「總管」任一詞 → 立即讀取 `_agent/skills/personal-director-v90/SKILL.md` 並以雷總管身份回應。
+
+### 龍蝦 AI 兩段觸發
+
+「更新龍蝦」「更新大鉗」「檢查龍蝦版本」→ 第一段任務（版本更新、爬資料、寫工作日誌），雷總管接手，低階模型（GPT-5.4 Mini 等級）即可。
+「分析龍蝦」「龍蝦分析一下」→ 第二段任務，基於第一段工作日誌做系統設計抽象，缺工作日誌就提醒補跑第一段。
+
+完整執行原則 → `_agent/skills/openclaw-installer/SKILL.md`（龍蝦兩段任務段落）
+
+### 換視窗交接觸發
+
+統一觸發詞：「準備交接」，分兩種輸出格式：
+
+- 「準備交接**檔案**」→ 存檔 + 輸出可貼到新視窗的推送指令（適合長、要留存）
+- 「準備交接**指令**」→ 不存檔，直接吐完整文字到對話，使用者複製貼上（適合短、快速輪替）
+
+AI 從對話脈絡自動判斷用四段模板（規劃已收尾要執行：前提 → 決策 → 避坑 → 脈絡）還是五段模板（還在規劃中要繼續想：在規劃什麼 → 已定 → 已排除 → 還卡 → 下一步）。判斷錯使用者會補一句「這是執行／規劃」再調整。
+
+完整 SOP → `_agent/skills/personal-director-v90/SKILL.md`（換視窗交接模式）
+
+### 快速開卡捷徑
+
+使用者說「快速開卡」時，直接視為最上層快捷指令，不要求額外觸發雷總管。
+
+執行原則：
+- 依內容判斷放哪個看板（約人 → 邀約看板，其他 → 工作看板）
+- 預設放今天；有指定日期就放指定日期
+- 可不開檔案，以最少追問為原則
+- 這是唯一可不開檔案的開卡例外
+
+### 發文看板專案模式
+
+主場景是發文管理。進來就預設載入春總編（`_agent/skills/spring-editor/SKILL.md`），發文看板（`00 工作台/📝 發文看板.md`）是主要操作對象。
+
+觸發詞：「上看板」「上發文看板」「發文」「排程」「已發布」「歸檔」脆文，或使用者直接丟一段脆文內容。
+
+三種操作模式（速記、草稿、正式發文）的完整 SOP → spring-editor SKILL.md（發文看板操作模式）
+
+### 新視覺頁與新簡報參考規則
+
+使用者提到 `Stitch`、`DESIGN.md`、新簡報、新視覺頁、新提案頁、新報告頁、單頁網頁設計時，預設仍由春總編處理，但先讀 `_agent/skills/spring-editor/references/20-design-reference.md`。
+
+這份 reference 只用來建立新頁面的設計語言與版面規則，不回頭覆蓋既有社群圖文卡的直式、橫式、一頁總結固定規格。社群圖文卡仍以 `_agent/skills/spring-editor/references/15-mode-social-cards.md` 為準。
+
+### 逐字稿轉錄＋清稿觸發規則
+
+使用者說「幫我轉錄」「清稿」「逐字稿整理」「會議錄音整理」「音檔整理」「m4a 整理」「mp3 整理」「wav 整理」「整理錄音」「順稿」，或給了音檔（m4a/mp3/wav/opus）說要整理成文字 → 讀取 `_agent/skills/meeting-transcript-cleaner/SKILL.md`。
+
+與其他技能包的分工：
+- 音訊純安裝／環境建置 → local-speech-to-text
+- 轉錄完後要共識分析、風險分析 → meeting-record-strategy
+- 轉錄完後要改寫脆文 → spring-editor
+- 轉錄完後要清理成課程組織稿 → transcript-organizer
+
+### 課程逐字稿清理組織觸發規則
+
+使用者說「清理這一份」「幫我清理逐字稿」「整理成組織稿」「清理課程逐字稿」，或給了一個含「原始逐字稿」的檔案說「幫我清理」時 → 讀取 `_agent/skills/transcript-organizer/SKILL.md`。
+
+**存檔命名規則**：清理版時間戳 = 原始逐字稿時間戳 + 1 分鐘，檔名用「逐字稿清理」取代「原始逐字稿」。
+
+**清理等級**（未指定預設「很詳細」）：
+- 超詳細：所有實質內容都留，連小例子都保留
+- 很詳細：重要概念、例子、故事留下，去除冗長重複
+- 1比1：幾乎原樣，只去語氣詞，不改結構
+
+### 抓字幕觸發
+
+「抓字幕」「C抓字幕」「快速抓字幕」「直接用 Codex 抓字幕」→ Codex 直接抓存刪流程。
+
+讀 `_agent/skills/notebooklm-codex-ops/SKILL.md`（完整執行原則與 nlm 指令路徑都在技能包內）。不要先走發文流程或工作看板流程。
+
+### NotebookLM 連接器分工規則（個人版 vs 公開版）
+
+兩個技能包同主題、不同對象，遇到 NotebookLM 相關需求要先判斷是給誰用：
+
+**個人版 `notebooklm-codex-ops`**（江昱德私人用，含個人 nlm 路徑、字幕整理 notebook、個人分類詞）：
+- 觸發：「抓字幕」「字幕整理」「整本 NotebookLM 拉回本地」「在我的 NotebookLM 找 X」
+- 用於江昱德自己的 NotebookLM 工作流
+
+**公開版 `notebooklm-connector`**（v0.1.0，MIT，給其他人裝，只做 MCP 對話查詢）：
+- 觸發：「給別人用的 NotebookLM 連接器」「公開版」「裝 notebooklm-connector」「打包 .skill」「發 GitHub」
+- 不做字幕批次抓存刪、不做個人化分類，只保留「裝完就能用 Claude Code / Codex 問自己 NotebookLM」
+- 待發佈到 GitHub repo `my-notebooklm-connector` + `.skill` release
+
+判斷不出時主動問使用者：「這次是處理你自己的 NotebookLM（個人版），還是要做公開版的工作（連接器）？」
+
+### Preview 使用規則
+
+- Preview 工具（`mcp__Claude_Preview__*`）只在截圖流程中使用，其他情境一律不啟動
+- 截圖完成後必須立即呼叫 `preview_stop` 關閉 Preview
+- 不做截圖的對話，不啟動 Preview
+- 已由 Hook 攔截：每次啟動 Preview 前會先詢問使用者確認
+
+### 圖卡截圖觸發規則（Claude Code 專責）
+
+使用者說「幫我截圖卡」「做圖卡」，或給了 HTML 圖文卡片並說截圖 → 用 Playwright 截圖。
+
+**「設計圖卡」與「做圖卡」的區分：**
+- 「設計圖卡」= 只給草稿規格（張數、每張標題與重點文案、風格建議），等使用者確認，**不**動 HTML、不截圖
+- 「做圖卡」= 真的產 HTML + Playwright 截圖
+- 沒指定風格 → 預設淺焙
+
+執行流程：
+1. 讀取 HTML，找到所有 `.card` 元素
+2. 用 Playwright（Node.js）逐張截圖存 PNG
+3. PNG 存到 `03 我的文章 AI 應用 與 知識管理/Threads 脆/YYYY-MM-DD-HHMM 主題名稱/01.png`、`02.png`...
+
+exec
+/bin/bash -lc "pwd && rg --files -g 'CLAUDE.md' -g 'AGENTS.md'" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+AGENTS.md
+01 AI 辦公室 & Agent 團隊/02 GitHub 產品包/CLAUDE.md
+02 鉗助理｜龍蝦AI  OpenClaw/CLAUDE.md
+02 鉗助理｜龍蝦AI  OpenClaw/AGENTS.md
+CLAUDE.md
+01 AI 辦公室 & Agent 團隊/05 基本款雲端硬碟安裝版/Mika-基本版-v1.0（原始可編輯）/CLAUDE.md
+01 數位分身小聚/01 數位分身小聚 GitHub 版/CLAUDE.md
+01 數位分身小聚/01 數位分身小聚 GitHub 版/AGENTS.md
+01 數位分身小聚/01 數位分身小聚 主系統/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/04 免費試用版（第一代試水溫）/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/AGENTS.md
+_agent/github-repos/my-vault-commands/CLAUDE.md
+_agent/github-repos/my-vault-commands/AGENTS.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/tr/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/tr/AGENTS.md
+05 技能包備份/2026-04-21-0930 AI 辦公室產品包 v1.1/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/tr/examples/CLAUDE.md
+05 技能包備份/2026-04-22-0006 AI 辦公室產品包 v1.2/CLAUDE.md
+05 技能包備份/2026-04-24-0130 AI 辦公室產品包 v2.0/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/pt-BR/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/zh-CN/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/zh-CN/AGENTS.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/ko-KR/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/ja-JP/examples/CLAUDE.md
+01 數位分身小聚/01 數位分身小聚 主系統/AGENTS.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/zh-CN/examples/CLAUDE.md
+
+web search: 
+web search: AI hallucinations non expert verify advice experts trustworthy Dunning-Kruger 2025
+web search: 
+web search: OpenAI why language models hallucinate paper 2025 hallucinations incentives benchmark abstain
+web search: 
+web search: Reddit "AI hallucination" "experts" "Dunning-Kruger"
+web search: 
+web search: "AI literacy" "metacognitive accuracy" "ChatGPT" "Dunning-Kruger" "Computers in Human Behavior"
+web search: 
+web search: "How to Spot Real Expertise" "credentials" "fake experts"
+web search: 
+web search: SIFT method lateral reading verify information source credibility AI hallucinations
+web search: 
+web search: Tetlock experts political judgment predictions track record foxes hedgehogs expert credibility
+web search: 
+web search: Vectara hallucination leaderboard AI hallucination rate leaderboard 2025
+codex
+# 網友與從業者的負面評價與反駁（為何『找能解問題的專家』也不夠、認知盲點、Dunning-Kruger）：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+
+## 來源列表
+1. [Why language models hallucinate](https://openai.com/research/why-language-models-hallucinate/) — 2025-09-05
+2. [AI makes you smarter but none the wiser](https://www.sciencedirect.com/science/article/pii/S0747563225002262) — 2026-02
+3. [Reddit r/science discussion on AI and reverse Dunning-Kruger](https://www.reddit.com/r/science/comments/1oj0pn9/when_interacting_with_ai_tools_like_chatgpt/) — 2025-10-29
+4. [How to Spot Real Expertise](https://www.clearerthinking.org/post/how-to-spot-real-expertise) — 2024-04-17, updated 2024-07-04
+5. [Novices and Expert Disagreement](https://academic.oup.com/book/35018/chapter/298800827) — 2019-09-19
+6. [When the Experts Are Wrong](https://academic.oup.com/book/55947/chapter/439420039) — 2024-02-22
+7. [Detecting hallucinations in large language models using semantic entropy](https://www.nature.com/articles/s41586-024-07421-0) — 2024-06-19
+8. [SIFT: Empowering Informed Communities](https://depts.washington.edu/learncip/sift/) — no page date found
+9. [Stanford scholars observe experts to see how they evaluate credibility online](https://ed.stanford.edu/news/stanford-scholars-observe-experts-see-how-they-evaluate-credibility-information-online) — 2017-10-24
+10. [The Superforecasters’ Track Record](https://goodjudgment.com/resources/the-superforecasters-track-record/) — 2023
+11. [Foxes, Hedgehogs, and Regulators](https://www.cato.org/regulation/fall-2017/foxes-hedgehogs-regulators) — 2017
+
+## 原文摘錄
+
+### 來源 1
+> “standard training and evaluation procedures reward guessing over acknowledging uncertainty.”
+
+### 來源 2
+> “Higher AI literacy correlates with lower self-assessment accuracy.”
+
+### 來源 3
+> “Checking a giant wall of text for accuracy and content takes longer in general than writing it.”
+
+### 來源 4
+> “sometimes the fake experts even have very impressive credentials”
+
+### 來源 5
+> “we are often not well-poised to distinguish between rival experts.”
+
+### 來源 6
+> “Experts make mistake all the time.”
+
+### 來源 7
+> “users cannot trust that any given output is correct.”
+
+### 來源 8
+> “trace a claim back to its original context.”
+
+### 來源 9
+> “fact checkers read less but learn more”
+
+### 來源 10
+> “For every forecast we make, we keep score so we can learn and improve.”
+
+### 來源 11
+> “experts often do little better than laymen in predicting the future.”
+
+## 關鍵重點
+
+- 「AI 回答像專家」不等於可靠；OpenAI 的材料指出，模型被訓練與評估制度推向「猜答案」，所以使用者不能只看語氣自信或文字完整度。（來源 1）
+- Dunning-Kruger 在 AI 使用情境中可能變形：ScienceDirect 這篇研究摘要指出，AI 使用者整體會高估表現，而且 AI literacy 較高者反而可能自我評估更差。（來源 2）
+- 從業者/網友的負面反駁集中在「驗證成本」：AI 產出很快，但檢查一大段文字的事實與邏輯常比自己寫更慢，導致口頭上說會查證，實務上容易直接信。（來源 3）
+- 「找專家」仍不夠，因為假專家也可能有漂亮 credentials；比較可用的訊號是：是否標示信心水準、承認不知道、引用高品質證據、鼓勵看其他來源、能說明主流共識與自己偏離共識的理由。（來源 4）
+- 新手在專家互相衝突時，常沒有足夠能力分辨哪個專家更可信；這正是「我不懂所以找專家」仍然不夠的核心盲點。（來源 5）
+- 專家會犯錯、也可能有 misconduct、error、credential misrepresentation、prediction failure；所以可信度不能只看頭銜，要看可檢查的過程與紀錄。（來源 6）
+- 對 AI 幻覺的技術檢測方向之一是 semantic entropy：看同一問題多次生成在「語義層」是否分歧，用來提示哪些回答需要額外小心。（來源 7）
+- SIFT / lateral reading 是可操作的方法論：Stop、Investigate、Find better coverage、Trace claims。重點不是在原頁面裡越讀越深，而是跳出去找來源背景、交叉報導、原始脈絡。（來源 8、9）
+- 專家可信度的一個反直覺指標是「可記分的預測紀錄」；Good Judgment 強調對每個 forecast 留紀錄、事後檢討，這比單次雄辯或名氣更可驗證。（來源 10）
+- Tetlock 相關材料反駁「專家自然比外行準」：至少在預測型問題上，某些專家表現接近外行；更可信的是會更新、多視角、可校準、可回顧的人。（來源 11）
+
+## 不確定點
+
+- 關於「一般使用者最有效辨別 AI 幻覺的方法」沒有找到單一公認標準；目前資料較像工具箱：SIFT/lateral reading、原始來源追溯、信心校準、語義分歧檢測、專家交叉比對。
+- 關於「找能解問題的專家是否不夠」有支持與反駁兩邊：資料支持「只找單一專家不夠」，但沒有資料支持「專家完全無用」。
+- 「Dunning-Kruger」在 AI 使用情境中是否已被穩定改寫，仍要看後續研究；目前找到的是 2026 Computers in Human Behavior 研究與社群討論，代表性高，但不等於所有任務都成立。
+tokens used
+78,801
+# 網友與從業者的負面評價與反駁（為何『找能解問題的專家』也不夠、認知盲點、Dunning-Kruger）：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+
+## 來源列表
+1. [Why language models hallucinate](https://openai.com/research/why-language-models-hallucinate/) — 2025-09-05
+2. [AI makes you smarter but none the wiser](https://www.sciencedirect.com/science/article/pii/S0747563225002262) — 2026-02
+3. [Reddit r/science discussion on AI and reverse Dunning-Kruger](https://www.reddit.com/r/science/comments/1oj0pn9/when_interacting_with_ai_tools_like_chatgpt/) — 2025-10-29
+4. [How to Spot Real Expertise](https://www.clearerthinking.org/post/how-to-spot-real-expertise) — 2024-04-17, updated 2024-07-04
+5. [Novices and Expert Disagreement](https://academic.oup.com/book/35018/chapter/298800827) — 2019-09-19
+6. [When the Experts Are Wrong](https://academic.oup.com/book/55947/chapter/439420039) — 2024-02-22
+7. [Detecting hallucinations in large language models using semantic entropy](https://www.nature.com/articles/s41586-024-07421-0) — 2024-06-19
+8. [SIFT: Empowering Informed Communities](https://depts.washington.edu/learncip/sift/) — no page date found
+9. [Stanford scholars observe experts to see how they evaluate credibility online](https://ed.stanford.edu/news/stanford-scholars-observe-experts-see-how-they-evaluate-credibility-information-online) — 2017-10-24
+10. [The Superforecasters’ Track Record](https://goodjudgment.com/resources/the-superforecasters-track-record/) — 2023
+11. [Foxes, Hedgehogs, and Regulators](https://www.cato.org/regulation/fall-2017/foxes-hedgehogs-regulators) — 2017
+
+## 原文摘錄
+
+### 來源 1
+> “standard training and evaluation procedures reward guessing over acknowledging uncertainty.”
+
+### 來源 2
+> “Higher AI literacy correlates with lower self-assessment accuracy.”
+
+### 來源 3
+> “Checking a giant wall of text for accuracy and content takes longer in general than writing it.”
+
+### 來源 4
+> “sometimes the fake experts even have very impressive credentials”
+
+### 來源 5
+> “we are often not well-poised to distinguish between rival experts.”
+
+### 來源 6
+> “Experts make mistake all the time.”
+
+### 來源 7
+> “users cannot trust that any given output is correct.”
+
+### 來源 8
+> “trace a claim back to its original context.”
+
+### 來源 9
+> “fact checkers read less but learn more”
+
+### 來源 10
+> “For every forecast we make, we keep score so we can learn and improve.”
+
+### 來源 11
+> “experts often do little better than laymen in predicting the future.”
+
+## 關鍵重點
+
+- 「AI 回答像專家」不等於可靠；OpenAI 的材料指出，模型被訓練與評估制度推向「猜答案」，所以使用者不能只看語氣自信或文字完整度。（來源 1）
+- Dunning-Kruger 在 AI 使用情境中可能變形：ScienceDirect 這篇研究摘要指出，AI 使用者整體會高估表現，而且 AI literacy 較高者反而可能自我評估更差。（來源 2）
+- 從業者/網友的負面反駁集中在「驗證成本」：AI 產出很快，但檢查一大段文字的事實與邏輯常比自己寫更慢，導致口頭上說會查證，實務上容易直接信。（來源 3）
+- 「找專家」仍不夠，因為假專家也可能有漂亮 credentials；比較可用的訊號是：是否標示信心水準、承認不知道、引用高品質證據、鼓勵看其他來源、能說明主流共識與自己偏離共識的理由。（來源 4）
+- 新手在專家互相衝突時，常沒有足夠能力分辨哪個專家更可信；這正是「我不懂所以找專家」仍然不夠的核心盲點。（來源 5）
+- 專家會犯錯、也可能有 misconduct、error、credential misrepresentation、prediction failure；所以可信度不能只看頭銜，要看可檢查的過程與紀錄。（來源 6）
+- 對 AI 幻覺的技術檢測方向之一是 semantic entropy：看同一問題多次生成在「語義層」是否分歧，用來提示哪些回答需要額外小心。（來源 7）
+- SIFT / lateral reading 是可操作的方法論：Stop、Investigate、Find better coverage、Trace claims。重點不是在原頁面裡越讀越深，而是跳出去找來源背景、交叉報導、原始脈絡。（來源 8、9）
+- 專家可信度的一個反直覺指標是「可記分的預測紀錄」；Good Judgment 強調對每個 forecast 留紀錄、事後檢討，這比單次雄辯或名氣更可驗證。（來源 10）
+- Tetlock 相關材料反駁「專家自然比外行準」：至少在預測型問題上，某些專家表現接近外行；更可信的是會更新、多視角、可校準、可回顧的人。（來源 11）
+
+## 不確定點
+
+- 關於「一般使用者最有效辨別 AI 幻覺的方法」沒有找到單一公認標準；目前資料較像工具箱：SIFT/lateral reading、原始來源追溯、信心校準、語義分歧檢測、專家交叉比對。
+- 關於「找能解問題的專家是否不夠」有支持與反駁兩邊：資料支持「只找單一專家不夠」，但沒有資料支持「專家完全無用」。
+- 「Dunning-Kruger」在 AI 使用情境中是否已被穩定改寫，仍要看後續研究；目前找到的是 2026 Computers in Human Behavior 研究與社群討論，代表性高，但不等於所有任務都成立。

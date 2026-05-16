@@ -1,0 +1,139 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019de63a-37ec-7022-a3ca-b17a0896e3c3
+--------
+user
+搜尋主題：GitHub trending knowledge management LLM wiki 2025
+角度：官方
+
+任務：從「官方」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 官方：GitHub trending knowledge management LLM wiki 2025
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-02T01:07:49.215389Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會從官方來源切入，優先找 GitHub repository、release/blog/docs 這類原始頁面；摘錄會控制在短句，避免把來源文字大段搬過來。
+web search: 
+web search: site:github.com knowledge management LLM wiki 2025 GitHub trending
+web search: 
+web search: Andrej Karpathy LLM wiki gist 2025 official
+web search: 
+web search: https://gist.github.com/karpathy
+web search: 
+web search: https://github.com/topics/llm-wiki
+web search: 
+web search: site:github.com "GBrain" "LLM Wiki" "2025"
+web search: 
+web search: https://github.com/garrytan/gbrain
+web search: 
+web search: 'Updated' in https://github.com/garrytan/gbrain
+codex
+# 官方：GitHub trending knowledge management LLM wiki 2025
+
+## 來源列表
+1. [karpathy / llm-wiki.md](https://gist.github.com/karpathy) — Created April 4, 2026
+2. [GitHub Topics: llm-wiki](https://github.com/topics/llm-wiki) — Accessed 2026-05-02；頁面列出多個 2026 更新專案
+3. [garrytan/gbrain](https://github.com/garrytan/gbrain) — 日期未標示；頁面內容含 v0.25.0
+4. [xoai/sage-wiki](https://github.com/xoai/sage-wiki) — Published 2 weeks ago
+5. [Astro-Han/karpathy-llm-wiki](https://github.com/Astro-Han/karpathy-llm-wiki) — Updated Apr 13, 2026
+
+## 原文摘錄
+
+### 來源 1
+> A pattern for building personal knowledge bases using LLMs.
+
+### 來源 2
+> Here are 147 public repositories matching this topic...
+
+### 來源 3
+> Your AI agent is smart but forgetful. GBrain gives it a brain.
+
+### 來源 4
+> An implementation of Andrej Karpathy's idea for an LLM-compiled personal knowledge base.
+
+### 來源 5
+> A reusable skill for building Karpathy-style LLM wikis with Claude Code, Cursor, Codex
+
+## 關鍵重點
+- 官方 GitHub/Gist 可確認「LLM Wiki」代表性源頭是 Karpathy 的 `llm-wiki.md`，但日期是 2026-04-04，不是 2025。（對應來源 1）
+- GitHub 官方 Topics 頁面目前已有 `llm-wiki` topic，並列出 147 個公開 repositories，代表該題目已形成明確 GitHub 專案群。（對應來源 2）
+- `garrytan/gbrain` 是高星官方 repo，定位偏「AI agent brain / LLM-maintained knowledge base」，更像完整產品化或系統化版本。（對應來源 3）
+- `xoai/sage-wiki` 明確以「LLM-compiled personal knowledge base」定位，重點是把 papers/articles/notes 編譯成 interlinked wiki。（對應來源 4）
+- `Astro-Han/karpathy-llm-wiki` 把 LLM Wiki 包成 Agent Skills workflow，官方 README 明確支援 Claude Code、Cursor、Codex。（對應來源 5）
+
+## 不確定點
+- 無資料：我沒有在官方 GitHub/Gist 來源中找到「2025 年 GitHub trending knowledge management LLM wiki」的明確歷史 trending 記錄。
+- 日期矛盾：目前最具代表性的官方源頭 `karpathy / llm-wiki.md` 顯示建立於 2026-04-04；不是 2025。
+- GitHub Trending 本身通常是即時榜單，不提供穩定的公開歷史快照；本次只能用 GitHub Topics、官方 repo、官方 gist 作為可驗證來源。
+tokens used
+63,672
+# 官方：GitHub trending knowledge management LLM wiki 2025
+
+## 來源列表
+1. [karpathy / llm-wiki.md](https://gist.github.com/karpathy) — Created April 4, 2026
+2. [GitHub Topics: llm-wiki](https://github.com/topics/llm-wiki) — Accessed 2026-05-02；頁面列出多個 2026 更新專案
+3. [garrytan/gbrain](https://github.com/garrytan/gbrain) — 日期未標示；頁面內容含 v0.25.0
+4. [xoai/sage-wiki](https://github.com/xoai/sage-wiki) — Published 2 weeks ago
+5. [Astro-Han/karpathy-llm-wiki](https://github.com/Astro-Han/karpathy-llm-wiki) — Updated Apr 13, 2026
+
+## 原文摘錄
+
+### 來源 1
+> A pattern for building personal knowledge bases using LLMs.
+
+### 來源 2
+> Here are 147 public repositories matching this topic...
+
+### 來源 3
+> Your AI agent is smart but forgetful. GBrain gives it a brain.
+
+### 來源 4
+> An implementation of Andrej Karpathy's idea for an LLM-compiled personal knowledge base.
+
+### 來源 5
+> A reusable skill for building Karpathy-style LLM wikis with Claude Code, Cursor, Codex
+
+## 關鍵重點
+- 官方 GitHub/Gist 可確認「LLM Wiki」代表性源頭是 Karpathy 的 `llm-wiki.md`，但日期是 2026-04-04，不是 2025。（對應來源 1）
+- GitHub 官方 Topics 頁面目前已有 `llm-wiki` topic，並列出 147 個公開 repositories，代表該題目已形成明確 GitHub 專案群。（對應來源 2）
+- `garrytan/gbrain` 是高星官方 repo，定位偏「AI agent brain / LLM-maintained knowledge base」，更像完整產品化或系統化版本。（對應來源 3）
+- `xoai/sage-wiki` 明確以「LLM-compiled personal knowledge base」定位，重點是把 papers/articles/notes 編譯成 interlinked wiki。（對應來源 4）
+- `Astro-Han/karpathy-llm-wiki` 把 LLM Wiki 包成 Agent Skills workflow，官方 README 明確支援 Claude Code、Cursor、Codex。（對應來源 5）
+
+## 不確定點
+- 無資料：我沒有在官方 GitHub/Gist 來源中找到「2025 年 GitHub trending knowledge management LLM wiki」的明確歷史 trending 記錄。
+- 日期矛盾：目前最具代表性的官方源頭 `karpathy / llm-wiki.md` 顯示建立於 2026-04-04；不是 2025。
+- GitHub Trending 本身通常是即時榜單，不提供穩定的公開歷史快照；本次只能用 GitHub Topics、官方 repo、官方 gist 作為可驗證來源。

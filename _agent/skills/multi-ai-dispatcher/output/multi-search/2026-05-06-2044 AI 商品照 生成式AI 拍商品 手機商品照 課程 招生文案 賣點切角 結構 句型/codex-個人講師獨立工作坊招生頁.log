@@ -1,0 +1,199 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019dfd51-3cff-79d3-b9f8-4c7de007a709
+--------
+user
+搜尋主題：AI 商品照 生成式AI 拍商品 手機商品照 課程 招生文案 賣點切角 結構 句型
+角度：個人講師獨立工作坊招生頁
+
+任務：從「個人講師獨立工作坊招生頁」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 個人講師獨立工作坊招生頁：AI 商品照 生成式AI 拍商品 手機商品照 課程 招生文案 賣點切角 結構 句型
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-06T12:44:14.114756Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先抓近期公開招生頁與個人講師/工作坊頁，不把平台課程、工具介紹和代理商服務混在一起；摘錄只保留短句，避免超出可引用範圍。
+web search: 
+web search: AI 商品照 課程 工作坊 招生 個人講師
+web search: 
+web search: site:accupass.com AI 商品照 課程 工作坊
+web search: 
+web search: "AI product photography" workshop course landing page instructor
+web search: 
+web search: https://tewlpho.com/class01/
+web search: 
+web search: https://shinphotos.com/ai-11/
+web search: 
+web search: "AI 商品照" "課程" "講師"
+codex
+# 個人講師獨立工作坊招生頁：AI 商品照 生成式AI 拍商品 手機商品照 課程 招生文案 賣點切角 結構 句型
+
+## 來源列表
+1. [AI Product Photography for E-Commerce Teams — Maven](https://maven.com/buildmyaesthetic/ai-product-photography-for-e-commerce-teams) — 2026-05-02
+2. [《AI 提示詞與構圖實戰入門》線上課程｜Tewlpho](https://tewlpho.com/class01/) — 2025-12-13 開課
+3. [線上課程｜在 AI 時代下，用手機拍出品牌感！商品攝影技巧 X 品牌視覺行銷攻略](https://www.howhowphoto.com/course01) — 頁面未標示日期
+4. [AI Product Photography Course](https://www.aiproductphotography.co/) — 2026
+5. [Master A.I. Photography — Simon Meyer](https://simonmeyer.teachable.com/) — 頁面未標示日期
+6. [生成式 AI 實務應用課｜燃燒吧攝影魂 AI 學院](https://shinphotos.com/ai-11/) — 2025-12-03
+7. [電商手機攝影拍照與手機短影音影片製作工作坊](https://shinphotos.com/reels/) — 2026-01-02
+8. [南哥玩攝影｜AI 時代手機商品攝影完整實戰課](https://pt.jihan.idv.tw/) — 頁面未標示日期
+
+## 原文摘錄
+
+### 來源 1
+> A Hands-On AI Image Production Workshop
+
+> using your own products
+
+### 來源 2
+> 從攝影師角度思考畫面，從設計師角度完成作品。
+
+> 可以直接拿去上線
+
+### 來源 3
+> 品牌店家必學！自己用手機拍出好看的商品照！
+
+> 一看就喜歡、一看就想買
+
+### 來源 4
+> Learn How To Create AI Product Photos That Actually Sell
+
+> No studio. No photographer. No logistics.
+
+### 來源 5
+> Step into the world of AI
+
+> Prompting the Base Images in Midjourney A.I.
+
+### 來源 6
+> 文案、圖片、影片、簡報，一次搞定
+
+> 落地實作
+
+### 來源 7
+> 用手機打造賣得出去的商品影像
+
+> 顧客往往只用三秒鐘就決定
+
+### 來源 8
+> AI 可以幫你生成場景
+
+> 但商品的質感，還是要先拍對
+
+## 關鍵重點
+
+- 個人工作坊招生頁常用「成果導向」切角：完成 5–10 張素材、可上線素材、商品照 actually sell。（對應來源 1、2、4）
+- 主賣點不是單純教 AI 工具，而是「攝影判斷 + 提示詞 + 工作流」。（對應來源 2、5、8）
+- 手機商品照課程仍把「先拍對商品」放在 AI 之前，AI 被定位成延伸場景、設計或效率工具。（對應來源 3、7、8）
+- 招生文案常見句型是痛點開場：「不會拍」「沒攝影棚」「沒設計師」「顧客三秒滑過」。（對應來源 3、4、6、7）
+- 課綱結構常見順序：視覺觀念 → 構圖/光線 → 提示詞 → AI 生成 → Canva/後製 → 上架素材。（對應來源 2、3、5、6）
+- 獨立講師頁會強調講師實戰資歷，例如攝影師、影像總監、AI Creative Director、商品攝影講師。（對應來源 1、2、5、6、7）
+
+## 不確定點
+
+- 「AI 商品照」在中文市場多數仍混在 AI 圖像、Canva、短影音、手機攝影課裡；純粹只教 AI 商品照的獨立講師招生頁較少。
+- 有些頁面沒有明確標示發布日期，只能依頁面活動日期、課程日期或搜尋索引時間判斷新近程度。
+- 「個人講師」和「小型工作室品牌」界線不完全清楚，例如 Tewlpho、HowHowPhoto、燃燒吧攝影魂都以品牌頁招生，但講師個人色彩明顯。
+tokens used
+66,588
+# 個人講師獨立工作坊招生頁：AI 商品照 生成式AI 拍商品 手機商品照 課程 招生文案 賣點切角 結構 句型
+
+## 來源列表
+1. [AI Product Photography for E-Commerce Teams — Maven](https://maven.com/buildmyaesthetic/ai-product-photography-for-e-commerce-teams) — 2026-05-02
+2. [《AI 提示詞與構圖實戰入門》線上課程｜Tewlpho](https://tewlpho.com/class01/) — 2025-12-13 開課
+3. [線上課程｜在 AI 時代下，用手機拍出品牌感！商品攝影技巧 X 品牌視覺行銷攻略](https://www.howhowphoto.com/course01) — 頁面未標示日期
+4. [AI Product Photography Course](https://www.aiproductphotography.co/) — 2026
+5. [Master A.I. Photography — Simon Meyer](https://simonmeyer.teachable.com/) — 頁面未標示日期
+6. [生成式 AI 實務應用課｜燃燒吧攝影魂 AI 學院](https://shinphotos.com/ai-11/) — 2025-12-03
+7. [電商手機攝影拍照與手機短影音影片製作工作坊](https://shinphotos.com/reels/) — 2026-01-02
+8. [南哥玩攝影｜AI 時代手機商品攝影完整實戰課](https://pt.jihan.idv.tw/) — 頁面未標示日期
+
+## 原文摘錄
+
+### 來源 1
+> A Hands-On AI Image Production Workshop
+
+> using your own products
+
+### 來源 2
+> 從攝影師角度思考畫面，從設計師角度完成作品。
+
+> 可以直接拿去上線
+
+### 來源 3
+> 品牌店家必學！自己用手機拍出好看的商品照！
+
+> 一看就喜歡、一看就想買
+
+### 來源 4
+> Learn How To Create AI Product Photos That Actually Sell
+
+> No studio. No photographer. No logistics.
+
+### 來源 5
+> Step into the world of AI
+
+> Prompting the Base Images in Midjourney A.I.
+
+### 來源 6
+> 文案、圖片、影片、簡報，一次搞定
+
+> 落地實作
+
+### 來源 7
+> 用手機打造賣得出去的商品影像
+
+> 顧客往往只用三秒鐘就決定
+
+### 來源 8
+> AI 可以幫你生成場景
+
+> 但商品的質感，還是要先拍對
+
+## 關鍵重點
+
+- 個人工作坊招生頁常用「成果導向」切角：完成 5–10 張素材、可上線素材、商品照 actually sell。（對應來源 1、2、4）
+- 主賣點不是單純教 AI 工具，而是「攝影判斷 + 提示詞 + 工作流」。（對應來源 2、5、8）
+- 手機商品照課程仍把「先拍對商品」放在 AI 之前，AI 被定位成延伸場景、設計或效率工具。（對應來源 3、7、8）
+- 招生文案常見句型是痛點開場：「不會拍」「沒攝影棚」「沒設計師」「顧客三秒滑過」。（對應來源 3、4、6、7）
+- 課綱結構常見順序：視覺觀念 → 構圖/光線 → 提示詞 → AI 生成 → Canva/後製 → 上架素材。（對應來源 2、3、5、6）
+- 獨立講師頁會強調講師實戰資歷，例如攝影師、影像總監、AI Creative Director、商品攝影講師。（對應來源 1、2、5、6、7）
+
+## 不確定點
+
+- 「AI 商品照」在中文市場多數仍混在 AI 圖像、Canva、短影音、手機攝影課裡；純粹只教 AI 商品照的獨立講師招生頁較少。
+- 有些頁面沒有明確標示發布日期，只能依頁面活動日期、課程日期或搜尋索引時間判斷新近程度。
+- 「個人講師」和「小型工作室品牌」界線不完全清楚，例如 Tewlpho、HowHowPhoto、燃燒吧攝影魂都以品牌頁招生，但講師個人色彩明顯。

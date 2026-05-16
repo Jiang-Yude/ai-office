@@ -1,0 +1,155 @@
+Reading additional input from stdin...
+2026-05-04T01:48:43.006907Z  WARN codex_core::plugins::manager: failed to warm featured plugin ids cache error=remote plugin sync request to https://chatgpt.com/backend-api/plugins/featured failed with status 403 Forbidden: <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style global>body{font-family:Arial,Helvetica,sans-serif}.container{align-items:center;display:flex;flex-direction:column;gap:2rem;height:100%;justify-content:center;width:100%}@keyframes enlarge-appear{0%{opacity:0;transform:scale(75%) rotate(-90deg)}to{opacity:1;transform:scale(100%) rotate(0deg)}}.logo{color:#8e8ea0}.scale-appear{animation:enlarge-appear .4s ease-out}@media (min-width:768px){.scale-appear{height:48px;width:48px}}.data:empty{display:none}.data{border-radius:5px;color:#8e8ea0;text-align:center}@media (prefers-color-scheme:dark){body{background-color:#343541}.logo{color:#acacbe}}</style>
+  <meta http-equiv="refresh" content="360"></head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <svg
+          width="41"
+          height="41"
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          strokeWidth="2"
+          class="scale-appear"
+        >
+          <path
+            d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div class="data"><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cFPWv: 'g',cH: 'OLCVJ1U4DUEGba_DtvIeDSHtUvmEdO7gdD_g8jvvxjQ-1777859322-1.2.1.1-mOBuV4sDXdqYvuynJXpoyCegmP2tK5TR0aeIsCZeW8snMKpI.h4hwpRBL1qGoqAH',cITimeS: '1777859322',cRay: '9f63d840bb614a46',cTplB: '0',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/backend-api/plugins/featured?platform=codex&__cf_chl_tk=yPd5puBUX6ogKy0jFaHSWCGCbYSQnr0lbH5OW3zpjlI-1777859322-1.0.1.1-CbBVU1MQYa0P2wTz7AyVXFHPb1eHG.fId4wthArfzpc",cvId: '3',cZone: 'chatgpt.com',fa:"/backend-api/plugins/featured?platform=codex&__cf_chl_f_tk=yPd5puBUX6ogKy0jFaHSWCGCbYSQnr0lbH5OW3zpjlI-1777859322-1.0.1.1-CbBVU1MQYa0P2wTz7AyVXFHPb1eHG.fId4wthArfzpc",md: 'ZiKwXUXDaOIPxhvjJwXI6GnEl3Gldg4.2yl6opnEyJc-1777859322-1.2.1.1-AgwPmpmHzj_71S7.ORNiqKqAvFcbPpS7V6tpScffTnKmkHnNxEv35g8.kOubP5ErPzVO62J0g8XheR0bcgcFcIok96Hqg53mQSaHC7n78cxsEphb.GG90c4u6WciHTe7zKIfYUyuoRqZe6gCvrYUrYUlVXTlCMHKjK0Uts8ObGsqev6Gr4fnZSnVW8S7y.1r0blkQJSfdMa0e4Y1BYjNZl.yq7M2dyzw6_FsJQ6ub3YjGdi9kYC0mmGlGQ2j1Qr70VVdmlrmABXAjGGEDYC.b7FUjruB639japXPRFM6Qy8kjdLo0uyGWcwNqbakIWIkwVw9.8W7c1Fk191qA5.phkY7rXLCrdXmfKRrGk1J7NGCwWXDoxAhp3cypOKUecA7WB_0WAyGAZN8paFNkzqHMbsQnpsWzB4Nv199PHAd1BkSoJ9oKMK6icFDV3BkZiN0W4TtAWyIufQXcPcIPhe.zdtwdKYMfroTc8QxkwwB5J_5pV8o.7Q6tO25ADqAQLJu6aFizGVnDUHP66Y52BlHqqyv77TVznr17DGSjODJdxu4wif_WqWhYQNL5G..aRcFDKVM1Ed5XpA2QbHS2HpGNJWEh1yCextUYTfc2tsXBIzoX8S1b0DbMXR2ghqnuyo4Kx7Ow5QVO6MvrLgLy_V5k1nlHObj6XXpfKZdU_ZZByjzDKRGJgLn0SzRYVQvEOwl5cNL55a8QE.yY2H4FJx3PdfrFgqDGDh4b6iKnNUubvkg4pRXsRXs3GsvlyqtB0i03s.axunFhLhPUAs.dcgjp_SsYxho1bgmkgpoZqdRx1Y9zU5hTJQTo2x.QIsUApLOULWqSstVk1YBKguDS0FDCy9xjrlPfo.4UZ1e1O_homIb3umDDwNvk4fV_H57XwUhH1i4LhzUc3.sHcEM2GOaOlWlLK..RFaYlI.RJMUdjYrPGJPesMFhySMk6yKQB7lBeOTEc96e3aVz33WevVIf8J6d0EnGX5o.trZK9qt2jVBOlJjbg.G.X_ZTiiMPxzPpmcnKPpTQnqHFR1BQGZIdsnn6Rmo_cDN98.Qmmvp9eH5ngjrWTkN0DmS0rEBGc7qm',mdrd: 'KUDVWNVN.uOFq9h7hrJGt1ODs2aUBMilnf8E.1ofjRI-1777859322-1.2.1.1-vcXKoUZD1x6vrZXArXehrALMfAOvIbZJh5F1TiHXmXZe1RfGNmtwiUAdJ7FL6x7mcxTd0oURwgKOyF7OK6kI7Yt71eca.QaRD4Pyfbo.FM315JFFwAwvc2EHM.5i_S6rC.WjwFeppkzrZJnGOanPS0ZwJlonJH5PUGMHCJwzC1Yy4xnUrrEKrKVP0Qg0Sg3CZ2F8SpT512FcxzICKXOv6kGWiQQSsIQrB8VWPxTy965q3Y2MdOpWo9nqEVuBL8_UE0Uhu0X19KTbtLrNmB0hF2na1Vhx1HoOUN_JmeWcTYk24y9IUGfgCdJdYpTiYCnXnPXNQbhX761FGt9GjQgYBoSFhZbXSd4dLcu2qWZ7KQNdHcFKUP9wa3nvVFX7hJB95WTsGxVo7UflV60VBP8RU.BxIe7gGjMwSj2ZZOrOo4JCOIyxN2a0WRDqTd8zpNJKPFlJ5V8oPXTB3InwnMqnONMWESWv94AjJc1tCB8WKNwYEkbNxFz2TwQsBTxjd0UeO5R4esRF7Nevojd3cQCS4_QTN6qEikyB4Ac5iMmpdZrjf_0VEo2EHzUQcIiPyoO7Cmkp8EhaqnqEWlkwJZL1PiE2tMKA9EOjw2deV9GPk4QkeehOmlS2SsvIv27pv9jNCNIMqgGtqbrNKn_PjWLVyvuR8NhFQZ0EPUTSZ.jO5r9VyzhBfKV8Uil0J..JVKgAqibJR7z42tsbPswct9lwzhrjIIYGk9hEAEreECeNcWlU7dHQhHOGNRzIOgDaxvJ04EpFlDFy66brs2Q5lgx_eFgwwR0dy0_dwyJowB4zxkEAEZ52zxxNH5Lxq7hvP5wl.zLso4QdRj0jOqhMmnI00j_myP.KxmMdgINmsyDCYhTOPzHM0p68VIfjvlCUkNl7puJjvsdKi9mkcwWAdAuhI_gA1CA25cwZ7lK1nifR1wrT4Z253KcPGbo4yWmot0bdHiOAXc5xM0AltpkUOLMKqjVfnXwQCk9sp_lLhNaA3Gjkajxprdz4C5UqCsGingtIZTgumx2vNOH3RU.c9aoC7kItpxU7YygRonXsTfexbPYdi5CZboQ0ti2_X5Ri2M0Peeoz9bQAPFgTYVQNWNVoYATj_pKl5NfldjuP1y0F0dSGjMzBFPdHtOLRiBcbWdgc2uk1OOVRHZ6KN88KSLtg.pd8.goKTRDATZs.NKVLDxC2xOH1pJ.QVDi9RNiYUbEa1FOqZUpFCGWme4OefFdsmUrEDFqfLTKfZh5NCLJEHN2E_T3o5guG76HKSqLPa_X0jG9Hd5qbTfPykiTg2LKyxvas8.o6xm5WhlX2dhVQdepyAwaJCBA0h8LL3_Ymr8AmyQGTH1GFSVUAJbjGuo4VAbFRi64ygONEMlX1MvKAIqVSXdjfX3V.LRDK0DgMqK2CVgijC7PoV8WaS1o1s5luRCgrDbsbp8EsZDV7.DBMjPqB0DtLWiyOJYEFU4ubfhMKWoF.sQ6JOY7X2IA0LZ0FjOfqKXXugRs4gkpNVdY9JhlOt4dIpS_EcetCcyI3bSoicJ1MIx3xy6GduU50hhiMuNUsFok14EwBbD4YUTjDTw3QKIOO7WGVbsMzr8G2ArJ_NjvrxJ0K2OI9OFkdk7HR4aBEYGzzA2KwClc30ZGjnj.KB.yEEzI.oSRrwFTMZzfO2fmiAaPFs7nkx6sU0Nwd7yvLgGNw9RLVGRRHm3s1XYhMNo02jqoaee.TEE8T.UhY30.bhnF6Aw0Zl7T7FK5NKwbiopnjp25Y7ap6WxzKj09qfbH7o_Z8T8Gpf9nyGeCXTmdT9oigX69aJWZJaBCKcZHrtPcmvfKb5wiU.90L5luQi9kBDbwobK6g1SQrmHWTiQQVeHaH7P3DPiGdwmlmlrZ9vJfQ9cPkVosoitNEOF3AFBRrhQS1IO5rceJA5_B9XYuB_l7ROd0VfOMatQjZAr73AhQs2j0.1GXx7c15LpS6XHLwNFu25LIVZxUm9BIDtpobXjJz1yb7F_55bnytmrmsuZ2oqBiYqOkFsVjTAkwVMvTmY.4xi.avqx2B..0BpnPu3NVsedQy9YyWv7.8sBGyPEyLjgXXTeu20tzhUHbz51Zjge_e7lGdRH2r7BS75OdoUum8hoyPNgNoCgBZwynqfBv5fLa8SzilXdWQq2atyaqaGIwM0CaO0TRlf4bZ7t92bCaBB74WRYmUszqhmA',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9f63d840bb614a46';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/backend-api/plugins/featured?platform=codex&__cf_chl_rt_tk=yPd5puBUX6ogKy0jFaHSWCGCbYSQnr0lbH5OW3zpjlI-1777859322-1.0.1.1-CbBVU1MQYa0P2wTz7AyVXFHPb1eHG.fId4wthArfzpc"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>
+    </div>
+  </body>
+</html>
+
+2026-05-04T01:48:43.714838Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-04T01:48:43.716342Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019df0ac-6c24-76c3-acde-170df8076e80
+--------
+user
+搜尋主題：LINE Telegram Discord Slack 用於社群管理 AI bot AI 成員化 防詐 課程社群 缺點 風險 使用者抱怨
+角度：官方限制
+
+任務：從「官方限制」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 官方限制：LINE Telegram Discord Slack 用於社群管理 AI bot AI 成員化 防詐 課程社群 缺點 風險 使用者抱怨
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-04T01:48:45.353253Z  WARN codex_analytics::client: events failed with status 403 Forbidden: <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style global>body{font-family:Arial,Helvetica,sans-serif}.container{align-items:center;display:flex;flex-direction:column;gap:2rem;height:100%;justify-content:center;width:100%}@keyframes enlarge-appear{0%{opacity:0;transform:scale(75%) rotate(-90deg)}to{opacity:1;transform:scale(100%) rotate(0deg)}}.logo{color:#8e8ea0}.scale-appear{animation:enlarge-appear .4s ease-out}@media (min-width:768px){.scale-appear{height:48px;width:48px}}.data:empty{display:none}.data{border-radius:5px;color:#8e8ea0;text-align:center}@media (prefers-color-scheme:dark){body{background-color:#343541}.logo{color:#acacbe}}</style>
+  <meta http-equiv="refresh" content="360"></head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <svg
+          width="41"
+          height="41"
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          strokeWidth="2"
+          class="scale-appear"
+        >
+          <path
+            d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div class="data"><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cFPWv: 'g',cH: 'u0tus8k9HKyXudcaX6LBAPGWtIoZzkfHTFp.TeeyZPw-1777859325-1.2.1.1-X1KjTk_B4QW89uGAeTSgCefC4xRsqwgfQ9wT7XsTjPVryTOQ_3eWFq1m83HD7J8H',cITimeS: '1777859325',cRay: '9f63d84f6ba58427',cTplB: '0',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/backend-api/codex/analytics-events/events?__cf_chl_tk=RUx7ckoidxFhtX6anDkSYi9rBNZGTl1quQemuj5ZOFs-1777859325-1.0.1.1-kGMek_Kpt5dVaAUSS7IeecA02MZ1YvM1HYNMVcAOJtQ",cvId: '3',cZone: 'chatgpt.com',fa:"/backend-api/codex/analytics-events/events?__cf_chl_f_tk=RUx7ckoidxFhtX6anDkSYi9rBNZGTl1quQemuj5ZOFs-1777859325-1.0.1.1-kGMek_Kpt5dVaAUSS7IeecA02MZ1YvM1HYNMVcAOJtQ",md: 'uD7WIe9ObGnjkpHdaTmVFXJqt16DX6fBoulo5Qg2w.Y-1777859325-1.2.1.1-hnYBEqu9BSTpcjc3Ol5Kr1peRD0rWLKunYkqiWvANRQ5C7qyO7_HjpNZNLJWxkagsHAaOfKof4mpWoB49.OxCftNlCDE3Tmk7SgqaBM2ywG9aqGJCKDBlPXMTn8ppp5jdjMFJ0xpsKYHQbOphNt80wUmHDc.eoaps.71hTwzLbwj.HTAtVIAWPFBXjSxPTNzhowP9Seh8pUez283MjlWqkCP.lmkR7_e6qlzUZTEFxFvcV6Thz3rHd6w.w.bmpNCXoya25UJKyt27FrCdlYqEhsCqDJiBhCGT0kp9NrlZVVuyNKs5THlFebKBEqhon2zi75jlbxx1DgkczqLihbz_86ajcxSGK6rRF0n6vAbMISTDmeM4Lj6aVJBsbs39BgGoEAR9A9AqeGG4taTduddrzziAfaaGgxtWe2K9rTBNayR1nnD3qEBwESAw2Mkgy0wQQN6zrJxQloI0QuYwR7EsKn.YjU4j3ZkP2z5o2UmQOgOZZ.2lGEBBl2D8NhwfzowTu2DpvEW6d_oCed4MERvrkZTRdy3QhRHmHWY9EY.2vsbszQoqWA0enST0uMYbym55kjYcBbBpfhcnnKDtn2_pMpaxkHgMoaCiW90ug7h3y.78WLiMvmlPklCG6.rUAUD_RZerKmzqXvrNfAxNdB_hnAbeXfoWvDrZgjlHKndtmdTMAssTZ0tRutTAvjznApfjz4bf5AV5W8tA1ksc.ho6sD3NPouLcz_FJkb3B0MB9mzpXajQ6yqtRm1YwNPlzBQNq9Iy3avpcR8EzbCN1AmUnMql7PZav5VX9gElg0LHiGoNenSQM3nMdDyaolXvOzXo1w0cBnl9WeE56TwCWz88GImZKgz8C2rrDGWSNddMaHhX9vMKYn96zQXyo7ZY1tEBekqXUsWPH1l4V4YqTDp4Fg3KFrLm4haIprpi28S4xprr93hSmEoQQj9XzVq4wMe.PIbYHUhs2gVgLrNH0le8EBRjQf7xLQkkJVLahb8CAT114.y.L7ZfEJAFU9Vq.zja43aE4A.u9WGfHkbO9hQMA5BmvHtBkFzkVqH.bqYF7ypL47q1BINXSI7t0ogKBOgFvOjwI76SENfgv5D8_rVvg',mdrd: 'BewqgVfIpX6faJx0EupMQL6Adv6eeSYVpCFiCZHkk8E-1777859325-1.2.1.1-fqBeRHDRNY5QRUtdafgKx9g8H5DolQLYKFVtFGcnEnVEqNUZuyDu7vUXsaWKH6ESCwSkZlh06eHuTfaPQ8XmcRSPoZVRBrjNoEif0MUyNVOwHiotSRTLl6jkCvCofQv4UBQA8l.bJ11IzgtaYzMaOE7Z3jcIj_Uq2WSP56eEqfrYjtmO9KLWzHdnW4wUF13QfxaEIS3NMvF4Yji156sds.Unilopikt83IxGLgl9RnMGzd1QyBIgmv6E8L0LCkmu16LUyTqAMN21WGYFUOnQXhyZWVBFBfggusARWP55ibr4fAvDnWR2QYQ8NEn_Xp9weCHtL.Pnpdhfmn5fCD2zPXVblRX2FMmQ5hXZ4T0JyYXxYI27PFnn3e0mSOWD6x4mf12lP1b7mjrTIyeGBAXba0XoOUd3xB47Lyr7hIYqYtOodsxrI5eKisq.nhFTWuLhUFKEH.3HCzvBRqbTw5qThKqFpRti14a4cIsX2e4UgyTC0fYOhRTNZodgqVTTmOtUbRuj_HItXHHHsRwlMqz3N8Y09QZcc6gaD_XwHrfB8U3eshwqJy8lz7tGa5fm8sAPnZK4g7GaC3BV4D5PeVDbAYmBAcc_KfnxuehrtyutjFmY0.Ye3w56Y__y_j6jSXFbY5ZNxs1yRlO0TaxCJnePueMzwEsffA5thml0IZDMAQK8HQUCeXG6XSWo6fHjTfyCFh3qsJcOHehUwcVQi80.yeBCBcDuLcCpnHcCFxbO5SYaokgbSLpRfjNVHOXmsbAr0XWJoYbFkDgkHgCIdnjOS0eKS1u9aCvfCW5JgBcYciuVIot29R9RYzJEauqkdOIuDEkeRxjDrc_tX9K_9UDdFsZPNc7fmS0E.JdYzqlcJZS0e0A9k.5sTPC59uI_T9WzFnbjXyDRY4NNGcCyd5Da7LxfpvxdoL.v0cVMobfq_f93Iu9spmOKOShjCtB6hqSO_N0gG4qTGnGNcB0C8iOP8SqM98hmo5tdrwmUHM5r7HAnNfHPJMTi.2CorQOwrlh7eULq.B0kbdxeqk0eeAaSWpe.5c0sClrtbI8sKsiclKA6B0X82.Nf.9dGEB4QYLAqNM8lJsk8nTU_EinaIzj6dj.3wcw3dh4P3gWDHb8dOJqU764fvn2oSizqF1QmMnVhq9y9XoSCECNB4WecaS9q.R_6clhYmEPkaCq0aD2acIR9jPe25Wlhmk0HOX4OETAkCoEasuFNNa8FLz243cjinsV9sDbP2T_5.EUyJQ1ff62BDNn8k88SAbcf57Bhc8PIDbQ6UbL1qyNIctDMHkE6IYHJNHifUyDVSawBU1DfRn5tngQc.xmoTCT4MKux2WZ0Ih4ao48bzIauXdXH1ga2MZ4gWaAfP6QW4QCbvQrHQxkcrs2qXkF7EPJOMyb3XGxtRUO1Ktur8._8m92IuDr0_fwCd9Ff5ubXIBOpV270Z03Hx2Q08x4j7jDs4QKfmEKo6aHKR3.KCGjeF2lCXwiIa59QXGoXOr9GL0rq3qZTqEJa8WdRo3ER67D9NgfjBVZyAEGJjEHW9_2WRM1dlFKv2Tgynng5Q3eB_yKPoaDTfuP.xQQBEd7qt.r8oQjd51ZPP5q_bkmhidBcZUiy.zF9r9zCaZdBacj76MmwwVmURGVSxEFe7dNos90Y2u9L0.bJAKerLqXiETSyxhfrkqDFhI6Z2CdGliARD6_VtF31x9WWEuHWBavZ2svfUgbet40T65x_VVeFYbqGnY.1OJ89dXV1AHrGqfoWZSjU0jz_b2hS0B1xNjooY3qcjYklnN3vpmJ8z9Fc.dM4BHXADq1YA9tRgCwsLFJKeprkmemeg1VRIuWIFAEsn_rYSc4g6eACaSTyPGwdEB6dIzGF.1k8mdLRjTIyeyLBjOOSuWyU0oeKa9k9maahcg5nQXZvdIzJy.l1VI.Jl8ihX7ksDfAFSd2CjACAf5YntoCozw0MJNw5P_ghkaHOwRiz.7CTDDlNT6sLQITY8n5kjO4fAd.cQp6_SoWq7laJWQNA8wFQn2JeJtWGQEqO6Z_sMapyGNOmMi2Lz3h8OHff4owH2zhKNSTq8rZd3F4EhXGYkO6SoI9QlqiWGUI1cmO18SVd5YC_a3zp.FGTz7.DiHSUrak83LcTT5DUeUqIKsZMPd8eFFaO9dF8T.LrsiHkCHUjoO5.MAB9jdT8sS1gw0CFO8lweSlO5OnsaynT_y6q9TUhIc5dScZSHjGBYk9Uotc6IpyEwuavskuRAXaXZE8PhnTpyZppaCQYFO0NMBSROy7BytbWShjYsjslbi9IulbzLQWNBHBOkoaaZv7tERF1J0CxYL5wj19Ga6bkEJt_SaC54GBWuox8Ypo0X5I15r3AKASdN1KqyHEDEmY1xKfISeOnaptUlXxZaxYEJYdJEh2LKEQZYiqootPBaIe3nx7SzP0myTh61nBowYpItEdC4oTaiYkR_9ExMXH.QrhbkJS6szBPoXAmRfvu2QAytq8OnwifSH11SxSllqTPC33VftHgBp6han6f1wPWwd039MU7bLKKFYHzauqbQ_keuYpHBJMyOZaTsjdOFiEZS10lbRTJ9Q19JpyezoGu0rU5mNT_VPKlv0OGllSpe91V8VhQB4oBRevh5ou96hpnxPJtZVmx81lwsiD53ENvyiIwu0XCoMPVX0rbRqMBcqU4WIgqkwBf',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9f63d84f6ba58427';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=RUx7ckoidxFhtX6anDkSYi9rBNZGTl1quQemuj5ZOFs-1777859325-1.0.1.1-kGMek_Kpt5dVaAUSS7IeecA02MZ1YvM1HYNMVcAOJtQ"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>
+    </div>
+  </body>
+</html>
+
+2026-05-04T01:48:45.570880Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+2026-05-04T01:48:51.979770Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-04T01:48:51.981147Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-04T01:48:52.002444Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:52.002475Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:52.003556Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:52.003584Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:52.004297Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:52.004325Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:52.004815Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:52.004832Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:52.005425Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:52.005436Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:52.006519Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:52.006532Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.258973Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-04T01:48:53.259294Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-04T01:48:53.283237Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.283292Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.285861Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.285914Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.287692Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.287720Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.289403Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.289445Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.291069Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.291108Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.293941Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.293960Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+我會按「官方限制」只抓官方文件或官方政策頁，避免把論壇抱怨混進來。因為你要求原文摘錄，我會控制每個來源只摘短句，剩下用「整理說明」對應來源。
+web search: 
+web search: LINE Messaging API official limitations rate limits quota bot group chat restrictions
+web search: 
+web search: site:core.telegram.org/bots Telegram Bot API limitations privacy mode groups official
+web search: 
+web search: site:developers.line.biz/en/docs/messaging-api Messaging API rate limits quota official
+web search: 
+web search: site:discord.com/developers/docs policies app review bot automated moderation AI official
+web search: 
+web search: site:docs.slack.dev Slack AI app policies official API data AI bot restrictions
+web search: 
+web search: https://developers.line.biz/en/docs/messaging-api/group-chats
+web search: 
+web search: https://core.telegram.org/bots/features
+web search: 
+web search: https://slack.com/intl/en-gb/terms-of-service/api
+web search: 
+web search: https://docs.discord.com/developers/topics/rate-limits?source=post_page---------------------------
+web search: 
+web search: https://core.telegram.org/bots/features
+web search: 

@@ -1,0 +1,223 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019e0ca6-65e8-7012-8507-b4b11539fd64
+--------
+user
+搜尋主題：個人創作者多平台社群中控台 Claude Code 發文排程 IG Threads YouTube TikTok 留言收集 數據分析 競品研究 自動化
+角度：個人自用級多平台社群中控架構建議與限制(API quota審查留言數據抓取競品分析法律與TOS)
+
+任務：從「個人自用級多平台社群中控架構建議與限制(API quota審查留言數據抓取競品分析法律與TOS)」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 個人自用級多平台社群中控架構建議與限制(API quota審查留言數據抓取競品分析法律與TOS)：個人創作者多平台社群中控台 Claude Code 發文排程 IG Threads YouTube TikTok 留言收集 數據分析 競品研究 自動化
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-09T12:11:33.090136Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先用公開網頁查最新官方文件與政策頁，優先抓 API quota、留言讀取、發文、競品資料抓取與 TOS/legal 限制；摘錄會控制在短句，避免超過來源引用限制。
+web search: 
+web search: Instagram Graph API comments publishing rate limits official Meta 2026
+web search: 
+web search: site:developers.facebook.com/docs/instagram-platform Instagram API content publishing limit comments insights rate limit
+web search: 
+web search: developers.facebook.com Instagram Graph API content publishing 100 posts 24 hours comments insights
+web search: 
+web search: 
+web search: 
+web search: developers.facebook.com/docs/threads/overview Threads API publishing replies insights rate limits
+web search: 
+web search: Threads API official docs replies insights publishing rate limits 250 posts 24 hours
+web search: 
+web search: TikTok terms of service automated data collection scraping API automated means
+codex
+# 個人自用級多平台社群中控架構建議與限制(API quota審查留言數據抓取競品分析法律與TOS)：個人創作者多平台社群中控台 Claude Code 發文排程 IG Threads YouTube TikTok 留言收集 數據分析 競品研究 自動化
+
+## 來源列表
+1. [YouTube Data API — Quota and Compliance Audits](https://developers.google.com/youtube/v3/guides/quota_and_compliance_audits) — 2025
+2. [YouTube Data API — Quota Calculator](https://developers.google.com/youtube/v3/determine_quota_cost) — 2025-12-04
+3. [YouTube API Services — Developer Policies](https://developers.google.com/youtube/terms/developer-policies) — 2025
+4. [TikTok for Developers — Rate Limits on API Requests](https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit/) — 未標示；查詢日 2026-05-09
+5. [TikTok Content Posting API — Direct Post](https://developers.tiktok.com/doc/content-posting-api-reference-direct-post) — 未標示；查詢日 2026-05-09
+6. [TikTok Content Sharing Guidelines](https://developers.tiktok.com/doc/content-sharing-guidelines/) — 未標示；查詢日 2026-05-09
+7. [TikTok Research API FAQ](https://developers.tiktok.com/doc/research-api-faq) — 未標示；查詢日 2026-05-09
+8. [TikTok Developer Terms of Service](https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en) — 2024-03-21
+9. [Meta Automated Data Collection Terms](https://www.facebook.com/apps/site_scraping_tos_terms.php) — 2024-10-07
+10. [Meta Terms of Service](https://www.facebook.com/terms) — 2025-01-01
+11. [Instagram Help Center — About Instagram Insights](https://www.facebook.com/help/instagram/788388387972460) — 未標示；查詢日 2026-05-09
+12. [Instagram Platform — IG User Media, archived developer docs](https://archive.ph/2025.12.31-074218/https%3A/developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media) — 2025-12-31 archive
+13. [TechCrunch — Threads API docs / access](https://techcrunch.com/2024/04/08/metas-x-competitor-threads-invites-developers-to-sign-up-for-api-access-publishes-docs/) — 2024-04-08
+14. [Emplifi Docs — Threads Publishing](https://docs.emplifi.io/platform/latest/home/threads-publishing) — 未標示；查詢日 2026-05-09
+
+## 原文摘錄
+
+### 來源 1
+> “default quota allocation of 10,000 units per day”
+
+### 來源 2
+> “All API requests, including invalid requests, incur a quota cost of at least one point.”
+
+### 來源 3
+> “You and your API Clients must not... scrape YouTube Applications or Google Applications”
+
+### 來源 4
+> “Request rate calculation is based on a one minute sliding window.”
+
+### 來源 5
+> “Each user access_token is limited to 6 requests per minute.”
+
+### 來源 6
+> “Unaudited API Clients can only post contents in `SELF_ONLY` viewership.”
+
+### 來源 7
+> “I am a creator, advertiser, or commercial user. Am I eligible for access to the Research Tools? No.”
+
+### 來源 8
+> “exceeds reasonable request volume, constitutes excessive or abusive usage”
+
+### 來源 9
+> “You will not engage in Automated Data Collection without first obtaining Meta’s express written permission”
+
+### 來源 10
+> “You may not access or collect data from our Products using automated means”
+
+### 來源 11
+> “Insights are free and available only for business or creator accounts.”
+
+### 來源 12
+> “Containers expire after 24 hours”
+
+### 來源 13
+> “planned for June”
+
+### 來源 14
+> “The Threads API allows only 250 posts within 24 hours.”
+
+## 關鍵重點（你的整理說明）
+
+- YouTube 適合接官方 API 做自有頻道留言、影片、數據與部分管理，但核心限制是每日 10,000 quota、每個 method 成本不同，擴額要合規審查。（來源 1、2）
+- YouTube 競品研究不能靠 scraping 當主路徑；官方政策明確禁止直接或間接 scrape YouTube/Google apps。（來源 3）
+- TikTok 個人自用發文自動化限制很硬：Direct Post 未審核 client 只能 private/self-only，正式公開發文需 audit；單一 user token 初始化發文每分鐘 6 次。（來源 5、6）
+- TikTok Research API 不是給創作者、廣告主、商業用戶做競品研究的通道；FAQ 直接排除 creator / advertiser / commercial user。（來源 7）
+- TikTok 一般 Display API 有每分鐘滑動窗口 rate limit；可取 creator profile / video metadata，但不是完整留言與競品情報中控的萬能入口。（來源 4）
+- Meta / Instagram / Threads 方向要以官方 API 與授權資料為主；Meta TOS 與 Automated Data Collection Terms 都明確限制未授權 automated collection。（來源 9、10）
+- Instagram Insights 只給 business 或 creator account；所以個人創作者中控台若要 IG 數據，帳號型態要先轉 professional。（來源 11）
+- Instagram 發文 API 是 container → publish 流程，container 24 小時過期；自建排程要自己保留任務佇列與失敗重試。（來源 12）
+- Threads API 已開放第三方整合，能做發文、回覆管理與 insights；但公開資料中可確認的限制是 24 小時 250 posts。（來源 13、14）
+
+## 不確定點
+
+- Claude Code 作為「個人社群中控台調度器」本身沒有找到社群平台官方文件直接提及；無資料。
+- IG / Threads 官方 developer docs 部分頁面本輪搜尋可見性不穩，Threads 的 250 posts/24h 使用第三方文件佐證，仍建議實作前以 Meta Developer Console 內實際 app review / endpoint 文件複核。
+- TikTok 留言大規模抓取若不是合格非營利研究者，官方 Research API 不支援；一般 creator / commercial use 的可行官方替代方案，本輪查到資料不足。
+tokens used
+71,725
+# 個人自用級多平台社群中控架構建議與限制(API quota審查留言數據抓取競品分析法律與TOS)：個人創作者多平台社群中控台 Claude Code 發文排程 IG Threads YouTube TikTok 留言收集 數據分析 競品研究 自動化
+
+## 來源列表
+1. [YouTube Data API — Quota and Compliance Audits](https://developers.google.com/youtube/v3/guides/quota_and_compliance_audits) — 2025
+2. [YouTube Data API — Quota Calculator](https://developers.google.com/youtube/v3/determine_quota_cost) — 2025-12-04
+3. [YouTube API Services — Developer Policies](https://developers.google.com/youtube/terms/developer-policies) — 2025
+4. [TikTok for Developers — Rate Limits on API Requests](https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit/) — 未標示；查詢日 2026-05-09
+5. [TikTok Content Posting API — Direct Post](https://developers.tiktok.com/doc/content-posting-api-reference-direct-post) — 未標示；查詢日 2026-05-09
+6. [TikTok Content Sharing Guidelines](https://developers.tiktok.com/doc/content-sharing-guidelines/) — 未標示；查詢日 2026-05-09
+7. [TikTok Research API FAQ](https://developers.tiktok.com/doc/research-api-faq) — 未標示；查詢日 2026-05-09
+8. [TikTok Developer Terms of Service](https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en) — 2024-03-21
+9. [Meta Automated Data Collection Terms](https://www.facebook.com/apps/site_scraping_tos_terms.php) — 2024-10-07
+10. [Meta Terms of Service](https://www.facebook.com/terms) — 2025-01-01
+11. [Instagram Help Center — About Instagram Insights](https://www.facebook.com/help/instagram/788388387972460) — 未標示；查詢日 2026-05-09
+12. [Instagram Platform — IG User Media, archived developer docs](https://archive.ph/2025.12.31-074218/https%3A/developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media) — 2025-12-31 archive
+13. [TechCrunch — Threads API docs / access](https://techcrunch.com/2024/04/08/metas-x-competitor-threads-invites-developers-to-sign-up-for-api-access-publishes-docs/) — 2024-04-08
+14. [Emplifi Docs — Threads Publishing](https://docs.emplifi.io/platform/latest/home/threads-publishing) — 未標示；查詢日 2026-05-09
+
+## 原文摘錄
+
+### 來源 1
+> “default quota allocation of 10,000 units per day”
+
+### 來源 2
+> “All API requests, including invalid requests, incur a quota cost of at least one point.”
+
+### 來源 3
+> “You and your API Clients must not... scrape YouTube Applications or Google Applications”
+
+### 來源 4
+> “Request rate calculation is based on a one minute sliding window.”
+
+### 來源 5
+> “Each user access_token is limited to 6 requests per minute.”
+
+### 來源 6
+> “Unaudited API Clients can only post contents in `SELF_ONLY` viewership.”
+
+### 來源 7
+> “I am a creator, advertiser, or commercial user. Am I eligible for access to the Research Tools? No.”
+
+### 來源 8
+> “exceeds reasonable request volume, constitutes excessive or abusive usage”
+
+### 來源 9
+> “You will not engage in Automated Data Collection without first obtaining Meta’s express written permission”
+
+### 來源 10
+> “You may not access or collect data from our Products using automated means”
+
+### 來源 11
+> “Insights are free and available only for business or creator accounts.”
+
+### 來源 12
+> “Containers expire after 24 hours”
+
+### 來源 13
+> “planned for June”
+
+### 來源 14
+> “The Threads API allows only 250 posts within 24 hours.”
+
+## 關鍵重點（你的整理說明）
+
+- YouTube 適合接官方 API 做自有頻道留言、影片、數據與部分管理，但核心限制是每日 10,000 quota、每個 method 成本不同，擴額要合規審查。（來源 1、2）
+- YouTube 競品研究不能靠 scraping 當主路徑；官方政策明確禁止直接或間接 scrape YouTube/Google apps。（來源 3）
+- TikTok 個人自用發文自動化限制很硬：Direct Post 未審核 client 只能 private/self-only，正式公開發文需 audit；單一 user token 初始化發文每分鐘 6 次。（來源 5、6）
+- TikTok Research API 不是給創作者、廣告主、商業用戶做競品研究的通道；FAQ 直接排除 creator / advertiser / commercial user。（來源 7）
+- TikTok 一般 Display API 有每分鐘滑動窗口 rate limit；可取 creator profile / video metadata，但不是完整留言與競品情報中控的萬能入口。（來源 4）
+- Meta / Instagram / Threads 方向要以官方 API 與授權資料為主；Meta TOS 與 Automated Data Collection Terms 都明確限制未授權 automated collection。（來源 9、10）
+- Instagram Insights 只給 business 或 creator account；所以個人創作者中控台若要 IG 數據，帳號型態要先轉 professional。（來源 11）
+- Instagram 發文 API 是 container → publish 流程，container 24 小時過期；自建排程要自己保留任務佇列與失敗重試。（來源 12）
+- Threads API 已開放第三方整合，能做發文、回覆管理與 insights；但公開資料中可確認的限制是 24 小時 250 posts。（來源 13、14）
+
+## 不確定點
+
+- Claude Code 作為「個人社群中控台調度器」本身沒有找到社群平台官方文件直接提及；無資料。
+- IG / Threads 官方 developer docs 部分頁面本輪搜尋可見性不穩，Threads 的 250 posts/24h 使用第三方文件佐證，仍建議實作前以 Meta Developer Console 內實際 app review / endpoint 文件複核。
+- TikTok 留言大規模抓取若不是合格非營利研究者，官方 Research API 不支援；一般 creator / commercial use 的可行官方替代方案，本輪查到資料不足。

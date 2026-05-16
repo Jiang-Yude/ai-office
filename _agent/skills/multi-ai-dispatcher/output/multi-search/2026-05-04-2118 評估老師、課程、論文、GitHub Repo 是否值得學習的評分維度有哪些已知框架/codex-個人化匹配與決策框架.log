@@ -1,0 +1,646 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019df323-83f1-7313-b4a2-3e30fdbc219f
+--------
+user
+搜尋主題：評估老師、課程、論文、GitHub Repo 是否值得學習的評分維度有哪些已知框架
+角度：個人化匹配與決策框架
+
+任務：從「個人化匹配與決策框架」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 個人化匹配與決策框架：評估老師、課程、論文、GitHub Repo 是否值得學習的評分維度有哪些已知框架
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-04T13:18:05.333403Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先快速讀本知識庫的本地規則，接著用網路搜尋找可引用來源；這次只整理有 URL 的原文摘錄，避免把推論混進資料包。
+exec
+/bin/bash -lc "sed -n '1,220p' CLAUDE.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+exec
+/bin/bash -lc "sed -n '1,220p' _agent/skills/personal-director-v90/SKILL.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+exec
+/bin/bash -lc pwd in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+
+ succeeded in 118ms:
+## 執行模式判斷原則
+
+### 機械性動作：直接做，不研究
+
+「排工作」「開看板」「開卡」「快速開卡」「加截止日」等看板操作 → 直接執行，不讀專案背景、不查相關資料夾、不做脈絡研究。
+
+所需最少步驟：拿時間戳 → 讀看板 → 寫卡／更新看板。不需要載入雷總管 SKILL.md，CLAUDE.md 本身的規則已足夠。
+
+只有使用者明確說「查資料」「研究一下」「幫我了解」，才進行探索性工具呼叫。
+
+**Why:** 過度研究讓簡單任務變成多輪工具呼叫，浪費時間、增加誤判風險。
+
+---
+
+## 路由規則
+
+### 技能包優先順序
+
+1. 先檢查 `_agent/skills/` 有沒有本地技能包 → 有的話用 Read 工具直接讀取
+2. 本地沒有，才調動雲端（Skill 工具）
+
+本地技能包清單：
+- `personal-director-v90` → 雷總管（技能包調度、檔案管理、專案管理、標籤管理、工作日記）
+- `spring-editor` → 春總編（脆文、方格子、講座預告、深度檢查、順稿、改標題與行銷評估、社群備份、簡報）
+- `prompt-coach-v41` → 提示詞優化教練（提示詞健檢、教學、優化、建構、問題拆解）
+- `teaching-monitor` → 教學班長（課程定位、問卷與選人、課程壓測、課後整理、學習導航）
+- `solo-startup-consultant` → 商業顧問（問題定義、目標規劃、合作對齊、營運系統、復盤）
+- `marketing-consultant` → 行銷顧問（市場驗證、客戶洞察、行銷策略、行銷心理學）
+- `admin-assistant` → 行政助理（PDF 翻譯轉檔、網頁轉知識圖譜、字幕校正翻譯、逐字稿整理）
+- `openclaw-installer` → OpenClaw 安裝器（安裝、初始化、驗證、排錯 OpenClaw 龍蝦；支援 Codex／Claude Code 直接執行，Claude Cowork／反重力改走手動教學）
+- `local-speech-to-text` → 本地語音轉文字器（純安裝型技能包：安裝、驗證、排錯 Whisper／ffmpeg；支援 Codex／Claude Code 實機安裝，反重力沿用同機手動教學；以手動指定啟動為主）
+- `bookkeeping` → 記帳（個人接案收入記帳、稅務分類、扣繳記錄、9A/9B、年度對帳）
+- `ani-assistant` → 阿妮助理（Ani 相關內容收納、短影音拍攝指令、口吻文案、設定備忘與版本管理）
+- `codex-threads-backup` → Codex 爬脆文模式（Threads 補檔、補發文看板、截圖補救、Obsidian 歸檔）
+- `threads-centaur-scout` → Threads 半人馬海巡（搜尋適合回應的貼文、產出候選回應胚胎、不代發不套版）
+- `trend-scanner` → 趨勢掃描（YouTube RSS、新聞 RSS、Product Hunt、Hacker News；三梯隊架構；手動觸發 + 排程自動）
+- `video-downloader` → 抓影片技能包（Loom、公開分享頁影片、mp4、m3u8/HLS 串流抓取與封裝）
+- `web-data-capture` → Codex 網路抓資料技能包（文章、影片、字幕、頁面原始碼、播放器來源的統一抓取入口）
+- `web-deep-research` → 網路資料深度研究（認真上網查、多輪搜尋、來源分級、交叉驗證、研究報告）
+- `multi-ai-dispatcher` → 風組長（多模型分工、交叉驗證、搜尋與整合拆工、cross-check 材料包）
+- `file-to-markdown` → 檔案轉 Markdown 轉換器（DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 轉 Markdown、統一入口路由、知識圖譜、批次轉換）
+- `ai-presentation-workflow` → AI 簡報製作流程（六階段分步驟、三層級 Prompt、簡報分類模組、搜尋策略、NotebookLM 彙整、Markdown 大綱輸出）
+- `huashu-design` → Huashu Design／花叔 Design（HTML-native 設計技能包；高保真原型、HTML 簡報、設計變體、資訊圖、動畫 Demo、MP4/GIF 輸出；適合輪播圖卡轉短影片、網頁簡報、設計方向探索；已掛載到 Claude Code；Personal Use License，商用／付費培訓需另取授權）
+- `sustainability-reporting-assistant` → 永續報告書助理（台灣主體、國際框架補充；永續報告書章節骨架、重大主題、利害關係人、揭露缺口、GRI / IFRS S1 S2 / SASB / TNFD 對照）
+- `github-ops` → GitHub 操作技能包（版控、備份、發布、半自動同步；新建 repo、掃敏感檔、寫 gitignore、commit、push、release；repo 分類前綴：my-/ai-office-/system-/digital-twin-/private-）
+- `webpage-builder` → 網頁製作技能包（江江教練品牌風格；對內草稿 Claude Code、對外精美 Claude Designer；奶茶色系設計語言、部署指南）
+- `meeting-transcript-cleaner` → 逐字稿轉檔＋清理助理（MacWhisper CLI 轉錄、逐字稿順稿、會議記錄整理；前期資料清理層，後段分析交 meeting-record-strategy）
+- `transcript-organizer` → 課程逐字稿清理組織技能包（已轉錄的原始逐字稿 → 對照課綱/簡報 → 清理為組織稿；保留原始脈絡；超詳細/很詳細/1比1 三等級；存檔時間戳+1分）
+- `notebooklm-connector` → NotebookLM 公開版連接器 v0.1.0（MIT；Claude Code & Codex 透過 MCP 連 NotebookLM；最小可用版，只做 MCP 對話查詢，砍掉個人字幕工作流）
+
+### 網頁製作觸發規則
+
+使用者說「做網頁」「做一頁」「做提案頁」「做報告頁」「做介紹頁」「對內網頁」「對外網頁」「行銷頁」「整理成網頁」「把這個做成網頁」「轉成網頁給大家看」「上 GitHub 頁面」，或情境明顯是要把內容做成可以分享的 HTML 頁面時 → 讀取 `_agent/skills/webpage-builder/SKILL.md`。
+
+分工說明：
+- 春總編的「會議報告書」模式（把會議記錄做成報告頁）仍走春總編
+- 純簡報（互動式簡報、Reveal.js）仍走春總編的簡報模式
+- 獨立的、可部署分享的 HTML 網頁 → 走 webpage-builder
+
+### Huashu Design 觸發規則
+
+使用者說「用 Huashu Design」「花叔 Design」「做 HTML 簡報」「做網頁簡報」「做動畫 Demo」「把輪播圖卡做成影片」「圖卡轉短影音」「導出 MP4」「導出 GIF」「做設計變體」「設計方向」「設計評審」「高保真原型」「iOS 原型」「互動原型」，或情境明顯是要用 HTML 產出視覺作品、簡報、動畫、短影音素材時 → 優先讀取 `_agent/skills/huashu-design/SKILL.md`。
+
+分工說明：
+- 單純網頁建置、對外網站、部署頁 → 走 `webpage-builder`
+- 內容型簡報大綱、課程簡報企劃 → 走 `ai-presentation-workflow` 或春總編
+- HTML-native 視覺產出、網頁簡報、動畫、MP4/GIF、輪播圖卡轉短影片 → 走 `huashu-design`
+- Huashu Design 授權為 Personal Use License；付費課程、商業工作坊、客戶交付、公司內部工具鏈整合前，需先提醒使用者授權限制
+
+### GitHub 操作觸發規則
+
+使用者說「同步 GitHub」「GitHub 備份」，或情境明顯涉及把技能包、知識庫系統上 GitHub（新建 repo、掃敏感檔、打包 .skill 發 release、推送技能包、跨 repo 同步）時 → 讀取 `_agent/skills/github-ops/SKILL.md`。
+
+### 檔案轉 Markdown 觸發規則
+
+使用者說「轉 Markdown」「轉 MD」「幫我轉」「轉知識圖譜」「整理成筆記」「批次轉換」「MarkItDown」，或丟入 DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 檔案說「幫我轉」→ 讀取 `_agent/skills/file-to-markdown/SKILL.md`。
+
+與 admin-assistant 的分工：
+- DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML → 走 file-to-markdown（MarkItDown）
+- PDF → 走 admin-assistant（extract_pdf.py）
+- 網頁爬取 → 走 admin-assistant（web-to-knowledge-graph）
+- 音訊 → 走 local-speech-to-text
+- YouTube → 走 notebooklm-codex-ops
+
+### 雷總管觸發規則
+
+使用者說「雷哥」「雷總管」「總管」任一詞 → 立即讀取 `_agent/skills/personal-director-v90/SKILL.md` 並以雷總管身份回應。
+
+### 龍蝦 AI 兩段觸發
+
+「更新龍蝦」「更新大鉗」「檢查龍蝦版本」→ 第一段任務（版本更新、爬資料、寫工作日誌），雷總管接手，低階模型（GPT-5.4 Mini 等級）即可。
+「分析龍蝦」「龍蝦分析一下」→ 第二段任務，基於第一段工作日誌做系統設計抽象，缺工作日誌就提醒補跑第一段。
+
+完整執行原則 → `_agent/skills/openclaw-installer/SKILL.md`（龍蝦兩段任務段落）
+
+### 換視窗交接觸發
+
+統一觸發詞：「準備交接」，分兩種輸出格式：
+
+- 「準備交接**檔案**」→ 存檔 + 輸出可貼到新視窗的推送指令（適合長、要留存）
+- 「準備交接**指令**」→ 不存檔，直接吐完整文字到對話，使用者複製貼上（適合短、快速輪替）
+
+AI 從對話脈絡自動判斷用四段模板（規劃已收尾要執行：前提 → 決策 → 避坑 → 脈絡）還是五段模板（還在規劃中要繼續想：在規劃什麼 → 已定 → 已排除 → 還卡 → 下一步）。判斷錯使用者會補一句「這是執行／規劃」再調整。
+
+完整 SOP → `_agent/skills/personal-director-v90/SKILL.md`（換視窗交接模式）
+
+### 快速開卡捷徑
+
+使用者說「快速開卡」時，直接視為最上層快捷指令，不要求額外觸發雷總管。
+
+執行原則：
+- 依內容判斷放哪個看板（約人 → 邀約看板，其他 → 工作看板）
+- 預設放今天；有指定日期就放指定日期
+- 可不開檔案，以最少追問為原則
+- 這是唯一可不開檔案的開卡例外
+
+### 發文看板專案模式
+
+主場景是發文管理。進來就預設載入春總編（`_agent/skills/spring-editor/SKILL.md`），發文看板（`00 工作台/📝 發文看板.md`）是主要操作對象。
+
+觸發詞：「上看板」「上發文看板」「發文」「排程」「已發布」「歸檔」脆文，或使用者直接丟一段脆文內容。
+
+三種操作模式（速記、草稿、正式發文）的完整 SOP → spring-editor SKILL.md（發文看板操作模式）
+
+### 新視覺頁與新簡報參考規則
+
+使用者提到 `Stitch`、`DESIGN.md`、新簡報、新視覺頁、新提案頁、新報告頁、單頁網頁設計時，預設仍由春總編處理，但先讀 `_agent/skills/spring-editor/references/20-design-reference.md`。
+
+這份 reference 只用來建立新頁面的設計語言與版面規則，不回頭覆蓋既有社群圖文卡的直式、橫式、一頁總結固定規格。社群圖文卡仍以 `_agent/skills/spring-editor/references/15-mode-social-cards.md` 為準。
+
+### 逐字稿轉錄＋清稿觸發規則
+
+使用者說「幫我轉錄」「清稿」「逐字稿整理」「會議錄音整理」「音檔整理」「m4a 整理」「mp3 整理」「wav 整理」「整理錄音」「順稿」，或給了音檔（m4a/mp3/wav/opus）說要整理成文字 → 讀取 `_agent/skills/meeting-transcript-cleaner/SKILL.md`。
+
+與其他技能包的分工：
+- 音訊純安裝／環境建置 → local-speech-to-text
+- 轉錄完後要共識分析、風險分析 → meeting-record-strategy
+- 轉錄完後要改寫脆文 → spring-editor
+- 轉錄完後要清理成課程組織稿 → transcript-organizer
+
+### 課程逐字稿清理組織觸發規則
+
+使用者說「清理這一份」「幫我清理逐字稿」「整理成組織稿」「清理課程逐字稿」，或給了一個含「原始逐字稿」的檔案說「幫我清理」時 → 讀取 `_agent/skills/transcript-organizer/SKILL.md`。
+
+**存檔命名規則**：清理版時間戳 = 原始逐字稿時間戳 + 1 分鐘，檔名用「逐字稿清理」取代「原始逐字稿」。
+
+**清理等級**（未指定預設「很詳細」）：
+- 超詳細：所有實質內容都留，連小例子都保留
+- 很詳細：重要概念、例子、故事留下，去除冗長重複
+- 1比1：幾乎原樣，只去語氣詞，不改結構
+
+### 抓字幕觸發
+
+「抓字幕」「C抓字幕」「快速抓字幕」「直接用 Codex 抓字幕」→ Codex 直接抓存刪流程。
+
+讀 `_agent/skills/notebooklm-codex-ops/SKILL.md`（完整執行原則與 nlm 指令路徑都在技能包內）。不要先走發文流程或工作看板流程。
+
+### NotebookLM 連接器分工規則（個人版 vs 公開版）
+
+兩個技能包同主題、不同對象，遇到 NotebookLM 相關需求要先判斷是給誰用：
+
+**個人版 `notebooklm-codex-ops`**（江昱德私人用，含個人 nlm 路徑、字幕整理 notebook、個人分類詞）：
+- 觸發：「抓字幕」「字幕整理」「整本 NotebookLM 拉回本地」「在我的 NotebookLM 找 X」
+- 用於江昱德自己的 NotebookLM 工作流
+
+**公開版 `notebooklm-connector`**（v0.1.0，MIT，給其他人裝，只做 MCP 對話查詢）：
+- 觸發：「給別人用的 NotebookLM 連接器」「公開版」「裝 notebooklm-connector」「打包 .skill」「發 GitHub」
+- 不做字幕批次抓存刪、不做個人化分類，只保留「裝完就能用 Claude Code / Codex 問自己 NotebookLM」
+- 待發佈到 GitHub repo `my-notebooklm-connector` + `.skill` release
+
+判斷不出時主動問使用者：「這次是處理你自己的 NotebookLM（個人版），還是要做公開版的工作（連接器）？」
+
+### Preview 使用規則
+
+- Preview 工具（`mcp__Claude_Preview__*`）只在截圖流程中使用，其他情境一律不啟動
+- 截圖完成後必須立即呼叫 `preview_stop` 關閉 Preview
+- 不做截圖的對話，不啟動 Preview
+- 已由 Hook 攔截：每次啟動 Preview 前會先詢問使用者確認
+
+### 圖卡截圖觸發規則（Claude Code 專責）
+
+使用者說「幫我截圖卡」「做圖卡」，或給了 HTML 圖文卡片並說截圖 → 用 Playwright 截圖。
+
+**「設計圖卡」與「做圖卡」的區分：**
+- 「設計圖卡」= 只給草稿規格（張數、每張標題與重點文案、風格建議），等使用者確認，**不**動 HTML、不截圖
+- 「做圖卡」= 真的產 HTML + Playwright 截圖
+- 沒指定風格 → 預設淺焙
+
+執行流程：
+1. 讀取 HTML，找到所有 `.card` 元素
+2. 用 Playwright（Node.js）逐張截圖存 PNG
+3. PNG 存到 `03 我的文章 AI 應用 與 知識管理/Threads 脆/YYYY-MM-DD-HHMM 主題名稱/01.png`、`02.png`...
+4. 資料夾名稱從脆文標題推導
+
+截圖腳本放 `/tmp/screenshot-cards.mjs`，在 `/tmp/` 下執行（已安裝 node_modules/playwright）。
+
+完整規格與腳本 → `_agent/skills/spring-editor/references/15-mode-social-cards.md`
+
+### 縮圖觸發規則（11圖片待整專用）
+
+使用者說「縮圖」時，預設視為整理 `11圖片待整/` 裡的圖片檔或資料夾，不要先全庫搜尋。
+
+執行流程：
+1. 到 `11圖片待整/` 依使用者提供的檔名、關鍵字或資料夾名稱尋找目標。
+2. 如果找到明確單一檔案或資料夾，使用 `11圖片待整/_image-converter 圖檔壓縮技能包/` 裡面的腳本處理。
+3. 如果有多個候選或找不到目標，先列出候選並詢問使用者，不要自行猜。
+4. 預設使用該資料夾內技能包的 smart 模式縮檔；這份副本成功產出 JPG 後會刪除原始非 JPG 檔。
+5. 完成後回報處理前後檔名、完整路徑與檔案大小變化。
+
+完整流程 → `11圖片待整/_image-converter 圖檔壓縮技能包/SKILL.md`
+
+### Codex 爬脆文模式觸發規則
+
+使用者說「爬脆文」「補發文看板」「Threads 補檔」「備份脆文」等相關表述 → 讀取 `_agent/skills/codex-threads-backup/SKILL.md`。
+
+### Threads 半人馬海巡觸發規則
+
+使用者說「海巡」「幫我海巡」「脆上找貼文」「找適合我回的貼文」「Threads 回應建議」「不要代發」「半人馬社群」等相關表述 → 讀取 `_agent/skills/threads-centaur-scout/SKILL.md`。
+
+核心邊界：
+
+ succeeded in 123ms:
+---
+name: personal-director-v101
+description: 個人總管（雷總管／雷哥）v10.1 - AI 個人管理中樞，地端雲端統一版。五個核心能力：技能包調度管理、檔案管理（兩套命名系統、放置規則、歸檔）、專案管理（看板管理、Obsidian ↔ Notion 雙向同步、即時同步、月底換板）、標籤管理（四維度受控詞彙、標註校正）、工作日記。v10.1 新增：日曆操作規則（改期用修改不用新建刪舊）、完整破壞性操作安全規則（垃圾桶機制、安全改檔流程、Hook 防護）、新使用者環境初始化（安全網自動建置 + 使用習慣偵測三種方式）。自動偵測執行環境（Cowork 地端 / Claude.ai Project 雲端），切換對應行為。當使用者說「雷哥」「雷總管」「總管」「新開專案」「我現在該做什麼」「專案狀態」「更新專案」「今天要做什麼」「加到看板」「開卡」「快速開卡」「先快速記」「先記到看板」「月底換板」「同步看板」「這個想法跟 XX 有關」「我有哪些工具」「整理卡片關係」「輸出狀態」「整理檔案」「這個放哪裡」「歸檔」「檢查檔名」「幫我標標籤」「檢查標籤」「統一關鍵字」「受控詞彙」「更新受控詞彙」「寫工作日記」「記錄工作」「整理成工作日記」或任何涉及技能包調度、檔案管理、專案管理、標籤管理、工作日記的請求時觸發。即使使用者沒有明確說觸發詞，只要情境涉及任務追蹤、進度管理、檔案整理、標籤歸類，都該使用這個技能包。
+---
+
+# 個人總管（雷總管／雷哥）
+
+> 為什麼叫「雷」？
+> 設定得好，雷厲風行。快速精確，嚴格管理每個員工技能包，不讓任何環節拖泥帶水。
+> 設定得不好，就是一顆地雷。判斷亂、調度差，踩到才知道炸在哪。
+> 所以雷總管的表現，取決於你願意花多少時間校準他。
+
+經理角色。CLAUDE.md 是最上層的路由器，雷總管是規則更細的第二層。
+
+CLAUDE.md 說「什麼情況找哪個技能包」，雷總管說「找到之後怎麼協調、怎麼判斷、怎麼追蹤」。
+
+其他技能包是員工，各自有專業。雷總管不存員工的規則，但知道什麼時候該叫誰來做事。
+
+---
+
+## 環境偵測與行為切換
+
+雷哥同時支援兩種環境，啟動時自動判斷：
+
+| 判斷條件 | 環境 |
+|---------|------|
+| 能讀寫檔案系統（有 Read/Write/Edit 工具） | 地端（Cowork） |
+| 無法操作檔案、只有對話 | 雲端（Claude.ai Project） |
+
+### 環境差異對照
+
+| 項目 | 地端（Cowork） | 雲端（Claude.ai Project） |
+|------|---------------|--------------------------|
+| 檔案操作 | 直接讀寫 Obsidian .md | 無法操作，改用對話紀錄 |
+| 狀態保存 | 寫入 SKILL.md 狀態區 | 每次對話結束前輸出狀態，下次貼回來 |
+| 看板操作 | 直接編輯看板檔案 + Notion 雙向同步 | 在對話中維護看板內容 |
+| 員工調度 | 自動載入其他技能包 | 需另外上傳或提醒使用者切換環境 |
+| 專案助理 | 各自獨立 SKILL.md | 全部寫在狀態區裡 |
+| references | 分檔存放，按需載入 | 內容已嵌入本檔附錄 |
+
+核心邏輯完全相同，只是操作介面不同。
+
+### 雲端版狀態接力規則
+
+Claude.ai 的對話不跨對話保存狀態。所以：
+
+1. 每次對話結束前，使用者說「輸出狀態」→ 雷哥輸出完整狀態區
+2. 下次對話開頭，使用者把狀態貼回來 → 雷哥接手繼續
+3. 如果使用者沒貼狀態就開始對話 → 雷哥主動問「要不要貼上次的狀態？」
+
+地端不需要狀態接力，狀態直接寫在檔案裡。
+
+---
+
+## 語意卡片的三層結構
+
+卡片 = 一個檔案（最小單位的知識點）
+卡片盒 = 一個 Skill（一個資料夾，內含多張卡片，構成完整功能）
+卡片櫃 = 多個 Skill 共同運作（總管 + 多個助理 = 一個卡片櫃）
+
+總管管的是一個卡片櫃。獨立的工具類、框架類技能包各自是獨立的卡片盒，總管不管轄，但知道它們存在。
+
+## 四個核心能力
+
+1. **技能包調度管理**：知道什麼時候該叫誰、哪些員工技能包各自擅長什麼
+2. **檔案管理**：兩套命名系統、放置位置規則、歸檔與備存、技能包資料夾結構
+3. **專案管理**：建立和更新專案助理、緊急性追蹤、看板日常操作、延遲追蹤、月底換板、Notion 雙向同步（地端）、跨卡片關聯索引、卡片檢索
+4. **標籤管理**：四維度受控詞彙、標註模式、校正模式
+
+任何顧問方面的建議、策略分析、決策判斷，都交給對應的顧問類技能包處理，不是總管的職責。
+
+雷總管只記錄，不分析。包含：
+- 會議記錄整理 → 只負責歸檔、拆看板卡片
+- 跨次比對、向量分析、策略判斷 → 交給會議紀錄技能包或顧問類工具
+- 這條邊界不因情境改變，使用者要分析時，另外觸發對應工具
+
+## 員工調度表
+
+雷哥不存員工的規則細節，只記錄「什麼時候該叫誰」。
+
+| 什麼時候 | 叫誰（技能包） |
+|---------|--------------|
+| 寫文章、脆文、方格子、改標題、換受眾、備份方格子、社群備份、補圖、做簡報、互動式簡報 | 春總編／小春（spring-editor） |
+| 寫工作日記、記錄工作、整理成工作日記 | 雷總管自己處理（references/journal-format.md） |
+| 更新龍蝦 AI、更新龍蝦、檢查 OpenClaw 新版本 | 雷總管主責第一段；需要安裝排錯時調 openclaw-installer，需要外部版本研究時調風組長或網路研究 |
+| 分析龍蝦 AI、分析龍蝦、整理更新後可借鏡的機制 | 雷總管主責第二段；以前一輪工作日誌為基礎做高階判斷 |
+| 提示詞健檢、優化提示詞、教提示詞、拆解問題、釐清需求 | 提示詞優化教練（prompt-coach-v41） |
+| 定位課程、設計問卷、篩選學員、模擬新手、課程壓測、整理逐字稿做教學手冊、學習定位、文章定位、新增概念 | 教學班長／小班（teaching-monitor） |
+| 整理會議記錄 | 會議紀錄（meeting-record-strategy） |
+| 做技能包、更新技能包 | 技能包大師（skill-master） |
+| 多 AI 分工、交叉驗證、Claude/Codex/Gemini 協作、Gemini CLI 調度、cross-check | 風組長／小風（multi-ai-dispatcher） |
+| 一人公司策略、目標規劃、OGSM、營運系統、復盤、引導共識、合作對齊 | 商業顧問（business-consultant，資料夾名 solo-startup-consultant） |
+| 行銷策略、定價、市場驗證、客戶洞察、廣告投放、目標客群 | 行銷顧問（marketing-consultant） |
+| PDF 轉 Markdown、翻譯 PDF、網頁爬取存 Obsidian、校正字幕、翻譯字幕、整理逐字稿、觀點報告 | 行政助理（admin-assistant） |
+| 記帳、收到款項、入帳、報酬單、扣繳、9A、9B、勞務所得、年度對帳 | 記帳（bookkeeping） |
+| 寫專案指令、新開 Cowork 專案、設定 Project Instructions | 雷總管自己處理（references/project-instructions-guide.md） |
+
+遇到不在表上的需求 → 查卡片檢索表，或直接問使用者。
+
+雲端注意：調度員工時，如果該技能包沒有上傳到同一個 Project，雷哥改為用對話中的通用知識處理，或提醒使用者切換到有該技能包的環境。
+
+### 風組長調度前的安全邊界
+
+雷哥要調 `multi-ai-dispatcher` 前，先做一次資料判斷：
+- 如果內容涉及知識庫、客戶資料、未公開文件、技能包內容，先當成敏感資料處理
+- 敏感資料不可直接送進資料流向不明的 provider，也不可為了省額度改丟免費模型
+- 這種情況可以做分工判斷，但若要實際調度，只能用可信工具，或把外部模型限制在公開資料搜尋
+
+如果任務主要是公開資料、網路搜尋、方案蒐集，才適合把 Gemini 或其他外部 provider 放進分工。
+
+細節一律以 `multi-ai-dispatcher/references/provider-safety.md` 為準，雷哥在總管層只負責先擋一次，不負責重寫全部安全規則。涉及 Gemini CLI 的搜尋品質、來源複查、交叉驗證流程，交給風組長處理。
+
+### 通用規則
+
+每次建立、修改、搬移檔案後，必須告知使用者：
+1. 檔案名稱
+2. 檔案位置（哪個資料夾）
+3. computer:// 可點擊連結（讓使用者直接開啟檔案）
+三項都不可省略。（雲端環境無檔案操作時，此規則不適用）
+
+如果是為技能包建立結構畫布、檢索畫布、架構圖，不要真的把 `.canvas` 的 file 節點連到技能包裡的卡片或 reference 檔。這類畫布一律用純文字節點或 group 呈現檔名與結構，避免外掛自動回寫 frontmatter，錯誤覆寫技能包 YAML。
+
+### 標題與標籤用完整字
+
+檔案標題和標籤一律使用完整字，不用縮寫。例如：「Hook、CLAUDE.md、技能包」不寫成「H、C、S」。縮寫只在對話中使用。
+
+### 規則寫入位置的縮寫代號
+
+使用者指定規則要寫入哪裡時，會用縮寫：
+- H = Hook（`.claude/hooks/`）
+- C = CLAUDE.md
+- S = 相對應的技能包 SKILL.md
+- I = 專案指令（Cowork 專案的 project instructions，AI 無法直接編輯，需提供草稿給使用者手動更新）
+
+例如「寫入 C、S」= CLAUDE.md + 技能包，「寫入 H、C、S」= 三個都要，「HCSI」= 四個都要。
+
+I 的處理方式：整理好草稿文字，告知使用者哪段要加到專案指令，由使用者手動複製貼入。
+
+---
+
+### 規則寫入評估（主動推薦）
+
+使用者說出新規則、說「記住」「記下來」「以後要這樣」，或對話中自然產生了一條可重複使用的規則時，雷哥**不等使用者指定寫入位置**，主動評估後推薦。
+
+#### 評估判斷樹
+
+依序問自己四個問題：
+
+**問題一：這條規則「漏了代價高」且「靠文字規則記不住」嗎？**
+- 是 → 需要 H（Hook 自動攔截）
+- 否 → 不需要 H，繼續往下判斷
+
+判斷 H 的標準：
+- 漏了會造成資料損失、操作無法復原、或使用者曾抱怨重複犯錯
+- 屬於「每次某個動作前都要強制檢查」的類型（例如：寫入前備份、刪除前確認、發文前掃圖片）
+- 不是 H 的：操作流程說明、偏好設定、判斷邏輯、規範風格
+
+**問題二：這條規則「每次對話一開始就需要」嗎？**
+- 是 → 需要 C（CLAUDE.md）
+- 否 → 不需要 C，繼續往下判斷
+
+判斷 C 的標準：
+- 對所有對話都有效，不限特定技能包（例如：檔案命名原則、標點符號規則、時區設定）
+- 是路由規則或全域行為規範
+- 不是 C 的：特定技能包的操作細節、只在某個任務情境下才用到的規則
+
+**問題三：這條規則是某個技能包的操作細節或流程判斷嗎？**
+- 是 → 需要 S（技能包 SKILL.md）
+- 否 → 可能是新類型，問使用者
+
+判斷 S 的標準：
+- 只在某個情境觸發時才需要（例如：歸檔流程、看板操作、標籤判斷）
+- 包含完整步驟、子判斷、案例說明
+- 不是 S 的：全域原則、Hook 腳本邏輯
+
+**問題四：跨兩個以上位置嗎？**
+- 有時候一條規則同時需要 C＋S（CLAUDE.md 放一句話路由，技能包放完整細節）
+- 有時候需要 H＋C＋S（Hook 攔截 + CLAUDE.md 原則 + 技能包流程）
+- 判斷完後，列出所有需要的位置一起推薦
+
+#### 輸出方式（依複雜程度）
+
+簡單規則（單一位置、判斷明確）→ 直接說結論，不解釋理由：
+> 「這條寫 S，幫你加進去？」
+
+複雜規則（多位置、需要說明為什麼）→ 給出建議 + 一句理由：
+> 「這條建議 C＋S：CLAUDE.md 放原則，技能包放步驟細節。要這樣嗎？」
+
+有 Hook 的情況 → 一定說明為什麼需要 Hook：
+> 「這條建議加 Hook，每次執行前自動攔截，不靠記憶。要我幫你設計 shell script 嗎？」
+
+#### 等使用者確認才動手
+
+推薦完後等使用者點頭（「好」「對」「就這樣」）才實際寫入，不預先動手。
+使用者說「你決定就好」→ 直接按推薦的位置執行。
+
+### 破壞性操作安全規則（最高優先級）
+
+起因：2026-03-09 發生過 `rm -rf` 意外刪除整個 `_agent/skills/` 的嚴重事故。
+
+1. 禁止 rm -rf：禁止對 `_agent/skills/`、`05 技能包備份/`、以及任何包含多個子項目的資料夾使用 `rm -rf` 或 `rm -r`。要移除資料夾一律用 `mv` 搬到 `_trash/當天日期/`。
+2. 絕對路徑：所有 Bash 指令使用完整絕對路徑，禁止依賴變數展開（Bash 工具每次都是新 shell，變數不延續）。
+3. 破壞前預覽：刪除、搬移、覆寫前，先 `ls` 列出影響範圍，告知使用者確認。
+4. 警告即停止：看到「dangerous to operate」「Operation not permitted」等系統警告，立即停止，回報使用者。
+5. 先搬後刪（垃圾桶機制）：所有刪除都不是真刪除，是搬進 `_trash/YYYY-MM-DD/`。使用者自行決定何時清理。
+6. 安全改檔流程（複製取代法）：修改既有檔案時不直接改舊檔，順序為：複製舊檔在副本上改 → 確認新檔無誤 → 舊檔改名加「（要刪除）」→ 新檔改回原始檔名 → 舊檔搬進 `_trash/`。順序不可調換。
+7. Hook 防護：`.claude/hooks/` 的 hook 自動攔截：
+   - `protect-files.sh`：攔截所有 `rm -rf` / `rm -r` / `rm -fr`
+   - `auto-backup.sh`：Edit / Write 知識庫檔案前，自動備份到 `.自動備份/YYYY-MM-DD/HHMM_原始檔名`
+   - `check-kanban-images.sh`：更新發文看板前，掃描未歸檔截圖並警告
+   - `check-tags.sh`：寫入 .md 檔案時，兩層檢查：（1）新建檔案沒有「標籤：」行 → 警告缺漏；（2）有標籤但不在字典檔 → 警告需確認。兩者都不阻擋，只提醒
+   - 備份排除：`.自動備份/`、`.claude/`、`.obsidian/`、暫存區、新建檔案
+   - 刪除 `.自動備份` 必須先列內容再確認，不可一次刪整個資料夾
+
+8. 重複犯錯 → 引導用 Hook 解決：
+   使用者抱怨「怎麼講不聽」「又錯了」「不是上次教過了」「為什麼重複犯」時，代表 CLAUDE.md 和技能包的文字規則不夠，AI 會忘。此時主動建議用 Hook 層級設計自動檢查機制：
+   - 跟使用者確認：「這個問題要不要用 Hook 自動攔截？每次操作前自動檢查，不靠記憶。」
+   - 確認後，協助設計 shell script，掛在 PreToolUse 的對應工具上
+   - Hook 定位：放「一定不能漏、漏了代價高、光靠文字規則記不住」的檢查
+   - 設計完成後，三處同步更新：Hook 腳本 + settings.json + CLAUDE.md 的 Hook 防護清單
+
+web search: 
+web search: personalized learning resource recommendation decision framework criteria course selection teacher evaluation paper GitHub repository evaluation framework
+web search: 
+web search: multi criteria decision making framework course selection AHP learner preferences criteria
+web search: 
+web search: 2024 paper recommender system user profile explainable personalized research paper recommendation framework criteria relevance quality
+web search: 
+web search: GitHub repository adoption framework evaluate open source project health documentation community maintenance criteria 2024
+web search: 
+web search: teacher evaluation framework student learning preferences effective teaching dimensions personalized learning 2024
+web search: 
+web search: Danielson Framework for Teaching domains planning preparation classroom environment instruction professional responsibilities official
+web search: 
+web search: https://www.mdpi.com/2079-9292/15/6/1292
+web search: 
+web search: https://www.sciencedirect.com/science/article/pii/S2772662225000724
+web search: 
+web search: https://www.sciencedirect.com/science/article/pii/S156849462401353X
+codex
+# 個人化匹配與決策框架：評估老師、課程、論文、GitHub Repo 是否值得學習的評分維度有哪些已知框架
+
+## 來源列表
+1. [Personalized Course Recommendation System: A Multi-Model Machine Learning Framework for Academic Success](https://www.mdpi.com/2673-6470/5/2/17) — 2025-05-22
+2. [A deep learning framework for optimizing personalized online course recommendation and selection](https://www.sciencedirect.com/science/article/pii/S2772662225000724) — 2025-09
+3. [Soft computing techniques in multi-criteria recommender systems: A comprehensive review](https://www.sciencedirect.com/science/article/pii/S156849462401353X) — 2025-01
+4. [A global user profile framework for effective recommender systems](https://link.springer.com/article/10.1007/s11042-023-17436-w) — 2023-11-08
+5. [Higher Ed Course Design Rubric](https://www.qualitymatters.org/qa-resources/rubric-standards/higher-ed-rubric) — Current Edition: Seventh Edition
+6. [The Framework for Teaching](https://danielsongroup.org/the-framework-for-teaching/) — 2022 updates / 頁面未標示發布日
+7. [The Classroom Assessment Scoring System (CLASS)](https://www.worldbank.org/en/programs/sief-trust-fund/brief/the-classroom-assessment-scoring-system-class) — 頁面未標示發布日
+8. [Research paper recommendation system based on multiple features from citation network](https://link.springer.com/article/10.1007/s11192-024-05109-w) — 2024-07-30
+9. [Starter Project Health Metrics Model](https://chaoss.community/kb/metrics-model-starter-project-health/) — 頁面未標示發布日
+10. [OpenSSF Scorecard](https://scorecard.dev/) — 頁面未標示發布日
+
+## 原文摘錄
+
+### 來源 1
+> “The meta-function aggregates predictions to compute a final score for each course”
+
+### 來源 2
+> “Integrate semantic similarity, sentiment analysis, and cognitive classification for better recommendations.”
+
+### 來源 3
+> “The emergence of multi-criteria recommender systems (MCRS) has further enhanced user experiences and satisfaction”
+
+### 來源 4
+> “user profiles that can accurately reflect user behavior, interests, and service contexts.”
+
+### 來源 5
+> “A set of eight General Standards and 44 Specific Review Standards”
+
+### 來源 6
+> “Knowing and Valuing Students”
+
+### 來源 7
+> “emotional support, classroom organization, and instructional support.”
+
+### 來源 8
+> “integrating multiple features such as citation network of papers and collaboration network of influential authors.”
+
+### 來源 9
+> “This metrics model is designed to help people get started with four key project health metrics”
+
+### 來源 10
+> “Scorecard assesses open source projects for security risks through a series of automated checks.”
+
+## 關鍵重點
+- 個人化課程評估可拆成多模型分數：成功機率、課程匹配、先修滿足、畢業優先、建議負荷，再合成 final score。（對應來源 1）
+- 線上課程推薦的近期框架把「語意相似度、情緒分析、認知分類」納入匹配，適合評估課程內容是否貼合學習目標。（對應來源 2）
+- 通用決策框架可用 MCRS：多準則評分、權重引出、資料稀疏與多維度問題，是評估老師 / 課程 / 論文 / Repo 的共通底層。（對應來源 3）
+- 個人化匹配核心資料不是單一喜好，而是 user behavior、interests、service contexts；可轉成「我的目標、程度、偏好、限制條件」。（對應來源 4）
+- 課程品質可參考 Quality Matters：目標、評量、教材、互動、技術、支持、可近用性等設計維度。（對應來源 5）
+- 老師評估可參考 Danielson：尤其「Knowing and Valuing Students」可對應個人化匹配，不只看名氣或內容正確性。（對應來源 6）
+- 老師互動品質可參考 CLASS：情感支持、課堂組織、教學支持，適合評估教學體驗是否能讓自己學得下去。（對應來源 7）
+- 論文推薦框架常用多特徵：引用網絡、作者合作網絡、語意 / 結構關係，用來評估論文是否 relevant、high-quality、tailored。（對應來源 8）
+- GitHub Repo 值不值得投入可先看專案健康：回應時間、PR 關閉比、貢獻者集中度、發布頻率。（對應來源 9）
+- GitHub Repo 風險可用 OpenSSF Scorecard：維護狀態、漏洞、CI、SAST、分支保護、code review、危險 workflow 等。（對應來源 10）
+
+## 不確定點
+- 無資料：沒有找到一個同時覆蓋「老師、課程、論文、GitHub Repo」四類學習對象的單一通用評分框架。
+- 多數近期資料是推薦系統或品質評估框架，不是「個人學習決策」專用框架；需要整合成自己的評分表。
+- 老師評估框架多偏正式教學觀察，不一定能直接套用到 YouTube、線上課、顧問、作者型老師。
+tokens used
+87,986
+# 個人化匹配與決策框架：評估老師、課程、論文、GitHub Repo 是否值得學習的評分維度有哪些已知框架
+
+## 來源列表
+1. [Personalized Course Recommendation System: A Multi-Model Machine Learning Framework for Academic Success](https://www.mdpi.com/2673-6470/5/2/17) — 2025-05-22
+2. [A deep learning framework for optimizing personalized online course recommendation and selection](https://www.sciencedirect.com/science/article/pii/S2772662225000724) — 2025-09
+3. [Soft computing techniques in multi-criteria recommender systems: A comprehensive review](https://www.sciencedirect.com/science/article/pii/S156849462401353X) — 2025-01
+4. [A global user profile framework for effective recommender systems](https://link.springer.com/article/10.1007/s11042-023-17436-w) — 2023-11-08
+5. [Higher Ed Course Design Rubric](https://www.qualitymatters.org/qa-resources/rubric-standards/higher-ed-rubric) — Current Edition: Seventh Edition
+6. [The Framework for Teaching](https://danielsongroup.org/the-framework-for-teaching/) — 2022 updates / 頁面未標示發布日
+7. [The Classroom Assessment Scoring System (CLASS)](https://www.worldbank.org/en/programs/sief-trust-fund/brief/the-classroom-assessment-scoring-system-class) — 頁面未標示發布日
+8. [Research paper recommendation system based on multiple features from citation network](https://link.springer.com/article/10.1007/s11192-024-05109-w) — 2024-07-30
+9. [Starter Project Health Metrics Model](https://chaoss.community/kb/metrics-model-starter-project-health/) — 頁面未標示發布日
+10. [OpenSSF Scorecard](https://scorecard.dev/) — 頁面未標示發布日
+
+## 原文摘錄
+
+### 來源 1
+> “The meta-function aggregates predictions to compute a final score for each course”
+
+### 來源 2
+> “Integrate semantic similarity, sentiment analysis, and cognitive classification for better recommendations.”
+
+### 來源 3
+> “The emergence of multi-criteria recommender systems (MCRS) has further enhanced user experiences and satisfaction”
+
+### 來源 4
+> “user profiles that can accurately reflect user behavior, interests, and service contexts.”
+
+### 來源 5
+> “A set of eight General Standards and 44 Specific Review Standards”
+
+### 來源 6
+> “Knowing and Valuing Students”
+
+### 來源 7
+> “emotional support, classroom organization, and instructional support.”
+
+### 來源 8
+> “integrating multiple features such as citation network of papers and collaboration network of influential authors.”
+
+### 來源 9
+> “This metrics model is designed to help people get started with four key project health metrics”
+
+### 來源 10
+> “Scorecard assesses open source projects for security risks through a series of automated checks.”
+
+## 關鍵重點
+- 個人化課程評估可拆成多模型分數：成功機率、課程匹配、先修滿足、畢業優先、建議負荷，再合成 final score。（對應來源 1）
+- 線上課程推薦的近期框架把「語意相似度、情緒分析、認知分類」納入匹配，適合評估課程內容是否貼合學習目標。（對應來源 2）
+- 通用決策框架可用 MCRS：多準則評分、權重引出、資料稀疏與多維度問題，是評估老師 / 課程 / 論文 / Repo 的共通底層。（對應來源 3）
+- 個人化匹配核心資料不是單一喜好，而是 user behavior、interests、service contexts；可轉成「我的目標、程度、偏好、限制條件」。（對應來源 4）
+- 課程品質可參考 Quality Matters：目標、評量、教材、互動、技術、支持、可近用性等設計維度。（對應來源 5）
+- 老師評估可參考 Danielson：尤其「Knowing and Valuing Students」可對應個人化匹配，不只看名氣或內容正確性。（對應來源 6）
+- 老師互動品質可參考 CLASS：情感支持、課堂組織、教學支持，適合評估教學體驗是否能讓自己學得下去。（對應來源 7）
+- 論文推薦框架常用多特徵：引用網絡、作者合作網絡、語意 / 結構關係，用來評估論文是否 relevant、high-quality、tailored。（對應來源 8）
+- GitHub Repo 值不值得投入可先看專案健康：回應時間、PR 關閉比、貢獻者集中度、發布頻率。（對應來源 9）
+- GitHub Repo 風險可用 OpenSSF Scorecard：維護狀態、漏洞、CI、SAST、分支保護、code review、危險 workflow 等。（對應來源 10）
+
+## 不確定點
+- 無資料：沒有找到一個同時覆蓋「老師、課程、論文、GitHub Repo」四類學習對象的單一通用評分框架。
+- 多數近期資料是推薦系統或品質評估框架，不是「個人學習決策」專用框架；需要整合成自己的評分表。
+- 老師評估框架多偏正式教學觀察，不一定能直接套用到 YouTube、線上課、顧問、作者型老師。

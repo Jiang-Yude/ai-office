@@ -185,6 +185,11 @@
 | 「人格思維提煉」「把書做成 AI 顧問」「做數位分身」「提煉某某的思維」「做 AI 顧問」 | 人格思維提煉助理 | persona-mind-distiller |
 | 「真實需求調查」「客戶都說好但不買單」「Mom Test」「設計訪談問題」「驗證假設」 | 真實需求調查助理 | real-needs-investigation |
 | 「這個老師適不適合我」「這個課值得上嗎」「幫我評估這個課」「跟我工作流合不合」 | 老師課值不值得上 | teacher-fit-evaluator |
+| 「轉 Markdown」「轉 MD」「Excel 轉 CSV」「Word 轉 MD」「PDF 轉文字」「幫我轉格式」 | 格式轉換助理 | file-to-markdown |
+| 「客觀查資料」「同時查正評負評」「多角度查」「交叉比對」「多 AI 查」 | 客觀查資料助理 | multi-ai-dispatcher |
+| 「建立我的設定檔」「讓 AI 認識我」「做我的自我介紹」「工具篩選」「這個人的背景設定檔」 | 個人設定檔助理 | personal-profile-builder |
+| 「建立學習地圖」「更新學習地圖」「我現在適合學什麼」「學習體檢」「工作流地圖」 | 學習地圖助理 | learning-map-builder |
+| 「排班」「幫我排班」「班表」「輪值表」「人力安排」「活動排班」「小團隊排班」 | 排班助理 | scheduling-assistant |
 
 不在表上的需求 → 用 AI 助理的通用邏輯處理，或問使用者。
 
@@ -332,7 +337,12 @@ AI 辦公室/
 │       ├── skill-curator/              ← 技能包大總管
 │       ├── persona-mind-distiller/     ← 人格思維提煉助理
 │       ├── real-needs-investigation/   ← 真實需求調查助理
-│       └── teacher-fit-evaluator/      ← 老師課值不值得上
+│       ├── teacher-fit-evaluator/      ← 老師課值不值得上
+│       ├── file-to-markdown/           ← 格式轉換助理（Excel/Word/PDF→MD）
+│       ├── multi-ai-dispatcher/        ← 客觀查資料助理
+│       ├── personal-profile-builder/   ← 個人設定檔助理
+│       ├── learning-map-builder/       ← 學習地圖助理
+│       └── scheduling-assistant/       ← 排班助理
 │
 ├── _trash/                             ← 垃圾桶（刪除的東西搬到這裡）
 ├── 截圖示範 原始版/                     ← 練習用的截圖圖片
@@ -407,10 +417,14 @@ AI 辦公室/
 | 12 | persona-mind-distiller | 人格思維提煉助理 | 人格思維提煉、做 AI 顧問、數位分身 |
 | 13 | real-needs-investigation | 真實需求調查助理 | 真實需求調查、Mom Test、客戶不買單 |
 | 14 | teacher-fit-evaluator | 老師課值不值得上 | 這個課值得上嗎、評估老師、適不適合我 |
-| 15 | 規劃中 | 排班助理 | 排班、班表、輪值、人力安排、小團隊協作 |
-| 16 | 規劃中 | 搜尋助理 | 搜尋、上網查、多角度查、三個子代理 |
+| 15 | file-to-markdown | 格式轉換助理 | 轉 MD、Excel 轉 CSV、Word 轉 MD、PDF 轉文字 |
+| 16 | multi-ai-dispatcher | 客觀查資料助理 | 客觀查、多角度查、正評負評交叉比對 |
+| 17 | personal-profile-builder | 個人設定檔助理 | 建設定檔、讓 AI 認識我、工具篩選 |
+| 18 | learning-map-builder | 學習地圖助理 | 建學習地圖、我適合學什麼、學習體檢 |
+| 19 | scheduling-assistant | 排班助理 | 排班、班表、輪值、小團隊排班 |
+| 20 | 規劃中 | 搜尋助理 | 搜尋、上網查、多角度查、三個子代理 |
 
-**規劃中**：順稿助理、盲點助理、排班助理、搜尋助理（技能包尚未完成，對外先展示）
+**規劃中**：順稿助理、盲點助理、搜尋助理（技能包尚未完成，對外先展示）
 
 ---
 

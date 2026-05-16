@@ -1,0 +1,661 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019dfb2e-78cc-7b30-8216-9cd8e4a80657
+--------
+user
+搜尋主題：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+角度：學術研究與正面評價（多個專家交叉驗證、可證偽性、引用核查、track record）
+
+任務：從「學術研究與正面評價（多個專家交叉驗證、可證偽性、引用核查、track record）」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 學術研究與正面評價（多個專家交叉驗證、可證偽性、引用核查、track record）：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-06T02:47:01.670281Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先核對專案規則要求的 `CLAUDE.md`，接著用網路來源找「學術研究與正面評價」角度的材料。這次只做資料蒐集與摘錄，不寫入檔案。
+exec
+/bin/bash -lc 'rg -n "學術|搜尋|引用|專家|幻覺|來源" CLAUDE.md' in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+35:- `threads-centaur-scout` → Threads 半人馬海巡（搜尋適合回應的貼文、產出候選回應胚胎、不代發不套版）
+38:- `web-data-capture` → Codex 網路抓資料技能包（文章、影片、字幕、頁面原始碼、播放器來源的統一抓取入口）
+39:- `web-deep-research` → 網路資料深度研究（認真上網查、多輪搜尋、來源分級、交叉驗證、研究報告）
+40:- `multi-ai-dispatcher` → 風組長（多模型分工、交叉驗證、搜尋與整合拆工、cross-check 材料包）
+42:- `ai-presentation-workflow` → AI 簡報製作流程（六階段分步驟、三層級 Prompt、簡報分類模組、搜尋策略、NotebookLM 彙整、Markdown 大綱輸出）
+229:使用者說「縮圖」時，預設視為整理 `11圖片待整/` 裡的圖片檔或資料夾，不要先全庫搜尋。
+249:- 只搜尋、篩選、整理脈絡、提出回應胚胎
+257:### 多代理搜尋觸發規則（Claude Code 環境）
+265:_agent/skills/multi-ai-dispatcher/scripts/multi-search.sh "搜尋主題"
+270:例外：使用者明確說「你自己查」「用 WebSearch」→ 才用 Claude 內建搜尋。
+272:完整配置（含 Codex 環境的 6 代理版本）→ 風組長 SKILL.md 多代理並行搜尋段落
+276:使用者說「深度研究」「認真上網查」「做網路研究」「查資料後寫報告」等相關表述，或情境明顯需要多輪搜尋、交叉驗證時 → 讀取 `_agent/skills/web-deep-research/SKILL.md`。
+626:不再使用 YAML frontmatter tags。新建檔案不加 YAML。改用三軌制：歸屬前綴（檔名）+ wiki-link 標籤（內文）+ 檔名關鍵字（｜後面）。既有檔案的 YAML 不主動刪除，但不作為分類或搜尋依據。
+
+exec
+/bin/bash -lc "rg --files -g 'CLAUDE.md'" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+CLAUDE.md
+01 AI 辦公室 & Agent 團隊/02 GitHub 產品包/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/05 基本款雲端硬碟安裝版/Mika-基本版-v1.0（原始可編輯）/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/04 免費試用版（第一代試水溫）/CLAUDE.md
+02 鉗助理｜龍蝦AI  OpenClaw/CLAUDE.md
+01 數位分身小聚/01 數位分身小聚 GitHub 版/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/CLAUDE.md
+01 數位分身小聚/01 數位分身小聚 主系統/CLAUDE.md
+_agent/github-repos/my-vault-commands/CLAUDE.md
+05 技能包備份/2026-04-21-0930 AI 辦公室產品包 v1.1/CLAUDE.md
+05 技能包備份/2026-04-24-0130 AI 辦公室產品包 v2.0/CLAUDE.md
+05 技能包備份/2026-04-22-0006 AI 辦公室產品包 v1.2/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/tr/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/zh-CN/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/tr/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/pt-BR/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/zh-CN/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/ja-JP/examples/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/01 主系統/2026-04-08-1519 外部參考｜Everything Claude Code/docs/ko-KR/examples/CLAUDE.md
+
+exec
+/bin/bash -lc "sed -n '257,282p' CLAUDE.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+exec
+/bin/bash -lc "sed -n '1,80p' CLAUDE.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+### 多代理搜尋觸發規則（Claude Code 環境）
+
+使用者說「多代理查」「上網查」 → 預設**不**用 Claude 自己的 WebSearch（省 token），調 Codex CLI 開 3 個子代理並行查。
+
+三個預設角度：官方 / 正面評價 / 負面評價（可依主題換）。由 Codex 做最後整合。
+
+執行方式：
+```bash
+_agent/skills/multi-ai-dispatcher/scripts/multi-search.sh "搜尋主題"
+# 換角度：
+_agent/skills/multi-ai-dispatcher/scripts/multi-search.sh --angles "技術,商業,法規" "主題"
+```
+
+例外：使用者明確說「你自己查」「用 WebSearch」→ 才用 Claude 內建搜尋。
+
+完整配置（含 Codex 環境的 6 代理版本）→ 風組長 SKILL.md 多代理並行搜尋段落
+
+### 網路資料深度研究觸發規則
+
+使用者說「深度研究」「認真上網查」「做網路研究」「查資料後寫報告」等相關表述，或情境明顯需要多輪搜尋、交叉驗證時 → 讀取 `_agent/skills/web-deep-research/SKILL.md`。
+
+### 永續報告書觸發規則
+
+使用者說「永續報告書」「ESG 報告」「GRI」「重大主題」「利害關係人議合」「永續揭露」「IFRS S1」「IFRS S2」「SASB」「TNFD」等相關表述，或情境明顯是在整理公司永續揭露架構、補永續報告章節、做框架對照時 → 讀取 `_agent/skills/sustainability-reporting-assistant/SKILL.md`。
+
+### 共識分析觸發規則（原「人員態度四象限分析」升級重命名）
+
+ succeeded in 0ms:
+## 執行模式判斷原則
+
+### 機械性動作：直接做，不研究
+
+「排工作」「開看板」「開卡」「快速開卡」「加截止日」等看板操作 → 直接執行，不讀專案背景、不查相關資料夾、不做脈絡研究。
+
+所需最少步驟：拿時間戳 → 讀看板 → 寫卡／更新看板。不需要載入雷總管 SKILL.md，CLAUDE.md 本身的規則已足夠。
+
+只有使用者明確說「查資料」「研究一下」「幫我了解」，才進行探索性工具呼叫。
+
+**Why:** 過度研究讓簡單任務變成多輪工具呼叫，浪費時間、增加誤判風險。
+
+---
+
+## 路由規則
+
+### 技能包優先順序
+
+1. 先檢查 `_agent/skills/` 有沒有本地技能包 → 有的話用 Read 工具直接讀取
+2. 本地沒有，才調動雲端（Skill 工具）
+
+本地技能包清單：
+- `personal-director-v90` → 雷總管（技能包調度、檔案管理、專案管理、標籤管理、工作日記）
+- `spring-editor` → 春總編（脆文、方格子、講座預告、深度檢查、順稿、改標題與行銷評估、社群備份、簡報）
+- `prompt-coach-v41` → 提示詞優化教練（提示詞健檢、教學、優化、建構、問題拆解）
+- `teaching-monitor` → 教學班長（課程定位、問卷與選人、課程壓測、課後整理、學習導航）
+- `solo-startup-consultant` → 商業顧問（問題定義、目標規劃、合作對齊、營運系統、復盤）
+- `marketing-consultant` → 行銷顧問（市場驗證、客戶洞察、行銷策略、行銷心理學）
+- `admin-assistant` → 行政助理（PDF 翻譯轉檔、網頁轉知識圖譜、字幕校正翻譯、逐字稿整理）
+- `openclaw-installer` → OpenClaw 安裝器（安裝、初始化、驗證、排錯 OpenClaw 龍蝦；支援 Codex／Claude Code 直接執行，Claude Cowork／反重力改走手動教學）
+- `local-speech-to-text` → 本地語音轉文字器（純安裝型技能包：安裝、驗證、排錯 Whisper／ffmpeg；支援 Codex／Claude Code 實機安裝，反重力沿用同機手動教學；以手動指定啟動為主）
+- `bookkeeping` → 記帳（個人接案收入記帳、稅務分類、扣繳記錄、9A/9B、年度對帳）
+- `ani-assistant` → 阿妮助理（Ani 相關內容收納、短影音拍攝指令、口吻文案、設定備忘與版本管理）
+- `codex-threads-backup` → Codex 爬脆文模式（Threads 補檔、補發文看板、截圖補救、Obsidian 歸檔）
+- `threads-centaur-scout` → Threads 半人馬海巡（搜尋適合回應的貼文、產出候選回應胚胎、不代發不套版）
+- `trend-scanner` → 趨勢掃描（YouTube RSS、新聞 RSS、Product Hunt、Hacker News；三梯隊架構；手動觸發 + 排程自動）
+- `video-downloader` → 抓影片技能包（Loom、公開分享頁影片、mp4、m3u8/HLS 串流抓取與封裝）
+- `web-data-capture` → Codex 網路抓資料技能包（文章、影片、字幕、頁面原始碼、播放器來源的統一抓取入口）
+- `web-deep-research` → 網路資料深度研究（認真上網查、多輪搜尋、來源分級、交叉驗證、研究報告）
+- `multi-ai-dispatcher` → 風組長（多模型分工、交叉驗證、搜尋與整合拆工、cross-check 材料包）
+- `file-to-markdown` → 檔案轉 Markdown 轉換器（DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 轉 Markdown、統一入口路由、知識圖譜、批次轉換）
+- `ai-presentation-workflow` → AI 簡報製作流程（六階段分步驟、三層級 Prompt、簡報分類模組、搜尋策略、NotebookLM 彙整、Markdown 大綱輸出）
+- `huashu-design` → Huashu Design／花叔 Design（HTML-native 設計技能包；高保真原型、HTML 簡報、設計變體、資訊圖、動畫 Demo、MP4/GIF 輸出；適合輪播圖卡轉短影片、網頁簡報、設計方向探索；已掛載到 Claude Code；Personal Use License，商用／付費培訓需另取授權）
+- `sustainability-reporting-assistant` → 永續報告書助理（台灣主體、國際框架補充；永續報告書章節骨架、重大主題、利害關係人、揭露缺口、GRI / IFRS S1 S2 / SASB / TNFD 對照）
+- `github-ops` → GitHub 操作技能包（版控、備份、發布、半自動同步；新建 repo、掃敏感檔、寫 gitignore、commit、push、release；repo 分類前綴：my-/ai-office-/system-/digital-twin-/private-）
+- `webpage-builder` → 網頁製作技能包（江江教練品牌風格；對內草稿 Claude Code、對外精美 Claude Designer、**散文編輯**混搭對話框/金句/信件；奶茶色系設計語言、部署指南）
+- `web-novel-layout` → 網路小說版型技能包（連載小說、章回體、長篇敘事；繼承散文編輯版型四元件＋連載系統：章節封面、上下章導航、閱讀進度條、目錄頁；多 HTML 檔架構為主）
+- `mothers-day-tribute` → 母親節感恩網頁產生器（公開版／MIT；把使用者寫給媽媽的文章自動排版成有層次的網頁：散文+對話框+金句+信件；開頭「YYYY 年母親節快樂」+ 結尾署名；三種部署選項 Netlify Drop / GitHub Pages / Vercel；公開 repo：https://github.com/Jiang-Yude/mothers-day-tribute）
+- `meeting-transcript-cleaner` → 逐字稿轉檔＋清理助理（MacWhisper CLI 轉錄、逐字稿順稿、會議記錄整理；前期資料清理層，後段分析交 meeting-record-strategy）
+- `transcript-organizer` → 課程逐字稿清理組織技能包（已轉錄的原始逐字稿 → 對照課綱/簡報 → 清理為組織稿；保留原始脈絡；超詳細/很詳細/1比1 三等級；存檔時間戳+1分）
+- `notebooklm-connector` → NotebookLM 公開版連接器 v0.1.0（MIT；Claude Code & Codex 透過 MCP 連 NotebookLM；最小可用版，只做 MCP 對話查詢，砍掉個人字幕工作流）
+
+### 網頁製作觸發規則
+
+使用者說「做網頁」「做一頁」「做提案頁」「做報告頁」「做介紹頁」「對內網頁」「對外網頁」「行銷頁」「整理成網頁」「把這個做成網頁」「轉成網頁給大家看」「上 GitHub 頁面」，或情境明顯是要把內容做成可以分享的 HTML 頁面時 → 讀取 `_agent/skills/webpage-builder/SKILL.md`。
+
+webpage-builder 內三個 mode 的判斷：
+- 對內草稿 / 報告頁 / 比較頁 → 對內模式（references/02）
+- 客戶頁 / 行銷頁 / 精美版 → 對外模式（references/03）
+- **散文 / 長文 / 心情日記 / 文章** 要做成網頁，且要對話框＋金句＋信件混搭 → 散文編輯模式（references/05）
+
+分工說明：
+- 春總編的「會議報告書」模式（把會議記錄做成報告頁）仍走春總編
+- 純簡報（互動式簡報、Reveal.js）仍走春總編的簡報模式
+- 獨立的、可部署分享的 HTML 網頁 → 走 webpage-builder
+- **連載小說 / 章回體 / 多章節故事** → 走 `web-novel-layout`，不走 webpage-builder
+
+### 網路小說版型觸發規則
+
+使用者說「網路小說版型」「做網路小說」「做連載」「章回體」「做小說網頁」「長篇連載」「章節網頁」「做故事網頁」「把小說放網路上」，或情境明顯是要把多章節的故事做成可閱讀的網頁（含章節索引、上下章導航、閱讀進度）→ 讀取 `_agent/skills/web-novel-layout/SKILL.md`。
+
+判斷：
+- 一篇文章 / 散文 / 單頁 → 走 webpage-builder 散文編輯模式
+- 兩章以上 / 連載 / 章回體 → 走 web-novel-layout
+- 不確定就問使用者「會有第二章嗎？」
+
+### 母親節感恩網頁觸發規則
+
+使用者說「母親節網頁」「母親節版型」「母親節感恩」「致媽媽網頁」「給媽媽的網頁」「母親節文章排版」「把這篇給媽媽的文章做成網頁」→ 讀取 `_agent/skills/mothers-day-tribute/SKILL.md`。
+
+
+exec
+/bin/bash -lc "sed -n '276,310p' CLAUDE.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+使用者說「深度研究」「認真上網查」「做網路研究」「查資料後寫報告」等相關表述，或情境明顯需要多輪搜尋、交叉驗證時 → 讀取 `_agent/skills/web-deep-research/SKILL.md`。
+
+### 永續報告書觸發規則
+
+使用者說「永續報告書」「ESG 報告」「GRI」「重大主題」「利害關係人議合」「永續揭露」「IFRS S1」「IFRS S2」「SASB」「TNFD」等相關表述，或情境明顯是在整理公司永續揭露架構、補永續報告章節、做框架對照時 → 讀取 `_agent/skills/sustainability-reporting-assistant/SKILL.md`。
+
+### 共識分析觸發規則（原「人員態度四象限分析」升級重命名）
+
+使用者說「共識分析」「分析團隊共識」「分析團隊向心力」「這群人有沒有共識」「人員態度」（舊說法）「分析人員的態度」「四象限分析」（舊說法）「態度軌跡」「態度轉變」「立場變化」「這群人有什麼變化」等相關表述 → 讀取 `_agent/skills/meeting-record-strategy/SKILL.md`，並依其「觸發詞：共識分析」章節走完整流程（三件套子分析：執行力軌跡圖＋發言比例變化＋角色定位對照）。
+
+**硬門檻**：共識分析只適用於平起平坐、自發參與的合作場景（一人公司、自由工作者、獨立單位之間的合作）。不適用於老闆對員工、有強制出席義務的組織內部會議。情境不明時先主動確認，上下級／強制性場景拒絕進入本模式。
+
+單次會議資料時必須先提醒使用者需要至少兩次會議才看得見動向，確認後才進入單次靜態版。全程遵守「語氣鐵則：不代替他人發言」。
+
+### 網頁部署預設規則（2026-04-29 更新）
+
+使用者說「部署網頁」時，**預設用 GitHub Pages**（GitHub repo + `gh-pages` 或 main branch + Pages 開關）。
+
+例外觸發詞：使用者明確說「**V 版網頁**」「**Vercel 部署**」「**用 Vercel**」時，才改用 Vercel CLI。
+
+#### GitHub Pages 預設流程
+1. 進到專案資料夾，`git init -b main` ＋ `.gitignore`（要排除 `.vercel/`、`node_modules/`、`.DS_Store`）
+2. `gh repo create <repo-name> --public --source=. --push`（用 public repo，因為 Pages 私倉需 Pro 帳號）
+3. `gh api -X POST "repos/<owner>/<repo>/pages" -f "source[branch]=main" -f "source[path]=/"` 開啟 Pages
+4. 等 1–3 分鐘部署完成（用 `until [...]; do sleep 5; done` 等到 200，不要硬 sleep）
+5. URL 格式：`https://<owner>.github.io/<repo>/`
+
+#### 內部性質內容（會議記錄、策略分析、內部提案、商業企劃等）的隱蔽方式
+- 預設「知道分享連結才能看」：repo 名稱不要太好猜、不要在 README 廣告、加 `robots.txt` 禁收錄
+- HTML 加 `<meta name="robots" content="noindex, nofollow">`
+- `robots.txt`：`User-agent: * / Disallow: /`
+- 真的要完全私密 → 使用者明確說「私密部署」再用 V 版（Vercel SSO 保護）
+
+#### Vercel 例外情境（需要使用者明確指示）
+- 「V 版網頁」「用 Vercel」「Vercel 部署」
+
+codex
+`CLAUDE.md` 指向網路資料深度研究流程；我先讀它的關鍵規則，再開始查來源。因為目前環境是唯讀，我不會產出檔案，只在回覆中交付材料包。
+exec
+/bin/bash -lc "sed -n '1,220p' _agent/skills/web-deep-research/SKILL.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+---
+name: web-deep-research
+description: 網路資料深度研究技能包 v1.1 - 將上網查資料、來源分級、交叉驗證、分析整合、報告輸出做成可重複執行的研究工作流。當使用者說「深度研究」「上網查」「認真上網查」「認真幫我上網查」「上網深挖」「仔細查網路資料」「幫我上網查資料並整理報告」「做網路研究」「交叉比對資料」「整理成研究報告」「做市場研究」「做產品研究」「做趨勢研究」「查資料後寫報告」或任何情境明顯需要多輪搜尋、來源分層、交叉驗證與正式報告輸出時觸發。特別適合 OpenCode、反重力、Codex 等具備搜尋與長上下文能力的環境。Claude Code 環境下可調用 Codex CLI 或其他搜尋工具。
+---
+
+標籤：[[技能包設計]] [[AI工作流]] [[ChatGPT]] [[教學]]
+
+# 網路資料深度研究技能包 v1.1
+
+## 核心定位
+
+這個技能包不是一般的「幫我查一下」。
+
+它負責的是比較完整的研究任務：
+- 多輪搜尋
+- 來源分級
+- 交叉驗證
+- 缺口補查
+- 事實與推論分離
+- 產出正式報告
+
+如果只是單一問題快查，這個技能包太重。
+如果使用者要的是「查完再分析，再整理成可讀報告」，就該用這個技能包。
+
+## 核心理念
+
+深度研究不是把很多連結貼在一起，而是：
+
+1. 先定義問題
+2. 再擴展搜尋
+3. 再分辨來源層級
+4. 再做交叉驗證
+5. 最後才寫結論
+
+這樣做的原因是：
+- 搜得多不等於研究深
+- 長上下文不等於判斷力
+- 強模型不等於自動嚴謹
+
+這個技能包的價值，是把研究方法變成可重複的流程，而不是靠一次 prompt 碰運氣。
+
+## 核心能力
+
+1. 把模糊的「幫我查一下」轉成可執行的研究任務。
+2. 建立搜尋地圖，先找主題結構，再進入深查。
+3. 對來源做分級，分清一手、二手、觀察性資料。
+4. 做多輪補洞與交叉驗證，不把轉載當多個來源。
+5. 把研究結果整理成正式報告，清楚區分事實、推論、待查空白。
+
+## 使用前先判斷環境
+
+先讀 [references/environment-and-principles.md](references/environment-and-principles.md) 的情境：
+- 需要判斷模型、上下文、工具、平台差異時
+- 需要對外教學或說明研究方法時
+
+如果環境沒有穩定網路搜尋與頁面讀取能力，要先明講限制，不要假裝能做完整研究。
+
+## 適用情境
+
+適合：
+- 趨勢研究
+- 市場研究
+- 產品研究
+- 競品研究
+- 觀點整理
+- 多來源事實查核
+- 網路資料整理成報告
+
+不適合：
+- 單一事實快查
+- 明顯需要線下資料或付費資料庫才答得出來的題目
+- 完全無法上網的環境
+- 使用者只要一段簡短主觀意見
+
+## 工作流程
+
+### 第一步：定義研究任務
+
+先釐清五件事：
+- 核心問題是什麼
+- 研究範圍是什麼
+- 時間範圍是什麼
+- 最終讀者是誰
+- 需要什麼形式的輸出
+
+如果使用者沒有說清楚，就做最小合理假設，並在報告開頭明寫假設。
+
+### 第二步：建立搜尋地圖
+
+先不要急著下結論。
+
+先做第一輪廣搜，建立：
+- 重要名詞
+- 主要玩家
+- 常見立場
+- 原始來源入口
+- 常被引用的數字與說法
+
+第一輪的目標是建地圖，不是定輸贏。
+
+### 第三步：來源分級
+
+把資料分成五類：
+- 官方 / 原始來源
+- 學術 / 研究
+- 主流媒體
+- 專業分析
+- 社群觀察
+
+原則：
+- 關鍵數字優先看官方或原始文件
+- 二手整理不能直接當最高證據
+- 社群觀察可以補脈絡，但不能單獨扛核心結論
+
+### 第四步：補洞搜尋
+
+根據第一輪資料缺口，繼續補查：
+- 缺原始證據
+- 只有單一觀點
+- 數字互相矛盾
+- 缺反方或限制條件
+- 缺近期資料
+
+不要只沿著第一輪最順手的方向越查越深，要主動找反例和修正資訊。
+
+### 第五步：交叉驗證
+
+每個重要主張都至少檢查：
+- 有沒有第二個獨立來源支持
+- 有沒有更高層級來源推翻或修正
+- 有沒有時間差造成的說法落差
+- 有沒有定義不同導致看似衝突
+
+如果查到分歧，不要強行合併。
+要把分歧保留下來，並說明哪一邊的證據較強、哪一邊仍待確認。
+
+### 第六步：整理研究筆記
+
+在正式報告前，先把資料壓成幾個區塊：
+- 已確認事實
+- 高機率推論
+- 待查空白
+- 關鍵來源
+- 衝突點
+
+這樣做的原因是：先把研究材料整理乾淨，再交給強模型做整合，品質會比邊查邊寫結論穩定。
+
+### 第七步：輸出正式報告
+
+報告格式請讀 [references/report-template.md](references/report-template.md)。
+
+最低要求：
+- 研究問題
+- 研究方法
+- 關鍵發現
+- 已確認事實 / 高機率推論 / 待查空白
+- 建議行動
+- 來源清單
+
+## 研究硬規則
+
+1. 不得只依賴單一來源類型。
+2. 不得把新聞轉載當成多個獨立來源。
+3. 關鍵數字與核心主張，優先回查原始來源。
+4. 發現衝突資訊時，要保留分歧，不得硬合併。
+5. 不知道就是不知道，缺證據要明講。
+6. 報告中要區分事實、推論、建議。
+7. 如果環境限制導致無法完成完整研究，要在報告開頭說明限制。
+
+## 關於來源數量
+
+不要機械地追求「100 個來源」。
+
+更好的原則是：
+- 至少 30 到 50 個有效來源
+- 來源需去重
+- 來源需分層
+- 每個核心結論至少 2 到 3 個獨立來源支持
+
+如果使用者明確要求 100+ 來源，可以執行，但要同時做：
+- 去重
+- 分層
+- 轉載排除
+- 原始來源優先
+
+否則只是在堆資料，不是在做研究。
+
+## 模型與資源分工建議
+
+如果環境可切換模型，建議這樣分工：
+
+### 較快模型
+
+用途：
+- 第一輪廣搜
+- 關鍵字展開
+- 粗篩來源
+- 研究筆記初整
+
+### 較強模型
+
+用途：
+- 缺口診斷
+- 交叉驗證
+- 衝突比對
+- 正式報告整合
+
+## 特殊處理
+
+### 使用者只要快速答案
+
+縮成輕量模式：
+- 只做必要搜尋
+- 明講不是完整研究
+- 不假裝做了全面交叉驗證
+
+### 題目高度時效性
+
+明寫資料時間範圍，避免把舊資料和新資料混成同一結論。
+
+
+exec
+/bin/bash -lc 'rg -n "來源|引用|原文|摘錄|交叉|URL|搜尋" _agent/skills/web-deep-research/SKILL.md' in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+3:description: 網路資料深度研究技能包 v1.1 - 將上網查資料、來源分級、交叉驗證、分析整合、報告輸出做成可重複執行的研究工作流。當使用者說「深度研究」「上網查」「認真上網查」「認真幫我上網查」「上網深挖」「仔細查網路資料」「幫我上網查資料並整理報告」「做網路研究」「交叉比對資料」「整理成研究報告」「做市場研究」「做產品研究」「做趨勢研究」「查資料後寫報告」或任何情境明顯需要多輪搜尋、來源分層、交叉驗證與正式報告輸出時觸發。特別適合 OpenCode、反重力、Codex 等具備搜尋與長上下文能力的環境。Claude Code 環境下可調用 Codex CLI 或其他搜尋工具。
+15:- 多輪搜尋
+16:- 來源分級
+17:- 交叉驗證
+30:2. 再擴展搜尋
+31:3. 再分辨來源層級
+32:4. 再做交叉驗證
+45:2. 建立搜尋地圖，先找主題結構，再進入深查。
+46:3. 對來源做分級，分清一手、二手、觀察性資料。
+47:4. 做多輪補洞與交叉驗證，不把轉載當多個來源。
+56:如果環境沒有穩定網路搜尋與頁面讀取能力，要先明講限制，不要假裝能做完整研究。
+66:- 多來源事實查核
+88:### 第二步：建立搜尋地圖
+96:- 原始來源入口
+97:- 常被引用的數字與說法
+101:### 第三步：來源分級
+104:- 官方 / 原始來源
+115:### 第四步：補洞搜尋
+126:### 第五步：交叉驗證
+129:- 有沒有第二個獨立來源支持
+130:- 有沒有更高層級來源推翻或修正
+143:- 關鍵來源
+158:- 來源清單
+162:1. 不得只依賴單一來源類型。
+163:2. 不得把新聞轉載當成多個獨立來源。
+164:3. 關鍵數字與核心主張，優先回查原始來源。
+170:## 關於來源數量
+172:不要機械地追求「100 個來源」。
+175:- 至少 30 到 50 個有效來源
+176:- 來源需去重
+177:- 來源需分層
+178:- 每個核心結論至少 2 到 3 個獨立來源支持
+180:如果使用者明確要求 100+ 來源，可以執行，但要同時做：
+184:- 原始來源優先
+197:- 粗篩來源
+204:- 交叉驗證
+213:- 只做必要搜尋
+215:- 不假裝做了全面交叉驗證
+223:優先收集不同立場來源，避免研究一開始就偏向單一敘事。
+238:- 幫我交叉比對資料，看看各家說法差在哪
+251:- 如果題目涉及醫療、法律、金融等高風險判斷，研究結果要特別強調限制與來源層級。
+269:- 建議搭配：OpenCode、反重力、Codex 或其他具備搜尋與長上下文能力的 Agent 環境
+
+web search: 
+web search: 2024 2025 academic study users verify AI hallucinations citation checking expert consensus track record
+web search: 
+web search: SIFT lateral reading fact checking method scholarly source evaluation expert credibility
+web search: 
+web search: 2025 survey hallucination detection fact verification LLM citations retrieval augmented generation user verification
+web search: 
+web search: how to evaluate scientific expert credibility consensus track record epistemic trust academic research
+web search: 
+web search: https://misinforeview.hks.harvard.edu/article/new-sources-of-inaccuracy-a-conceptual-framework-for-studying-ai-hallucinations/
+web search: 
+web search: 'AutoFactNLI decomposes' in https://www.sciencedirect.com/science/article/pii/S0957417425003343
+web search: 
+web search: "A framework for assessing the trustworthiness of scientific research findings" Nosek Allison Jamieson McNutt accountable evaluable evaluated
+web search: 
+web search: "CREDIBLE" "Credibility, Reliability, Evidence, Date, Intent, Bias, Logic, Expertise" AI Educ 2026 source evaluation
+web search: 
+web search: 'There are a number of attributes' in https://www.researchgate.net/publication/387629684_Specifying_Experts_and_Consensus
+web search: 
+web search: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2024.1341697/full
+codex
+# 學術研究與正面評價（多個專家交叉驗證、可證偽性、引用核查、track record）：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+
+## 來源列表
+1. [New sources of inaccuracy? A conceptual framework for studying AI hallucinations](https://misinforeview.hks.harvard.edu/article/new-sources-of-inaccuracy-a-conceptual-framework-for-studying-ai-hallucinations/) — 2025-08-27
+2. [HaluCheck: Explainable and verifiable automation for detecting hallucinations in LLM responses](https://www.sciencedirect.com/science/article/pii/S0957417425003343) — 2025-05-05
+3. [Teaching lateral reading: Interventions to help people read like fact checkers](https://www.sciencedirect.com/science/article/pii/S2352250X23001823) — 2024-02
+4. [CREDIBLE: A Framework for Critical Source Evaluation—From Information Consumers to Critical Evaluators](https://www.mdpi.com/3042-8130/2/1/3) — 2026-02-09
+5. [A framework for assessing the trustworthiness of scientific research findings](https://pmc.ncbi.nlm.nih.gov/articles/PMC12890942/) — 2026-02-10
+6. [What makes science trustworthy? A guide for the public](https://en.unesco.org/inclusivepolicylab/analytics/what-makes-science-trustworthy-guide-public) — 2022-12-27
+7. [ChatGPT Hallucinates Non-existent Citations: Evidence from Economics](https://journals.sagepub.com/doi/10.1177/05694345231218454) — 2024
+8. [FactCHD: Benchmarking Fact-Conflicting Hallucination Detection](https://www.ijcai.org/proceedings/2024/687) — 2024
+9. [Specifying “Experts” and “Consensus”](https://www.researchgate.net/publication/387629684_Specifying_Experts_and_Consensus) — 2025-01
+10. [The perils and promises of fact-checking with large language models](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2024.1341697/full) — 2024-02-07
+
+## 原文摘錄
+
+### 來源 1
+> “AI hallucinations are inaccurate outputs generated by AI tools”
+
+### 來源 2
+> “AutoFactNLI decomposes responses into atomic facts for automated verification.”
+
+### 來源 3
+> “targeted and explicit instruction in lateral reading can help people both assess credible information and identify misinformation”
+
+### 來源 4
+> “Credibility, Reliability, Evidence, Date, Intent, Bias, Logic, and Expertise”
+
+### 來源 5
+> “accountable, evaluable, well-formulated, has been evaluated, controls for bias, reduces error”
+
+### 來源 6
+> “presence of expertise”
+
+### 來源 7
+> “More than 30% of the citations provided by the GPT-3.5 version do not exist”
+
+### 來源 8
+> “fact-based evidence chains”
+
+### 來源 9
+> “acknowledgement of expertise by peers”
+
+### 來源 10
+> “agents explain their reasoning and cite the relevant sources”
+
+## 關鍵重點（你的整理說明）
+- AI 幻覺辨識不只是在找「錯字」或「怪句子」，而是要把 AI 輸出視為一種可能違反「best available evidence」的資訊風險；這支持用證據核查、引用核查、來源透明度來判斷。對應來源 1：https://misinforeview.hks.harvard.edu/article/new-sources-of-inaccuracy-a-conceptual-framework-for-studying-ai-hallucinations/
+- 可操作方法之一是「拆成 atomic facts」再逐條查證，而不是整段憑感覺判斷；HaluCheck / AutoFactNLI 代表這類工具路線。對應來源 2：https://www.sciencedirect.com/science/article/pii/S0957417425003343
+- 不熟領域時，lateral reading 是高代表性方法：離開原頁面，查作者、組織、主張是否被其他可靠來源支持。對應來源 3：https://www.sciencedirect.com/science/article/pii/S2352250X23001823
+- CREDIBLE 框架把來源評估拆成八項：可信度、可靠性、證據、日期、意圖、偏誤、邏輯、專業性，適合用在 AI 生成內容與一般網路資料。對應來源 4：https://www.mdpi.com/3042-8130/2/1/3
+- 專家可信度不能只看名氣；PNAS 框架強調研究本身是否可評估、已被評估、控制偏誤、降低錯誤、主張是否被證據支持。對應來源 5：https://pmc.ncbi.nlm.nih.gov/articles/PMC12890942/
+- 專家可信的正面指標包括：過往判斷成功、能解釋判斷理由、參與運作良好的專家共同體、與公眾價值有可說明的連結。對應來源 6：https://en.unesco.org/inclusivepolicylab/analytics/what-makes-science-trustworthy-guide-public
+- 引用核查是必要步驟，因為研究顯示 ChatGPT 會生成不存在的引用；越具體的題目，模型可靠性可能下降。對應來源 7：https://journals.sagepub.com/doi/10.1177/05694345231218454
+- 多專家／多模型交叉驗證的正面方法論可以參考 FactCHD 的 evidence chains 與 TRUTH-TRIANGULATOR：重點是把判斷和證據鏈綁在一起。對應來源 8：https://www.ijcai.org/proceedings/2024/687
+- 辨別專家時，可查 peer acknowledgement：資格、工作經驗、專業組織、同行評審出版、會議、其他專家提名；但也要注意共識不等於真理本身。對應來源 9：https://www.researchgate.net/publication/387629684_Specifying_Experts_and_Consensus
+- 用 LLM 做 fact-checking 有正面潛力，但最好要求它檢索外部資料、解釋推理、引用來源；仍需警惕不同語言與模糊命題下準確率不穩。對應來源 10：https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2024.1341697/full
+
+## 不確定點
+- 「完全可靠的 AI 幻覺偵測工具」無資料；現有研究多顯示可改善，但不是保證正確。
+- 專家共識的可信度有條件：若共識形成過程不透明、缺乏多元專家、或被制度誘因扭曲，不能只用「多數專家同意」當唯一判準。
+- 引用核查能抓到假文獻，但不能保證正文推論正確；仍需檢查原始論文是否真的支持 AI 或專家的說法。
+tokens used
+98,319
+# 學術研究與正面評價（多個專家交叉驗證、可證偽性、引用核查、track record）：在不熟悉的領域中,使用者如何辨別 AI 回答是否為幻覺?以及如何辨別專家是否可信?有哪些方法論、工具、框架?
+
+## 來源列表
+1. [New sources of inaccuracy? A conceptual framework for studying AI hallucinations](https://misinforeview.hks.harvard.edu/article/new-sources-of-inaccuracy-a-conceptual-framework-for-studying-ai-hallucinations/) — 2025-08-27
+2. [HaluCheck: Explainable and verifiable automation for detecting hallucinations in LLM responses](https://www.sciencedirect.com/science/article/pii/S0957417425003343) — 2025-05-05
+3. [Teaching lateral reading: Interventions to help people read like fact checkers](https://www.sciencedirect.com/science/article/pii/S2352250X23001823) — 2024-02
+4. [CREDIBLE: A Framework for Critical Source Evaluation—From Information Consumers to Critical Evaluators](https://www.mdpi.com/3042-8130/2/1/3) — 2026-02-09
+5. [A framework for assessing the trustworthiness of scientific research findings](https://pmc.ncbi.nlm.nih.gov/articles/PMC12890942/) — 2026-02-10
+6. [What makes science trustworthy? A guide for the public](https://en.unesco.org/inclusivepolicylab/analytics/what-makes-science-trustworthy-guide-public) — 2022-12-27
+7. [ChatGPT Hallucinates Non-existent Citations: Evidence from Economics](https://journals.sagepub.com/doi/10.1177/05694345231218454) — 2024
+8. [FactCHD: Benchmarking Fact-Conflicting Hallucination Detection](https://www.ijcai.org/proceedings/2024/687) — 2024
+9. [Specifying “Experts” and “Consensus”](https://www.researchgate.net/publication/387629684_Specifying_Experts_and_Consensus) — 2025-01
+10. [The perils and promises of fact-checking with large language models](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2024.1341697/full) — 2024-02-07
+
+## 原文摘錄
+
+### 來源 1
+> “AI hallucinations are inaccurate outputs generated by AI tools”
+
+### 來源 2
+> “AutoFactNLI decomposes responses into atomic facts for automated verification.”
+
+### 來源 3
+> “targeted and explicit instruction in lateral reading can help people both assess credible information and identify misinformation”
+
+### 來源 4
+> “Credibility, Reliability, Evidence, Date, Intent, Bias, Logic, and Expertise”
+
+### 來源 5
+> “accountable, evaluable, well-formulated, has been evaluated, controls for bias, reduces error”
+
+### 來源 6
+> “presence of expertise”
+
+### 來源 7
+> “More than 30% of the citations provided by the GPT-3.5 version do not exist”
+
+### 來源 8
+> “fact-based evidence chains”
+
+### 來源 9
+> “acknowledgement of expertise by peers”
+
+### 來源 10
+> “agents explain their reasoning and cite the relevant sources”
+
+## 關鍵重點（你的整理說明）
+- AI 幻覺辨識不只是在找「錯字」或「怪句子」，而是要把 AI 輸出視為一種可能違反「best available evidence」的資訊風險；這支持用證據核查、引用核查、來源透明度來判斷。對應來源 1：https://misinforeview.hks.harvard.edu/article/new-sources-of-inaccuracy-a-conceptual-framework-for-studying-ai-hallucinations/
+- 可操作方法之一是「拆成 atomic facts」再逐條查證，而不是整段憑感覺判斷；HaluCheck / AutoFactNLI 代表這類工具路線。對應來源 2：https://www.sciencedirect.com/science/article/pii/S0957417425003343
+- 不熟領域時，lateral reading 是高代表性方法：離開原頁面，查作者、組織、主張是否被其他可靠來源支持。對應來源 3：https://www.sciencedirect.com/science/article/pii/S2352250X23001823
+- CREDIBLE 框架把來源評估拆成八項：可信度、可靠性、證據、日期、意圖、偏誤、邏輯、專業性，適合用在 AI 生成內容與一般網路資料。對應來源 4：https://www.mdpi.com/3042-8130/2/1/3
+- 專家可信度不能只看名氣；PNAS 框架強調研究本身是否可評估、已被評估、控制偏誤、降低錯誤、主張是否被證據支持。對應來源 5：https://pmc.ncbi.nlm.nih.gov/articles/PMC12890942/
+- 專家可信的正面指標包括：過往判斷成功、能解釋判斷理由、參與運作良好的專家共同體、與公眾價值有可說明的連結。對應來源 6：https://en.unesco.org/inclusivepolicylab/analytics/what-makes-science-trustworthy-guide-public
+- 引用核查是必要步驟，因為研究顯示 ChatGPT 會生成不存在的引用；越具體的題目，模型可靠性可能下降。對應來源 7：https://journals.sagepub.com/doi/10.1177/05694345231218454
+- 多專家／多模型交叉驗證的正面方法論可以參考 FactCHD 的 evidence chains 與 TRUTH-TRIANGULATOR：重點是把判斷和證據鏈綁在一起。對應來源 8：https://www.ijcai.org/proceedings/2024/687
+- 辨別專家時，可查 peer acknowledgement：資格、工作經驗、專業組織、同行評審出版、會議、其他專家提名；但也要注意共識不等於真理本身。對應來源 9：https://www.researchgate.net/publication/387629684_Specifying_Experts_and_Consensus
+- 用 LLM 做 fact-checking 有正面潛力，但最好要求它檢索外部資料、解釋推理、引用來源；仍需警惕不同語言與模糊命題下準確率不穩。對應來源 10：https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2024.1341697/full
+
+## 不確定點
+- 「完全可靠的 AI 幻覺偵測工具」無資料；現有研究多顯示可改善，但不是保證正確。
+- 專家共識的可信度有條件：若共識形成過程不透明、缺乏多元專家、或被制度誘因扭曲，不能只用「多數專家同意」當唯一判準。
+- 引用核查能抓到假文獻，但不能保證正文推論正確；仍需檢查原始論文是否真的支持 AI 或專家的說法。

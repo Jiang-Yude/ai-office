@@ -1,0 +1,404 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019e0cd7-440b-7b22-b2d3-67969277e78a
+--------
+user
+搜尋主題：Postiz 自架版 多客戶 multi-tenant AGPL 商業服務
+角度：Postiz AGPL-3.0 授權對外提供服務 SaaS 限制 商業使用
+
+任務：從「Postiz AGPL-3.0 授權對外提供服務 SaaS 限制 商業使用」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# Postiz AGPL-3.0 授權對外提供服務 SaaS 限制 商業使用：Postiz 自架版 多客戶 multi-tenant AGPL 商業服務
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-09T13:04:55.607135Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先抓授權與 Postiz 官方來源，再補 AGPL 對 SaaS/網路服務條款的原始文字；這題只輸出可追溯來源，摘錄會保持短段避免過度引用。
+exec
+/bin/bash -lc "test -f CLAUDE.md && sed -n '1,220p' CLAUDE.md" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+## 執行模式判斷原則
+
+### 機械性動作：直接做，不研究
+
+「排工作」「開看板」「開卡」「快速開卡」「加截止日」等看板操作 → 直接執行，不讀專案背景、不查相關資料夾、不做脈絡研究。
+
+所需最少步驟：拿時間戳 → 讀看板 → 寫卡／更新看板。不需要載入雷總管 SKILL.md，CLAUDE.md 本身的規則已足夠。
+
+只有使用者明確說「查資料」「研究一下」「幫我了解」，才進行探索性工具呼叫。
+
+**Why:** 過度研究讓簡單任務變成多輪工具呼叫，浪費時間、增加誤判風險。
+
+---
+
+## 路由規則
+
+### 技能包優先順序
+
+1. 先檢查 `_agent/skills/` 有沒有本地技能包 → 有的話用 Read 工具直接讀取
+2. 本地沒有，才調動雲端（Skill 工具）
+
+本地技能包清單：
+- `personal-director-v90` → 雷總管（技能包調度、檔案管理、專案管理、標籤管理、工作日記）
+- `spring-editor` → 春總編（脆文、方格子、講座預告、深度檢查、順稿、改標題與行銷評估、社群備份、簡報）
+- `prompt-coach-v41` → 提示詞優化教練（提示詞健檢、教學、優化、建構、問題拆解）
+- `teaching-monitor` → 教學班長（課程定位、問卷與選人、課程壓測、課後整理、學習導航）
+- `solo-startup-consultant` → 商業顧問（問題定義、目標規劃、合作對齊、營運系統、復盤）
+- `marketing-consultant` → 行銷顧問（市場驗證、客戶洞察、行銷策略、行銷心理學）
+- `admin-assistant` → 行政助理（PDF 翻譯轉檔、網頁轉知識圖譜、字幕校正翻譯、逐字稿整理）
+- `openclaw-installer` → OpenClaw 安裝器（安裝、初始化、驗證、排錯 OpenClaw 龍蝦；支援 Codex／Claude Code 直接執行，Claude Cowork／反重力改走手動教學）
+- `local-speech-to-text` → 本地語音轉文字器（純安裝型技能包：安裝、驗證、排錯 Whisper／ffmpeg；支援 Codex／Claude Code 實機安裝，反重力沿用同機手動教學；以手動指定啟動為主）
+- `bookkeeping` → 記帳（個人接案收入記帳、稅務分類、扣繳記錄、9A/9B、年度對帳）
+- `ani-assistant` → 阿妮助理（Ani 相關內容收納、短影音拍攝指令、口吻文案、設定備忘與版本管理）
+- `codex-threads-backup` → Codex 爬脆文模式（Threads 補檔、補發文看板、截圖補救、Obsidian 歸檔）
+- `threads-centaur-scout` → Threads 半人馬海巡（搜尋適合回應的貼文、產出候選回應胚胎、不代發不套版）
+- `trend-scanner` → 趨勢掃描（YouTube RSS、新聞 RSS、Product Hunt、Hacker News；三梯隊架構；手動觸發 + 排程自動）
+- `video-downloader` → 抓影片技能包（Loom、公開分享頁影片、mp4、m3u8/HLS 串流抓取與封裝）
+- `web-data-capture` → Codex 網路抓資料技能包（文章、影片、字幕、頁面原始碼、播放器來源的統一抓取入口）
+- `web-deep-research` → 網路資料深度研究（認真上網查、多輪搜尋、來源分級、交叉驗證、研究報告）
+- `multi-ai-dispatcher` → 風組長（多模型分工、交叉驗證、搜尋與整合拆工、cross-check 材料包）
+- `file-to-markdown` → 檔案轉 Markdown 轉換器（DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 轉 Markdown、統一入口路由、知識圖譜、批次轉換）
+- `ai-presentation-workflow` → AI 簡報製作流程（六階段分步驟、三層級 Prompt、簡報分類模組、搜尋策略、NotebookLM 彙整、Markdown 大綱輸出）
+- `huashu-design` → Huashu Design／花叔 Design（HTML-native 設計技能包；高保真原型、HTML 簡報、設計變體、資訊圖、動畫 Demo、MP4/GIF 輸出；適合輪播圖卡轉短影片、網頁簡報、設計方向探索；已掛載到 Claude Code；Personal Use License，商用／付費培訓需另取授權）
+- `sustainability-reporting-assistant` → 永續報告書助理（台灣主體、國際框架補充；永續報告書章節骨架、重大主題、利害關係人、揭露缺口、GRI / IFRS S1 S2 / SASB / TNFD 對照）
+- `github-ops` → GitHub 操作技能包（版控、備份、發布、半自動同步；新建 repo、掃敏感檔、寫 gitignore、commit、push、release；repo 分類前綴：my-/ai-office-/system-/digital-twin-/private-）
+- `webpage-builder` → 網頁製作技能包（江江教練品牌風格；對內草稿 Claude Code、對外精美 Claude Designer、**散文編輯**混搭對話框/金句/信件；奶茶色系設計語言、部署指南）
+- `prose-novel-layout` → 小說、散文的網頁排版技能包（公開版／MIT；v2.0；前身為 mothers-day-tribute + web-novel-layout，2026-05-05 合併）。涵蓋兩種模式：Mode A 單篇散文（給媽媽／給爸爸／心情日記／訪談）、Mode B 連載小說（多章節 + 章節封面 + 上下章導航 + 閱讀進度 + 目錄頁）。四元件混搭：散文段落／對話框／金句／信件區塊。六配色主題：康乃馨淡粉／暖橘金黃／抹茶綠／紫薰衣／海洋藍／墨黑。三部署：Netlify Drop（30 秒拖資料夾）／ GitHub Pages（gh CLI）／ Vercel（SSO）。公開 repo：https://github.com/Jiang-Yude/prose-novel-layout
+- `meeting-transcript-cleaner` → 逐字稿轉檔＋清理助理（MacWhisper CLI 轉錄、逐字稿順稿、會議記錄整理；前期資料清理層，後段分析交 meeting-record-strategy）
+- `transcript-organizer` → 課程逐字稿清理組織技能包（已轉錄的原始逐字稿 → 對照課綱/簡報 → 清理為組織稿；保留原始脈絡；超詳細/很詳細/1比1 三等級；存檔時間戳+1分）
+- `notebooklm-connector` → NotebookLM 公開版連接器 v0.1.0（MIT；Claude Code & Codex 透過 MCP 連 NotebookLM；最小可用版，只做 MCP 對話查詢，砍掉個人字幕工作流）
+
+### 網頁製作觸發規則
+
+使用者說「做網頁」「做一頁」「做提案頁」「做報告頁」「做介紹頁」「對內網頁」「對外網頁」「行銷頁」「整理成網頁」「把這個做成網頁」「轉成網頁給大家看」「上 GitHub 頁面」，或情境明顯是要把內容做成可以分享的 HTML 頁面時 → 讀取 `_agent/skills/webpage-builder/SKILL.md`。
+
+webpage-builder 內三個 mode 的判斷：
+- 對內草稿 / 報告頁 / 比較頁 → 對內模式（references/02）
+- 客戶頁 / 行銷頁 / 精美版 → 對外模式（references/03）
+- **散文 / 長文 / 心情日記 / 文章** 要做成網頁，且要對話框＋金句＋信件混搭 → 散文編輯模式（references/05）
+
+分工說明：
+- 春總編的「會議報告書」模式（把會議記錄做成報告頁）仍走春總編
+- 純簡報（互動式簡報、Reveal.js）仍走春總編的簡報模式
+- 獨立的、可部署分享的 HTML 網頁 → 走 webpage-builder
+- **連載小說 / 章回體 / 多章節故事** → 走 `prose-novel-layout` Mode B，不走 webpage-builder
+
+### prose-novel-layout 觸發規則（取代 mothers-day-tribute + web-novel-layout）
+
+公開版 MIT，repo：https://github.com/Jiang-Yude/prose-novel-layout
+
+**單篇散文觸發**：「散文版型」「文章排版」「散文網頁」「給媽媽的網頁」「給爸爸的網頁」「給某人的信」「母親節網頁」「父親節網頁」「致媽媽」「致爸爸」「把這篇文章做成網頁」「心情日記排版」「訪談稿網頁」→ 走 Mode A 單篇散文模式
+
+**連載小說觸發**：「網路小說版型」「做網路小說」「做連載」「章回體」「做小說網頁」「長篇連載」「章節網頁」「做故事網頁」「把小說放網路上」「故事第一章 第二章」→ 走 Mode B 連載小說模式
+
+讀取 `_agent/skills/prose-novel-layout/SKILL.md`。
+
+判斷：
+- 一篇文章 / 散文 / 單頁 → Mode A
+- 兩章以上 / 連載 / 章回體 → Mode B
+- 不確定就問使用者「會有第二章嗎？」
+
+工作流程：先問模式 → 五個基本問題（標題、副標、主題場合、署名、配色、部署方式） → 識別四類內容（Scene/Dialogue/PullQuote/Letter） → 潤稿可選 → 套用排版 → 部署。
+
+預設部署推薦 Netlify Drop（30 秒拖資料夾）。三種部署選項：
+- Netlify Drop（最簡單，不會 git 的人）
+- GitHub Pages（要更新／版控）
+- Vercel（要 SSO 保護或自訂域名）
+
+兩個示範案例：
+- 母親節版本（康乃馨淡粉）：[my-mothersday-2026](https://jiang-yude.github.io/my-mothersday-2026/)
+- 父親版本（暖橘金黃）：[my-letter-dad](https://jiang-yude.github.io/my-letter-dad/)
+
+### Huashu Design 觸發規則
+
+使用者說「用 Huashu Design」「花叔 Design」「做 HTML 簡報」「做網頁簡報」「做動畫 Demo」「把輪播圖卡做成影片」「圖卡轉短影音」「導出 MP4」「導出 GIF」「做設計變體」「設計方向」「設計評審」「高保真原型」「iOS 原型」「互動原型」，或情境明顯是要用 HTML 產出視覺作品、簡報、動畫、短影音素材時 → 優先讀取 `_agent/skills/huashu-design/SKILL.md`。
+
+分工說明：
+- 單純網頁建置、對外網站、部署頁 → 走 `webpage-builder`
+- 內容型簡報大綱、課程簡報企劃 → 走 `ai-presentation-workflow` 或春總編
+- HTML-native 視覺產出、網頁簡報、動畫、MP4/GIF、輪播圖卡轉短影片 → 走 `huashu-design`
+- Huashu Design 授權為 Personal Use License；付費課程、商業工作坊、客戶交付、公司內部工具鏈整合前，需先提醒使用者授權限制
+
+### GitHub 操作觸發規則
+
+使用者說「同步 GitHub」「GitHub 備份」，或情境明顯涉及把技能包、知識庫系統上 GitHub（新建 repo、掃敏感檔、打包 .skill 發 release、推送技能包、跨 repo 同步）時 → 讀取 `_agent/skills/github-ops/SKILL.md`。
+
+### 檔案轉 Markdown 觸發規則
+
+使用者說「轉 Markdown」「轉 MD」「幫我轉」「轉知識圖譜」「整理成筆記」「批次轉換」「MarkItDown」，或丟入 DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML 檔案說「幫我轉」→ 讀取 `_agent/skills/file-to-markdown/SKILL.md`。
+
+與 admin-assistant 的分工：
+- DOCX/PPTX/XLSX/EPUB/ZIP/CSV/JSON/XML → 走 file-to-markdown（MarkItDown）
+- PDF → 走 admin-assistant（extract_pdf.py）
+- 網頁爬取 → 走 admin-assistant（web-to-knowledge-graph）
+- 音訊 → 走 local-speech-to-text
+- YouTube → 走 notebooklm-codex-ops
+
+### 雷總管觸發規則
+
+使用者說「雷哥」「雷總管」「總管」任一詞 → 立即讀取 `_agent/skills/personal-director-v90/SKILL.md` 並以雷總管身份回應。
+
+### 戰情室／總任務儀表板觸發規則
+
+使用者說「做戰情室」「總任務儀表板」「整合儀表板」「四象限圖」「Eisenhower 象限」「資源全景圖」「Canvas 儀表板」，或情境明顯是要把多個看板／合作對象／對外資源整合成一張俯瞰用 Canvas 時 → 讀取 `_agent/skills/personal-director-v90/references/war-room-dashboard.md`。
+
+兩種版型：三欄全景版（資源地圖）、四象限版（Eisenhower 決策表）。連線（edges）一律不主動連，由使用者自己拉。
+
+**增量更新觸發詞**（跟看板同款邏輯，不重生整檔，只改對應 node）：
+- 加卡（任務四象限）：「火線加 X」「養成加 X」「快打 X」「冷凍 X」「靜態資料加 X」「本週必動：…」
+- 移卡（任務四象限）：「升火 X」「降溫 X」「解凍 X」「完成 X」
+- 加卡（**📋 企劃草案區**，2026-05-08 新增）：「**草案加 X**」「**企劃草案加 X**」入 🆕 新進來
+- 移卡（**📋 企劃草案區**）：「**升談 X**」🆕→🌿 在談中｜「**成案 X**」🌿→📋 已成案（同步連回正式檔）｜「**擱置 X**」移到 🍂 擱置（必記原因）
+- 同步／盤點：「同步戰情室」「更新戰情室」「重整戰情室」（月底大重整＋備存）「戰情室狀態」「戰情室盤點」
+
+**📋 企劃草案區的存在意義**（2026-05-08 新增）：戰情室四象限管「我自己的任務狀態」（要不要做、急不急）；企劃草案區管「合作可能性的階段」（談到哪、有沒有成案）。所有合作機會、提案、待孵化的點子都先進企劃草案區，成案後才升上四象限相關卡片。對外網頁（如 ai-office-coop）也歸這區的「📋 已成案」卡，不塞進招商計劃書本體。
+
+固定檔位置：`00 工作台/戰情室儀表板.canvas`（四象限版，預設主操作）／`00 工作台/戰情室全景.canvas`（三欄全景版，可選）。月底快照備存到 `00 工作台/看板備存/YYYY-MM 戰情室快照.canvas`。「戰情室」單獨出現時預設指四象限版。
+
+### 龍蝦 AI 兩段觸發
+
+「更新龍蝦」「更新大鉗」「檢查龍蝦版本」→ 第一段任務（版本更新、爬資料、寫工作日誌），雷總管接手，低階模型（GPT-5.4 Mini 等級）即可。
+「分析龍蝦」「龍蝦分析一下」→ 第二段任務，基於第一段工作日誌做系統設計抽象，缺工作日誌就提醒補跑第一段。
+
+完整執行原則 → `_agent/skills/openclaw-installer/SKILL.md`（龍蝦兩段任務段落）
+
+### 換視窗交接觸發
+
+統一觸發詞：「準備交接」，分兩種輸出格式：
+
+- 「準備交接**檔案**」→ 存檔 + 輸出可貼到新視窗的推送指令（適合長、要留存）
+- 「準備交接**指令**」→ 不存檔，直接吐完整文字到對話，使用者複製貼上（適合短、快速輪替）
+
+AI 從對話脈絡自動判斷用四段模板（規劃已收尾要執行：前提 → 決策 → 避坑 → 脈絡）還是五段模板（還在規劃中要繼續想：在規劃什麼 → 已定 → 已排除 → 還卡 → 下一步）。判斷錯使用者會補一句「這是執行／規劃」再調整。
+
+完整 SOP → `_agent/skills/personal-director-v90/SKILL.md`（換視窗交接模式）
+
+### 快速開卡捷徑
+
+使用者說「快速開卡」時，直接視為最上層快捷指令，不要求額外觸發雷總管。
+
+執行原則：
+- 依內容判斷放哪個看板（約人 → 邀約看板，其他 → 工作看板）
+- 預設放今天；有指定日期就放指定日期
+- 可不開檔案，以最少追問為原則
+- 這是唯一可不開檔案的開卡例外
+
+### 發文看板專案模式
+
+主場景是發文管理。進來就預設載入春總編（`_agent/skills/spring-editor/SKILL.md`），發文看板（`00 工作台/📝 發文看板.md`）是主要操作對象。
+
+觸發詞：「上看板」「上發文看板」「發文」「排程」「已發布」「歸檔」脆文，或使用者直接丟一段脆文內容。
+
+三種操作模式（速記、草稿、正式發文）的完整 SOP → spring-editor SKILL.md（發文看板操作模式）
+
+### 新視覺頁與新簡報參考規則
+
+使用者提到 `Stitch`、`DESIGN.md`、新簡報、新視覺頁、新提案頁、新報告頁、單頁網頁設計時，預設仍由春總編處理，但先讀 `_agent/skills/spring-editor/references/20-design-reference.md`。
+
+這份 reference 只用來建立新頁面的設計語言與版面規則，不回頭覆蓋既有社群圖文卡的直式、橫式、一頁總結固定規格。社群圖文卡仍以 `_agent/skills/spring-editor/references/15-mode-social-cards.md` 為準。
+
+### 逐字稿轉錄＋清稿觸發規則
+
+使用者說「幫我轉錄」「清稿」「逐字稿整理」「會議錄音整理」「音檔整理」「m4a 整理」「mp3 整理」「wav 整理」「整理錄音」「順稿」，或給了音檔（m4a/mp3/wav/opus）說要整理成文字 → 讀取 `_agent/skills/meeting-transcript-cleaner/SKILL.md`。
+
+與其他技能包的分工：
+- 音訊純安裝／環境建置 → local-speech-to-text
+- 轉錄完後要共識分析、風險分析 → meeting-record-strategy
+- 轉錄完後要改寫脆文 → spring-editor
+- 轉錄完後要清理成課程組織稿 → transcript-organizer
+
+### 課程逐字稿清理組織觸發規則
+
+使用者說「清理這一份」「幫我清理逐字稿」「整理成組織稿」「清理課程逐字稿」，或給了一個含「原始逐字稿」的檔案說「幫我清理」時 → 讀取 `_agent/skills/transcript-organizer/SKILL.md`。
+
+**存檔命名規則**：清理版時間戳 = 原始逐字稿時間戳 + 1 分鐘，檔名用「逐字稿清理」取代「原始逐字稿」。
+
+**清理等級**（未指定預設「很詳細」）：
+- 超詳細：所有實質內容都留，連小例子都保留
+- 很詳細：重要概念、例子、故事留下，去除冗長重複
+- 1比1：幾乎原樣，只去語氣詞，不改結構
+
+### 抓字幕觸發
+
+「抓字幕」「C抓字幕」「快速抓字幕」「直接用 Codex 抓字幕」→ Codex 直接抓存刪流程。
+
+讀 `_agent/skills/notebooklm-codex-ops/SKILL.md`（完整執行原則與 nlm 指令路徑都在技能包內）。不要先走發文流程或工作看板流程。
+
+### NotebookLM 連接器分工規則（個人版 vs 公開版）
+
+兩個技能包同主題、不同對象，遇到 NotebookLM 相關需求要先判斷是給誰用：
+
+**個人版 `notebooklm-codex-ops`**（江昱德私人用，含個人 nlm 路徑、字幕整理 notebook、個人分類詞）：
+- 觸發：「抓字幕」「字幕整理」「整本 NotebookLM 拉回本地」「在我的 NotebookLM 找 X」
+- 用於江昱德自己的 NotebookLM 工作流
+
+**公開版 `notebooklm-connector`**（v0.1.0，MIT，給其他人裝，只做 MCP 對話查詢）：
+- 觸發：「給別人用的 NotebookLM 連接器」「公開版」「裝 notebooklm-connector」「打包 .skill」「發 GitHub」
+- 不做字幕批次抓存刪、不做個人化分類，只保留「裝完就能用 Claude Code / Codex 問自己 NotebookLM」
+- 待發佈到 GitHub repo `my-notebooklm-connector` + `.skill` release
+
+
+exec
+/bin/bash -lc "pwd && rg --files -g 'CLAUDE.md' -g 'AGENTS.md' | head -20" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+01 AI 辦公室 & Agent 團隊/02 GitHub 產品包/CLAUDE.md
+01 數位分身小聚/01 數位分身小聚 主系統/CLAUDE.md
+01 AI 辦公室 & Agent 團隊/05 基本款雲端硬碟安裝版/Mika-基本版-v1.0（原始可編輯）/CLAUDE.md
+CLAUDE.md
+_agent/github-repos/my-vault-commands/CLAUDE.md
+_agent/github-repos/my-vault-commands/AGENTS.md
+01 AI 辦公室 & Agent 團隊/04 免費試用版（第一代試水溫）/CLAUDE.md
+02 鉗助理｜龍蝦AI  OpenClaw/CLAUDE.md
+02 鉗助理｜龍蝦AI  OpenClaw/AGENTS.md
+AGENTS.md
+01 數位分身小聚/01 數位分身小聚 主系統/AGENTS.md
+05 技能包備份/2026-04-21-0930 AI 辦公室產品包 v1.1/CLAUDE.md
+05 技能包備份/2026-04-22-0006 AI 辦公室產品包 v1.2/CLAUDE.md
+05 技能包備份/2026-04-24-0130 AI 辦公室產品包 v2.0/CLAUDE.md
+
+web search: 
+web search: Postiz GitHub AGPL-3.0 license Postiz self host commercial SaaS
+web search: 
+web search: site:github.com/gitroomhq/postiz LICENSE AGPL-3.0
+web search: 
+web search: GNU Affero General Public License version 3 network interaction source code users
+web search: 
+web search: site:github.com/gitroomhq/postiz-app multi tenant organization Postiz
+web search: 
+web search: https://github.com/gitroomhq/postiz-app
+web search: 
+web search: https://github.com/gitroomhq/postiz-app/issues/975
+codex
+# Postiz AGPL-3.0 授權對外提供服務 SaaS 限制 商業使用：Postiz 自架版 多客戶 multi-tenant AGPL 商業服務
+
+## 來源列表
+1. [GitHub - gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app) — 最新 release 顯示 2026-04-27；查閱 2026-05-09
+2. [Postiz Pricing FAQ](https://postiz.com/pricing) — 頁面未標示日期；查閱 2026-05-09
+3. [GitHub Issue #975: Multi-Tenant Token Management & External OAuth Integration](https://github.com/gitroomhq/postiz-app/issues/975) — 2025-09-11
+4. [GNU Affero General Public License v3.0 - GNU Project](https://www.gnu.org/licenses/agpl-3.0.html.en) — 2007-11-19
+5. [Choose a License: GNU Affero General Public License v3.0](https://choosealicense.com/licenses/agpl-3.0/) — 2007-11-19
+
+## 原文摘錄
+
+### 來源 1
+> This repository's source code is available under the AGPL-3.0 license.
+
+> At the moment there is no difference between the hosted version to the self-hosted version
+
+### 來源 2
+> Alternatively you can deploy Postiz open-source on your cloud for free
+
+### 來源 3
+> Closed as not planned
+
+> a single Postiz instance can serve multiple customers, each with their own social media tokens.
+
+> Current Postiz setup requires hard-coded secrets in Docker, which only supports single-tenant usage.
+
+### 來源 4
+> Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+> public use of a modified version, on a publicly accessible server, gives the public access to the source code
+
+### 來源 5
+> Commercial use
+
+> Network use is distribution
+
+> Same license
+
+## 關鍵重點
+- Postiz 主 repo 明確標示 AGPL-3.0；這是本題授權判斷的直接來源。（對應來源 1）
+- Postiz 官方頁面明確說可以把 open-source Postiz 部署到自己的 cloud；但該 FAQ 沒有直接說「可否包成對外 SaaS 服務轉售」。（對應來源 2）
+- 多客戶 / multi-tenant 需求在官方 GitHub issue 中有使用者提出，而且 issue 目前顯示「Closed as not planned」。（對應來源 3）
+- 該 issue 的描述指出，提出者認為目前 setup「only supports single-tenant usage」，這是 multi-tenant 商業服務可行性上的產品限制線索，不是授權條款本身。（對應來源 3）
+- AGPL 原文重點是：若你修改程式並讓遠端網路使用者互動，需提供該修改版本的 Corresponding Source；商業使用本身不是被禁止項。（對應來源 4、5）
+
+## 不確定點
+- 無資料：我沒有找到 Postiz 官方針對「自架版包成多客戶 SaaS 商業服務」的專門授權 FAQ 或白皮書。
+- 無資料：我沒有找到 Postiz 官方明文禁止「商業使用」或「對外提供服務」的條款。
+- 需要法律確認：AGPL 對「修改版、整合、外掛、私有後端、前端包裝、多租戶 SaaS」的源碼揭露範圍，不能只靠一般搜尋結論判定。
+tokens used
+68,707
+# Postiz AGPL-3.0 授權對外提供服務 SaaS 限制 商業使用：Postiz 自架版 多客戶 multi-tenant AGPL 商業服務
+
+## 來源列表
+1. [GitHub - gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app) — 最新 release 顯示 2026-04-27；查閱 2026-05-09
+2. [Postiz Pricing FAQ](https://postiz.com/pricing) — 頁面未標示日期；查閱 2026-05-09
+3. [GitHub Issue #975: Multi-Tenant Token Management & External OAuth Integration](https://github.com/gitroomhq/postiz-app/issues/975) — 2025-09-11
+4. [GNU Affero General Public License v3.0 - GNU Project](https://www.gnu.org/licenses/agpl-3.0.html.en) — 2007-11-19
+5. [Choose a License: GNU Affero General Public License v3.0](https://choosealicense.com/licenses/agpl-3.0/) — 2007-11-19
+
+## 原文摘錄
+
+### 來源 1
+> This repository's source code is available under the AGPL-3.0 license.
+
+> At the moment there is no difference between the hosted version to the self-hosted version
+
+### 來源 2
+> Alternatively you can deploy Postiz open-source on your cloud for free
+
+### 來源 3
+> Closed as not planned
+
+> a single Postiz instance can serve multiple customers, each with their own social media tokens.
+
+> Current Postiz setup requires hard-coded secrets in Docker, which only supports single-tenant usage.
+
+### 來源 4
+> Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+> public use of a modified version, on a publicly accessible server, gives the public access to the source code
+
+### 來源 5
+> Commercial use
+
+> Network use is distribution
+
+> Same license
+
+## 關鍵重點
+- Postiz 主 repo 明確標示 AGPL-3.0；這是本題授權判斷的直接來源。（對應來源 1）
+- Postiz 官方頁面明確說可以把 open-source Postiz 部署到自己的 cloud；但該 FAQ 沒有直接說「可否包成對外 SaaS 服務轉售」。（對應來源 2）
+- 多客戶 / multi-tenant 需求在官方 GitHub issue 中有使用者提出，而且 issue 目前顯示「Closed as not planned」。（對應來源 3）
+- 該 issue 的描述指出，提出者認為目前 setup「only supports single-tenant usage」，這是 multi-tenant 商業服務可行性上的產品限制線索，不是授權條款本身。（對應來源 3）
+- AGPL 原文重點是：若你修改程式並讓遠端網路使用者互動，需提供該修改版本的 Corresponding Source；商業使用本身不是被禁止項。（對應來源 4、5）
+
+## 不確定點
+- 無資料：我沒有找到 Postiz 官方針對「自架版包成多客戶 SaaS 商業服務」的專門授權 FAQ 或白皮書。
+- 無資料：我沒有找到 Postiz 官方明文禁止「商業使用」或「對外提供服務」的條款。
+- 需要法律確認：AGPL 對「修改版、整合、外掛、私有後端、前端包裝、多租戶 SaaS」的源碼揭露範圍，不能只靠一般搜尋結論判定。

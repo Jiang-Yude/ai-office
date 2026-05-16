@@ -1,0 +1,72 @@
+# Postiz multi-tenant team workspace 自架實例多客戶分離 organization 帳號隔離：Postiz 自架版 多客戶 multi-tenant AGPL 商業服務
+
+## 來源列表
+1. [Add Postiz to Your SaaS - White-Label Social Media Scheduling](https://postiz.com/enterprise) — 頁面未標日期，查閱日 2026-05-09
+2. [Multi-Tenant Token Management & External OAuth Integration #975](https://github.com/gitroomhq/postiz-app/issues/975) — 2025-09-11
+3. [Invited users are prompted to create a new organization instead of joining existing org #819](https://github.com/gitroomhq/postiz-app/issues/819) — 2025-06-14
+4. [gitroomhq/postiz-app README](https://github.com/gitroomhq/postiz-app) — 最新 release 顯示 2026-04-27
+5. [Postiz Pricing](https://postiz.com/pricing) — 頁面未標日期，查閱日 2026-05-09
+6. [Postiz Public API Overview](https://docs.postiz.com/public-api/introduction) — 頁面未標日期，查閱日 2026-05-09
+
+## 原文摘錄
+
+### 來源 1
+> “Multi-tenant architecture designed for SaaS companies”
+
+> “Each of your customers gets their own isolated environment”
+
+URL: https://postiz.com/enterprise
+
+### 來源 2
+> “Closed as not planned”
+
+> “Current Postiz setup requires hard-coded secrets in Docker”
+
+URL: https://github.com/gitroomhq/postiz-app/issues/975
+
+### 來源 3
+> “a new organization is created with the same name”
+
+> “causing confusion and data fragmentation”
+
+URL: https://github.com/gitroomhq/postiz-app/issues/819
+
+### 來源 4
+> “Invite your team members to collaborate, comment, and schedule posts.”
+
+> “AGPL-3.0 license”
+
+URL: https://github.com/gitroomhq/postiz-app
+
+### 來源 5
+> “Organize channels into customer groups”
+
+> “deploy Postiz open-source on your cloud for free”
+
+URL: https://postiz.com/pricing
+
+### 來源 6
+> “If you’re building an app for other Postiz users”
+
+> “Self-hosted `https://{NEXT_PUBLIC_BACKEND_URL}/public/v1`”
+
+URL: https://docs.postiz.com/public-api/introduction
+
+## 關鍵重點
+
+以下是我的整理說明：
+
+- Postiz 官方 Enterprise 頁面明確把「multi-tenant architecture」定位在 SaaS/white-label 方案，並寫到每個 customer 有 isolated environment、separate accounts、channels、team management。（對應來源 1）
+- GitHub issue #975 顯示有人要求「single Postiz instance can serve multiple customers」與「multi-tenant token management」，但該 issue 目前標示為 “Closed as not planned”。（對應來源 2）
+- #975 的提問者指出目前設定依賴 Docker 內 hard-coded secrets，並主張這只支援 single-tenant usage；這是針對「自架單實例多客戶 token/OAuth 分離」最直接的限制型資料。（對應來源 2）
+- Postiz 已有 organization / invite / team member 概念，但 #819 顯示 invite 加入既有 organization 的流程曾被回報會誤建 duplicate organizations，造成 data fragmentation。（對應來源 3）
+- README 說 hosted version 與 self-hosted version “no difference”，也列出 invite team members；但這不等於官方確認自架社群版可安全做多客戶 SaaS tenant 隔離。（對應來源 4）
+- Pricing 頁的 “Customer groups” 是管理多客戶或多品牌的 channel 分組功能；它比較像操作層分組，不是同一自架實例的完整 tenant 隔離承諾。（對應來源 5）
+- Public API 支援 self-hosted base URL 與 OAuth2 token，但文件摘錄只證明 API/OAuth 存在，沒有直接證明自架版支援多客戶 token 動態隔離。（對應來源 6）
+
+## 不確定點
+
+- 無資料：官方公開文件中，我沒有找到「self-hosted community/AGPL edition explicitly supports safe multi-tenant SaaS customer isolation」的明確說法。
+- 無資料：我沒有找到官方文件明確說「organization = tenant boundary」或「customer group = tenant boundary」。
+- 有矛盾/落差：Enterprise 頁面宣稱 multi-tenant architecture，但 GitHub #975 對自架單實例多客戶 token 管理的需求被標示為 “Closed as not planned”。
+- 需要進一步查證：若要做商業服務，AGPL-3.0 對網路服務提供的原始碼開放義務要另查授權條文與法務意見；本次只確認 Postiz repo 標示 AGPL-3.0。

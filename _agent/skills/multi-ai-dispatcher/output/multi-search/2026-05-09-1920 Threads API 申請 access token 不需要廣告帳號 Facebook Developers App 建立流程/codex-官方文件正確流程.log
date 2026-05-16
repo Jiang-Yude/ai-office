@@ -1,0 +1,136 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019e0c78-193c-77e0-9381-5b30cd3e0204
+--------
+user
+搜尋主題：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+角度：官方文件正確流程
+
+任務：從「官方文件正確流程」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 官方文件正確流程：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-09T11:20:59.147612Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+2026-05-09T11:20:59.262923Z ERROR codex_memories_write::phase2: Phase 2 no changes
+codex
+我會只查官方來源，先確認 Threads API、access token、App 建立與是否需要 Business/廣告資產這幾個點各自落在哪些文件。輸出會把短原文摘錄和整理說明分開。
+web search: 
+web search: site:developers.facebook.com/docs/threads Threads API access token app create Facebook Developers official
+web search: 
+web search: 
+web search: 
+web search: Meta Threads API documentation access tokens permissions "developers.facebook.com/docs/threads"
+web search: 
+web search: https://context7.com/websites/developers_facebook_threads
+web search: 
+web search: https://context7.com/websites/developers_facebook_threads/llms.txt?tokens=10000
+web search: 
+web search: site:developers.facebook.com/docs/development/create-an-app/threads-use-case Threads use case Create an app official
+web search: 
+web search: https://developers.facebook.com/docs/development/create-an-app/threads-use-case
+web search: 
+web search: 
+web search: 
+web search: "Get Access Tokens and Permissions" "Threads API" "Step 1"
+web search: 
+web search: https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api
+codex
+# 官方文件正確流程：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+
+## 來源列表
+1. [Threads Use Case - Meta App Development - Meta for Developers](https://developers.facebook.com/docs/development/create-an-app/threads-use-case) — 頁面未顯示日期，查閱：2026-05-09
+2. [Long-Lived Access Tokens - Threads API - Meta for Developers](https://developers.facebook.com/docs/threads/get-started/long-lived-tokens) — 頁面未顯示日期，查閱：2026-05-09
+3. [Threads API Documentation - Postman / Meta](https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api) — 頁面未顯示日期，查閱：2026-05-09
+
+## 原文摘錄
+### 來源 1
+> If you're building an app for a business you own or manage, you aren't required to connect a business to your app.
+
+### 來源 2
+> short-lived tokens can be exchanged for long-lived tokens.
+
+> Long-lived tokens are valid for 60 days
+
+### 來源 3
+> You need to create a Meta app with the Threads use case.
+
+> The Grant type must be set to Authorization Code.
+
+## 關鍵重點
+- 官方 Threads App 建立流程是建立 Meta app，選擇 `Access the Threads API` use case；來源 1。
+- 官方文件明確寫「business」連結在自用或自有業務情境下不是必要；來源 1。
+- 若是 Tech Provider、服務客戶或其他 business portfolios，發布 app 前需要連到完成 Access and Business Verification 的 business；來源 1。
+- Threads 使用者 access token 的正式流程是 OAuth Authorization Code，而不是只靠 App access token；來源 3。
+- short-lived Threads user access token 可以換 long-lived token；來源 2。
+- long-lived token 需要 app secret、短效 user access token，並由 server-side request 執行；來源 2。
+
+## 不確定點
+- 官方文件中未找到「申請 Threads API access token 需要廣告帳號」這種要求。
+- 官方文件中也未找到逐字寫明「不需要 advertising account / ad account」的句子；能確認的是官方流程提到 Meta app、Threads use case、OAuth、permissions、business optional / Tech Provider business verification，未把廣告帳號列為必要條件。
+tokens used
+67,333
+# 官方文件正確流程：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+
+## 來源列表
+1. [Threads Use Case - Meta App Development - Meta for Developers](https://developers.facebook.com/docs/development/create-an-app/threads-use-case) — 頁面未顯示日期，查閱：2026-05-09
+2. [Long-Lived Access Tokens - Threads API - Meta for Developers](https://developers.facebook.com/docs/threads/get-started/long-lived-tokens) — 頁面未顯示日期，查閱：2026-05-09
+3. [Threads API Documentation - Postman / Meta](https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api) — 頁面未顯示日期，查閱：2026-05-09
+
+## 原文摘錄
+### 來源 1
+> If you're building an app for a business you own or manage, you aren't required to connect a business to your app.
+
+### 來源 2
+> short-lived tokens can be exchanged for long-lived tokens.
+
+> Long-lived tokens are valid for 60 days
+
+### 來源 3
+> You need to create a Meta app with the Threads use case.
+
+> The Grant type must be set to Authorization Code.
+
+## 關鍵重點
+- 官方 Threads App 建立流程是建立 Meta app，選擇 `Access the Threads API` use case；來源 1。
+- 官方文件明確寫「business」連結在自用或自有業務情境下不是必要；來源 1。
+- 若是 Tech Provider、服務客戶或其他 business portfolios，發布 app 前需要連到完成 Access and Business Verification 的 business；來源 1。
+- Threads 使用者 access token 的正式流程是 OAuth Authorization Code，而不是只靠 App access token；來源 3。
+- short-lived Threads user access token 可以換 long-lived token；來源 2。
+- long-lived token 需要 app secret、短效 user access token，並由 server-side request 執行；來源 2。
+
+## 不確定點
+- 官方文件中未找到「申請 Threads API access token 需要廣告帳號」這種要求。
+- 官方文件中也未找到逐字寫明「不需要 advertising account / ad account」的句子；能確認的是官方流程提到 Meta app、Threads use case、OAuth、permissions、business optional / Tech Provider business verification，未把廣告帳號列為必要條件。

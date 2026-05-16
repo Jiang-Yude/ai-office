@@ -1,0 +1,235 @@
+Reading additional input from stdin...
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019e0c78-1939-7d21-be14-2a4f843b4671
+--------
+user
+搜尋主題：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+角度：2025最新更新與限制
+
+任務：從「2025最新更新與限制」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 2025最新更新與限制：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-09T11:20:59.147642Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+codex
+我會先抓官方文件與 2025 附近的更新頁，再補代表性第三方教學或討論；這題重點是 access token 與 Facebook Developers App 的實際限制，所以會把原文摘錄和整理分開。
+exec
+/bin/bash -lc 'rg -n "Threads|Facebook Developers|access token|廣告帳號" /Users/jiangyude2/.codex/memories/MEMORY.md' in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+459:# Task Group: Social-search / Threads centaur scouting
+461:scope: Threads 半人馬海巡、回應胚胎、不代發、公開搜尋失效後改種子帳號/名單模式
+462:applies_to: cwd=/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫; reuse_rule=safe to reuse for這個使用者的 Threads 工作流與偏好；資料源可用性需重新驗證，不要假設公開搜尋已恢復
+464:## Task 1: 建立 Threads 半人馬海巡技能包與排程，success
+472:- threads-centaur-scout, 半人馬海巡, A 類, B 類, heartbeat, Threads API, 公開搜尋, 回應胚胎, No results
+495:- 技能包已寫明沒有 Threads API 權限；實際資料源只能是公開網頁搜尋、公開 Threads 頁面、使用者提供的連結/截圖/作者名單 [Task 1]
+
+exec
+/bin/bash -lc "nl -ba /Users/jiangyude2/.codex/memories/MEMORY.md | sed -n '459,496p'" in /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+ succeeded in 0ms:
+   459	# Task Group: Social-search / Threads centaur scouting
+   460	
+   461	scope: Threads 半人馬海巡、回應胚胎、不代發、公開搜尋失效後改種子帳號/名單模式
+   462	applies_to: cwd=/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫; reuse_rule=safe to reuse for這個使用者的 Threads 工作流與偏好；資料源可用性需重新驗證，不要假設公開搜尋已恢復
+   463	
+   464	## Task 1: 建立 Threads 半人馬海巡技能包與排程，success
+   465	
+   466	### rollout_summary_files
+   467	
+   468	- rollout_summaries/2026-04-23T00-52-10-RQeH-threads_centaur_scout_public_search_failover.md (cwd=/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫, rollout_path=/Users/jiangyude2/.codex/sessions/2026/04/23/rollout-2026-04-23T08-52-10-019db7d2-abb3-7ba3-a9f6-ffbc2ccd40d7.jsonl, updated_at=2026-04-30T00:31:44+00:00, thread_id=019db7d2-abb3-7ba3-a9f6-ffbc2ccd40d7, skills/calibration/casebook 建立並驗證)
+   469	
+   470	### keywords
+   471	
+   472	- threads-centaur-scout, 半人馬海巡, A 類, B 類, heartbeat, Threads API, 公開搜尋, 回應胚胎, No results
+   473	
+   474	## Task 2: 公開搜尋長期掃不到中文 A 類，刪除 heartbeat 並改走種子名單模式，partial
+   475	
+   476	### rollout_summary_files
+   477	
+   478	- rollout_summaries/2026-04-23T00-52-10-RQeH-threads_centaur_scout_public_search_failover.md (cwd=/Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫, rollout_path=/Users/jiangyude2/.codex/sessions/2026/04/23/rollout-2026-04-23T08-52-10-019db7d2-abb3-7ba3-a9f6-ffbc2ccd40d7.jsonl, updated_at=2026-04-30T00:31:44+00:00, thread_id=019db7d2-abb3-7ba3-a9f6-ffbc2ccd40d7, 中文公開搜尋無法作為主幹)
+   479	
+   480	### keywords
+   481	
+   482	- 工作用 AI, 醫療 AI 導入, 資訊系統 AI, 想學 AI 課程, techtip_s, yuyuchang.life, 種子帳號, 名單模式, automation_update
+   483	
+   484	## User preferences
+   485	
+   486	- when the user says「不要幫我發文」and「先幫我想幾組好的回應，然後我自己選擇跟修飾」 -> 預設只產出回應胚胎，不代發、不套版 [Task 1]
+   487	- when the user says「AI 做大量的勞動去找資料，人想梗想創意，是真的有感才發言」 -> 採半人馬分工：AI 搜尋/篩選/整理，人決定是否發言 [Task 1]
+   488	- when the user asks「你有 threads API ？」or「哪些部分該我協助操作 申請」 -> 明講權限邊界與需要使用者登入/申請/授權的部分，不要假裝已有 API [Task 1][Task 2]
+   489	- when the user要求「A 類正式留言候選」且說不足就直接講「今天中文 A 類不足」 -> A 類不足時要直說，不要把 B 類硬升級 [Task 2]
+   490	- when the user wants固定 heartbeat 報告 -> 預設中文、格式好讀、先總結再列候選 [Task 2]
+   491	
+   492	## Reusable knowledge
+   493	
+   494	- `threads-centaur-scout` 的穩定定位是：找公開可見貼文、分 A/B 類、產生 2-4 組回應方向，不自動發文/留言/按讚/追蹤/私訊 [Task 1]
+   495	- 技能包已寫明沒有 Threads API 權限；實際資料源只能是公開網頁搜尋、公開 Threads 頁面、使用者提供的連結/截圖/作者名單 [Task 1]
+   496	- 公開搜尋對多個中文工作場景關鍵字長期 `No results`，顯示瓶頸在資料源本身，不只是關鍵字不好 [Task 2]
+
+web search: 
+web search: site:developers.facebook.com/docs/threads Threads API access token app review Facebook login 2025
+web search: 
+web search: 
+web search: 
+web search: "Threads API" "Submit your app for App Review"
+web search: 
+web search: site:developers.facebook.com/blog Threads API July 2025 polls location tagging webhooks
+web search: 
+web search: Meta official Threads API all developers June 18 2024 access tokens app review
+web search: 
+web search: github threads-api sample app Meta access token app review threads_basic
+web search: 
+web search: "September 23, 2025" "Threads API" "Instagram"
+codex
+目前官方 developers.facebook.com 頁面被瀏覽器回 429，所以我改抓 Meta 官方 Postman Collection、Meta 官方/半官方新聞被引用的更新整理、以及 2025 實作討論。可確認的重點不是「需要廣告帳號」，而是 Meta App、Threads use case、OAuth、tester/app review/permission。
+web search: 
+web search: https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api?entity=request-34203612-f8bf85ba-a2a2-47f8-9183-f94cd3e9c9d3
+web search: 
+web search: 'Do not link to a business portfolio' in https://packagist.org/packages/revolution/laravel-threads
+codex
+# 2025最新更新與限制：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+
+## 來源列表
+1. [Meta / Postman：Threads API Documentation](https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api?entity=request-34203612-f8bf85ba-a2a2-47f8-9183-f94cd3e9c9d3) — 未標示日期，官方 Collection
+2. [PPC Land：Meta expands advertising formats on Threads with catalog ads](https://ppc.land/meta-expands-advertising-formats-on-threads-with-catalog-ads/) — Oct 28, 2025
+3. [PPC Land：Meta expands Threads API with advanced features for developers](https://ppc.land/meta-expands-threads-api-with-advanced-features-for-developers/) — Jul 28, 2025
+4. [Packagist：revolution/laravel-threads](https://packagist.org/packages/revolution/laravel-threads) — 未標示頁面日期
+5. [Make Community：Can’t Post to Threads via threads_content_publish Despite Being Authorised Tester](https://community.make.com/t/cant-post-to-threads-via-threads-content-publish-despite-being-authorised-tester/76204) — Mar 24, 2025 / Jun 14, 2025
+
+## 原文摘錄
+
+### 來源 1
+> You need to create a Meta app with the Threads use case.
+
+> The Grant type must be set to Authorization Code.
+
+> Note: The `threads_basic` permission is sufficient for the exchange or refresh process.
+
+### 來源 2
+> The platform eliminated the requirement for a linked Instagram account on September 23, 2025.
+
+> Threads profiles without Instagram connections can access all API functionalities except followers_count and follower_demographics user metrics.
+
+### 來源 3
+> Implementation requires specific API permissions including "threads_basic" for core functionality
+
+> Meta's app review process ensures appropriate usage while maintaining platform integrity.
+
+### 來源 4
+> To use the Threads API, you need to create an "App" on Meta for Developers.
+
+> "Do not link to a business portfolio"
+
+> Add your Threads account as a Threads tester. Approve it on the Threads website. Generate a token.
+
+### 來源 5
+> I have the correct access token with all relevant scopes
+
+> `threads_basic` calls work fine and return data.
+
+> Maybe you can try to add the tester role to your Meta app
+
+## 關鍵重點
+- 官方 Postman 流程列出的 access token 前置條件是 Meta App + Threads use case + OAuth Authorization Code + app id / secret / scope；來源未列「廣告帳號」為必要條件。（來源 1）
+- 目前可找到的實作文件明確寫「Do not link to a business portfolio」，這不是「廣告帳號」同義詞，但支持建立 Threads API App 時不一定要綁 Business Portfolio。（來源 4）
+- `threads_basic` 是 token exchange / refresh 充分權限；發文、刪除、搜尋等再另外啟用 `threads_content_publish`、`threads_delete`、`threads_keyword_search`。（來源 1、4）
+- 2025 的重要限制更新：Threads API 在 2025-09-23 取消「必須連結 Instagram account」要求，但沒有 Instagram 連結時，`followers_count` 與 `follower_demographics` 仍例外不可用。（來源 2）
+- 進 production / 非 tester 使用時，限制集中在 permission、tester role、App Review / Advanced Access，而不是廣告帳號。（來源 3、5）
+
+## 不確定點
+- 無資料：我沒有找到 Meta 官方明文寫「申請 Threads API access token 不需要廣告帳號」。
+- 有資料但不能等同：來源 4 的「Do not link to a business portfolio」只能說不必連 Business Portfolio，不能直接推論成所有情境都不需要廣告帳號。
+- 官方 developers.facebook.com 文件頁本次讀取時多次回 429；目前官方依據主要來自 Meta 的 Postman Collection，以及其連到 developer documentation / changelog 的說法。
+- 來源 2、3 引用 Meta Threads API changelog，但本次沒有成功直接讀取官方 changelog 原頁；因此 2025 更新時間線應視為「代表性二手整理」，不是官方原頁逐字驗證。
+
+
+tokens used
+89,409
+# 2025最新更新與限制：Threads API 申請 access token 不需要廣告帳號 Facebook Developers App 建立流程
+
+## 來源列表
+1. [Meta / Postman：Threads API Documentation](https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api?entity=request-34203612-f8bf85ba-a2a2-47f8-9183-f94cd3e9c9d3) — 未標示日期，官方 Collection
+2. [PPC Land：Meta expands advertising formats on Threads with catalog ads](https://ppc.land/meta-expands-advertising-formats-on-threads-with-catalog-ads/) — Oct 28, 2025
+3. [PPC Land：Meta expands Threads API with advanced features for developers](https://ppc.land/meta-expands-threads-api-with-advanced-features-for-developers/) — Jul 28, 2025
+4. [Packagist：revolution/laravel-threads](https://packagist.org/packages/revolution/laravel-threads) — 未標示頁面日期
+5. [Make Community：Can’t Post to Threads via threads_content_publish Despite Being Authorised Tester](https://community.make.com/t/cant-post-to-threads-via-threads-content-publish-despite-being-authorised-tester/76204) — Mar 24, 2025 / Jun 14, 2025
+
+## 原文摘錄
+
+### 來源 1
+> You need to create a Meta app with the Threads use case.
+
+> The Grant type must be set to Authorization Code.
+
+> Note: The `threads_basic` permission is sufficient for the exchange or refresh process.
+
+### 來源 2
+> The platform eliminated the requirement for a linked Instagram account on September 23, 2025.
+
+> Threads profiles without Instagram connections can access all API functionalities except followers_count and follower_demographics user metrics.
+
+### 來源 3
+> Implementation requires specific API permissions including "threads_basic" for core functionality
+
+> Meta's app review process ensures appropriate usage while maintaining platform integrity.
+
+### 來源 4
+> To use the Threads API, you need to create an "App" on Meta for Developers.
+
+> "Do not link to a business portfolio"
+
+> Add your Threads account as a Threads tester. Approve it on the Threads website. Generate a token.
+
+### 來源 5
+> I have the correct access token with all relevant scopes
+
+> `threads_basic` calls work fine and return data.
+
+> Maybe you can try to add the tester role to your Meta app
+
+## 關鍵重點
+- 官方 Postman 流程列出的 access token 前置條件是 Meta App + Threads use case + OAuth Authorization Code + app id / secret / scope；來源未列「廣告帳號」為必要條件。（來源 1）
+- 目前可找到的實作文件明確寫「Do not link to a business portfolio」，這不是「廣告帳號」同義詞，但支持建立 Threads API App 時不一定要綁 Business Portfolio。（來源 4）
+- `threads_basic` 是 token exchange / refresh 充分權限；發文、刪除、搜尋等再另外啟用 `threads_content_publish`、`threads_delete`、`threads_keyword_search`。（來源 1、4）
+- 2025 的重要限制更新：Threads API 在 2025-09-23 取消「必須連結 Instagram account」要求，但沒有 Instagram 連結時，`followers_count` 與 `follower_demographics` 仍例外不可用。（來源 2）
+- 進 production / 非 tester 使用時，限制集中在 permission、tester role、App Review / Advanced Access，而不是廣告帳號。（來源 3、5）
+
+## 不確定點
+- 無資料：我沒有找到 Meta 官方明文寫「申請 Threads API access token 不需要廣告帳號」。
+- 有資料但不能等同：來源 4 的「Do not link to a business portfolio」只能說不必連 Business Portfolio，不能直接推論成所有情境都不需要廣告帳號。
+- 官方 developers.facebook.com 文件頁本次讀取時多次回 429；目前官方依據主要來自 Meta 的 Postman Collection，以及其連到 developer documentation / changelog 的說法。
+- 來源 2、3 引用 Meta Threads API changelog，但本次沒有成功直接讀取官方 changelog 原頁；因此 2025 更新時間線應視為「代表性二手整理」，不是官方原頁逐字驗證。
+
+

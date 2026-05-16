@@ -1,0 +1,292 @@
+Reading additional input from stdin...
+2026-05-04T01:48:43.696730Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-04T01:48:43.697133Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/jiangyude2/Library/Mobile Documents/iCloud~md~obsidian/Documents/江昱德 主知識庫
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019df0ac-6c0e-7941-9ced-7402d68bdf8a
+--------
+user
+搜尋主題：LINE Telegram Discord Slack 用於社群管理 AI bot AI 成員化 防詐 課程社群 缺點 風險 使用者抱怨
+角度：論壇Reddit抱怨
+
+任務：從「論壇Reddit抱怨」角度上網搜尋這個主題，找最近、最具代表性的資料。
+
+硬規則：
+- 只輸出有來源的資訊，每條都要附 URL
+- 摘錄原文，不做翻譯或改寫
+- 找不到就明說「無資料」，不要推論
+- 區分「原文摘錄」和「你的整理說明」
+
+輸出格式（Markdown）：
+
+# 論壇Reddit抱怨：LINE Telegram Discord Slack 用於社群管理 AI bot AI 成員化 防詐 課程社群 缺點 風險 使用者抱怨
+
+## 來源列表
+1. [標題](URL) — 日期
+2. ...
+
+## 原文摘錄
+### 來源 1
+> 原文內容...
+
+### 來源 2
+> 原文內容...
+
+## 關鍵重點
+- 重點 1（對應來源 X）
+- 重點 2（對應來源 Y）
+
+## 不確定點
+- 矛盾、爭議或查不到的部分
+2026-05-04T01:48:45.603866Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+2026-05-04T01:48:45.687089Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/jiangyude2/.codex/shell_snapshots/019df0ac-59ca-7e01-81d7-8a2ff519d6b1.1777859320376495000.sh": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-05-04T01:48:46.085706Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/jiangyude2/.codex/shell_snapshots/019df0ac-59c5-7830-851e-159f492206f0.1777859320376502000.sh": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-05-04T01:48:46.637202Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/jiangyude2/.codex/shell_snapshots/019df0ac-59ca-7d52-af7d-741bcfa85be9.1777859320376403000.sh": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-05-04T01:48:51.898136Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-04T01:48:51.899323Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-04T01:48:51.916971Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:51.917005Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:51.917732Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:51.917763Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:51.918434Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:51.918452Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:51.919177Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:51.919203Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:51.919938Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:51.919950Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:51.921584Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:51.921600Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.005311Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-04T01:48:53.005771Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/jiangyude2/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-04T01:48:53.024106Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.024133Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.025419Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.025439Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.026381Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.026392Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.027270Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.027280Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.028284Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.028299Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-04T01:48:53.030277Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-04T01:48:53.030293Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+我會按你指定的「論壇/Reddit 抱怨」角度找資料，這輪只整理有 URL 的原文摘錄，整理說明會和摘錄分開。
+web search: 
+web search: site:reddit.com Telegram Discord Slack LINE AI bot scam community management complaints course community
+web search: 
+web search: site:reddit.com LINE app openchat scam bot complaints community management
+web search: 
+web search: site:reddit.com/r/Slack Slack AI complaints bot messages channels
+web search: 
+web search: site:reddit.com/r/Telegram bot scam group verification complaint 2026
+web search: 
+web search: site:reddit.com Discord paid community course scam complaints
+codex
+# 論壇Reddit抱怨：LINE Telegram Discord Slack 用於社群管理 AI bot AI 成員化 防詐 課程社群 缺點 風險 使用者抱怨
+
+## 來源列表
+1. [discord server falsely deleted due to ai moderation :\(](https://www.reddit.com/r/discordhelp/comments/1p62omw/discord_server_falsely_deleted_due_to_ai/) — 2025-11-25
+2. [AI moderation system is ass](https://www.reddit.com/r/discordsucks/comments/1pvleue/ai_moderation_system_is_ass/) — 2025-12-25
+3. [Slack AI still feels so dumb… has anyone tried an AI Workspace with private AI channels?](https://www.reddit.com/r/AI_Agents/comments/1rro5d3/slack_ai_still_feels_so_dumb_has_anyone_tried_an/) — 2026-03-12
+4. [What do you dislike about slack AI?](https://www.reddit.com/r/Slack/comments/1iuo117) — 2025-02-21
+5. [Telegram Scam](https://www.reddit.com/r/CryptoScams/comments/1sp2cnf/telegram_scam/) — 2026-04-18
+6. [scammed by safeguard bot on telegram](https://www.reddit.com/r/CryptoScams/comments/1s6e65t/scammed_by_safeguard_bot_on_telegram/) — 2026-03-28
+7. [Scam Warning.](https://www.reddit.com/r/Trading/comments/1pq5efe/scam_warning/) — 2025-12-18
+8. [Scam likely on OpenChat](https://www.reddit.com/r/ICPTrader/comments/1osuran) — 2025-11-09
+9. [How One Social Media App Is Beating Disinformation – Line and the Taiwanese government are working together to check facts.](https://www.reddit.com/r/lineapp/comments/jzsitn) — 2020-11-23
+
+## 原文摘錄
+
+### 來源 1
+> My server was wrongly terminated, with no warnings, limitations or anything of such. We strongly followed TOS with strict measures in place.
+
+> I believe my server was falsely banned by the new ai system. After years of work on it I am very disappointed that It was wrongfully deleted and hope for it to be appealed.
+
+> final update : appeal was rejected, i am restarting from scratch… i never received a proper response from discord, only their shitty ai review message.
+
+### 來源 2
+> Discord’s AI Moderation system KEEPS FUCKING DISABLING MY ACCOUNT FOR TRYING TO SPEAK WITH MY FRIENDS BRO
+
+> “Suspicious activity” bullshit
+
+> It disabled it again after I sent one message to my friend cuz the moderation system thinks my account got compromised
+
+### 來源 3
+> Slack’s AI features are still really basic. Right now, you can ask it to summarize a thread, draft a message, or maybe suggest a few improvements to text. That’s about it.
+
+> There’s no real way to run agents that pull data from different sources, no way to coordinate tasks, and no way to keep outputs organized.
+
+> People end up running the same tasks multiple times because they can’t find previous results in threads, API keys are shared insecurely, and nothing really scales for teams.
+
+### 來源 4
+> Except for the hype?
+> - The pricing
+> - The lack of activating it per user
+> - The perceived value
+> - The fact it probably takes resources from improving core features and stuff like Lists and Canvases.
+
+> I'll add that it's just not that good. Results are basically random answers of your search term.
+
+> The wall to wall pricing is bull shit. And the advertising to end users for them to ask admins for it is incredibly irritating.
+
+### 來源 5
+> there is this group/channel on Telegram that tells you that you can gain XRP by doing some tasks. DO NOT JOIN THIS GROUP!
+
+> It asks you.to start sending some TON Tokens to start..and you will just never be able to withdraw your Crypto.
+
+> I reached out to customer service of Telegram several times, but no response...as if they dont are, or are even pwrt of the scam.
+
+### 來源 6
+> I fell for a sophisticated Telegram session hijacking attack.
+
+> To get support in their "General" group, I had to "verify" via a bot, but as I remembered, I continued with the Safeguard bot. This is where it happened.
+
+> After a while, my account started spamming my groups and contacts. More importantly, the funds I sent to the "legit" bot's wallet address disappeared shortly after showing up.
+
+### 來源 7
+> Don’t fall for the discord Scam of (House of Traders). They give you a discount to enter then kick you out the day after…
+
+> While I was in, I looked at what they provided and you legit don’t learn anything.
+
+> I don’t understand how they got 10k+ members when the chats are barely active and their monthly price is 100$.
+
+### 來源 8
+> Just got this, not sure why. I don’t recall joining any sort of giveaway. Thought I’d share so others avoid whatever pitfall this leads to lol
+
+> I've seen other accounts post it too on OC as a scam
+
+> They make it sound like they’re an official dfinity/internet computer account by imitating character, letters and # of Dfinity accounts to impersonate them.
+
+### 來源 9
+> LINE is not different from other social networks. Its OpenChat community is full of gambling spam.
+
+> In OpenChat groups I subscribed, there are about 10 spam messages per group per day.
+
+> Also many accounts to recruit onlyfan subscribers.
+
+## 關鍵重點
+
+以下為我的整理說明，非原文摘錄。
+
+- Discord 的代表性抱怨集中在 AI moderation / automated enforcement：伺服器或帳號被停用、申訴拿不到真人回覆、社群多年累積可能瞬間消失。（來源 1、2）
+- Slack AI 的抱怨不是「防詐」為主，而是功能不足、無法真正做 agent workflow、結果難整理、價格與隱私/權限疑慮。（來源 3、4）
+- Telegram 的近期抱怨高度集中在 crypto / task scam / verification bot：假群組、假客服、驗證 bot、session hijacking、錢包或資金消失、客服無回應。（來源 5、6）
+- 付費課程/交易社群的 Discord 風險案例包含：折扣引流、付費後踢出、內容低價值、會員數疑似灌水、取消訂閱困難。（來源 7）
+- OpenChat 類社群裡的防詐抱怨包括假 giveaway、官方帳號仿冒、平台或專案方無法即時管理每個帳號和留言。（來源 8）
+- LINE OpenChat 找到的 Reddit 抱怨較舊，主要是 gambling spam、假商品廣告、成人內容導流；沒有找到同樣近期且明確談 AI bot 成員化的 LINE Reddit 抱怨。（來源 9）
+
+## 不確定點
+
+- LINE 相關 Reddit 資料偏少且較舊；本輪沒有找到 2025-2026 年 Reddit 上明確同時涵蓋「LINE OpenChat + AI bot + 課程社群 + 防詐」的代表性抱怨。
+- Slack 的 Reddit 抱怨多偏企業協作與 AI 功能/價格/隱私，較少直接對應「課程社群防詐」場景。
+- Telegram / Discord 的 scam 抱怨很多，但不少集中在 crypto / trading group；是否能完全外推到一般課程社群，需要另找課程社群專屬案例。
+2026-05-04T01:49:52.654211Z  WARN codex_core::session::turn: after_agent hook failed; continuing turn_id=019df0ac-6d3d-7512-a7ac-4edaa49e2db2 hook_name=legacy_notify error=No such file or directory (os error 2)
+2026-05-04T01:49:52.716347Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: Send message error Transport [rmcp::transport::worker::WorkerTransport<rmcp::transport::streamable_http_client::StreamableHttpClientWorker<rmcp::transport::auth::AuthClient<codex_rmcp_client::http_client_adapter::StreamableHttpClientAdapter>>>] error: Auth error: OAuth token refresh failed: Server returned error response: invalid_grant: Invalid refresh token, when send initialize request
+tokens used
+54,588
+# 論壇Reddit抱怨：LINE Telegram Discord Slack 用於社群管理 AI bot AI 成員化 防詐 課程社群 缺點 風險 使用者抱怨
+
+## 來源列表
+1. [discord server falsely deleted due to ai moderation :\(](https://www.reddit.com/r/discordhelp/comments/1p62omw/discord_server_falsely_deleted_due_to_ai/) — 2025-11-25
+2. [AI moderation system is ass](https://www.reddit.com/r/discordsucks/comments/1pvleue/ai_moderation_system_is_ass/) — 2025-12-25
+3. [Slack AI still feels so dumb… has anyone tried an AI Workspace with private AI channels?](https://www.reddit.com/r/AI_Agents/comments/1rro5d3/slack_ai_still_feels_so_dumb_has_anyone_tried_an/) — 2026-03-12
+4. [What do you dislike about slack AI?](https://www.reddit.com/r/Slack/comments/1iuo117) — 2025-02-21
+5. [Telegram Scam](https://www.reddit.com/r/CryptoScams/comments/1sp2cnf/telegram_scam/) — 2026-04-18
+6. [scammed by safeguard bot on telegram](https://www.reddit.com/r/CryptoScams/comments/1s6e65t/scammed_by_safeguard_bot_on_telegram/) — 2026-03-28
+7. [Scam Warning.](https://www.reddit.com/r/Trading/comments/1pq5efe/scam_warning/) — 2025-12-18
+8. [Scam likely on OpenChat](https://www.reddit.com/r/ICPTrader/comments/1osuran) — 2025-11-09
+9. [How One Social Media App Is Beating Disinformation – Line and the Taiwanese government are working together to check facts.](https://www.reddit.com/r/lineapp/comments/jzsitn) — 2020-11-23
+
+## 原文摘錄
+
+### 來源 1
+> My server was wrongly terminated, with no warnings, limitations or anything of such. We strongly followed TOS with strict measures in place.
+
+> I believe my server was falsely banned by the new ai system. After years of work on it I am very disappointed that It was wrongfully deleted and hope for it to be appealed.
+
+> final update : appeal was rejected, i am restarting from scratch… i never received a proper response from discord, only their shitty ai review message.
+
+### 來源 2
+> Discord’s AI Moderation system KEEPS FUCKING DISABLING MY ACCOUNT FOR TRYING TO SPEAK WITH MY FRIENDS BRO
+
+> “Suspicious activity” bullshit
+
+> It disabled it again after I sent one message to my friend cuz the moderation system thinks my account got compromised
+
+### 來源 3
+> Slack’s AI features are still really basic. Right now, you can ask it to summarize a thread, draft a message, or maybe suggest a few improvements to text. That’s about it.
+
+> There’s no real way to run agents that pull data from different sources, no way to coordinate tasks, and no way to keep outputs organized.
+
+> People end up running the same tasks multiple times because they can’t find previous results in threads, API keys are shared insecurely, and nothing really scales for teams.
+
+### 來源 4
+> Except for the hype?
+> - The pricing
+> - The lack of activating it per user
+> - The perceived value
+> - The fact it probably takes resources from improving core features and stuff like Lists and Canvases.
+
+> I'll add that it's just not that good. Results are basically random answers of your search term.
+
+> The wall to wall pricing is bull shit. And the advertising to end users for them to ask admins for it is incredibly irritating.
+
+### 來源 5
+> there is this group/channel on Telegram that tells you that you can gain XRP by doing some tasks. DO NOT JOIN THIS GROUP!
+
+> It asks you.to start sending some TON Tokens to start..and you will just never be able to withdraw your Crypto.
+
+> I reached out to customer service of Telegram several times, but no response...as if they dont are, or are even pwrt of the scam.
+
+### 來源 6
+> I fell for a sophisticated Telegram session hijacking attack.
+
+> To get support in their "General" group, I had to "verify" via a bot, but as I remembered, I continued with the Safeguard bot. This is where it happened.
+
+> After a while, my account started spamming my groups and contacts. More importantly, the funds I sent to the "legit" bot's wallet address disappeared shortly after showing up.
+
+### 來源 7
+> Don’t fall for the discord Scam of (House of Traders). They give you a discount to enter then kick you out the day after…
+
+> While I was in, I looked at what they provided and you legit don’t learn anything.
+
+> I don’t understand how they got 10k+ members when the chats are barely active and their monthly price is 100$.
+
+### 來源 8
+> Just got this, not sure why. I don’t recall joining any sort of giveaway. Thought I’d share so others avoid whatever pitfall this leads to lol
+
+> I've seen other accounts post it too on OC as a scam
+
+> They make it sound like they’re an official dfinity/internet computer account by imitating character, letters and # of Dfinity accounts to impersonate them.
+
+### 來源 9
+> LINE is not different from other social networks. Its OpenChat community is full of gambling spam.
+
+> In OpenChat groups I subscribed, there are about 10 spam messages per group per day.
+
+> Also many accounts to recruit onlyfan subscribers.
+
+## 關鍵重點
+
+以下為我的整理說明，非原文摘錄。
+
+- Discord 的代表性抱怨集中在 AI moderation / automated enforcement：伺服器或帳號被停用、申訴拿不到真人回覆、社群多年累積可能瞬間消失。（來源 1、2）
+- Slack AI 的抱怨不是「防詐」為主，而是功能不足、無法真正做 agent workflow、結果難整理、價格與隱私/權限疑慮。（來源 3、4）
+- Telegram 的近期抱怨高度集中在 crypto / task scam / verification bot：假群組、假客服、驗證 bot、session hijacking、錢包或資金消失、客服無回應。（來源 5、6）
+- 付費課程/交易社群的 Discord 風險案例包含：折扣引流、付費後踢出、內容低價值、會員數疑似灌水、取消訂閱困難。（來源 7）
+- OpenChat 類社群裡的防詐抱怨包括假 giveaway、官方帳號仿冒、平台或專案方無法即時管理每個帳號和留言。（來源 8）
+- LINE OpenChat 找到的 Reddit 抱怨較舊，主要是 gambling spam、假商品廣告、成人內容導流；沒有找到同樣近期且明確談 AI bot 成員化的 LINE Reddit 抱怨。（來源 9）
+
+## 不確定點
+
+- LINE 相關 Reddit 資料偏少且較舊；本輪沒有找到 2025-2026 年 Reddit 上明確同時涵蓋「LINE OpenChat + AI bot + 課程社群 + 防詐」的代表性抱怨。
+- Slack 的 Reddit 抱怨多偏企業協作與 AI 功能/價格/隱私，較少直接對應「課程社群防詐」場景。
+- Telegram / Discord 的 scam 抱怨很多，但不少集中在 crypto / trading group；是否能完全外推到一般課程社群，需要另找課程社群專屬案例。
