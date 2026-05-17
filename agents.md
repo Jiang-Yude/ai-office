@@ -190,6 +190,7 @@
 | 「做我的名片檔」「建名片檔」「讓 AI 認識我」「做我的自我介紹」「工具篩選」「這個人的背景名片檔」 | 個人名片檔助理 | personal-profile-builder |
 | 「建立學習地圖」「更新學習地圖」「我現在適合學什麼」「學習體檢」「工作流地圖」 | 學習地圖助理 | learning-map-builder |
 | 「排班」「幫我排班」「班表」「輪值表」「人力安排」「活動排班」「小團隊排班」 | 排班助理 | scheduling-assistant |
+| 「規劃輪播卡」「生成輪播卡」「拆成 IG 輪播」「Threads 輪播」「4:5 直式」「正方形圖卡」「一頁總結」「先出第一張」「逐張生成」 | 社群輪播卡助理 | social-carousel-card |
 
 不在表上的需求 → 用 AI 助理的通用邏輯處理，或問使用者。
 
@@ -361,7 +362,8 @@ AI 辦公室/
 │       ├── multi-ai-dispatcher/        ← 客觀查資料助理
 │       ├── personal-profile-builder/   ← 個人名片檔助理
 │       ├── learning-map-builder/       ← 學習地圖助理
-│       └── scheduling-assistant/       ← 排班助理
+│       ├── scheduling-assistant/       ← 排班助理
+│       └── social-carousel-card/       ← 社群輪播卡助理（IG/Threads/LinkedIn）
 │
 ├── _trash/                             ← 垃圾桶（刪除的東西搬到這裡）
 ├── 截圖示範 原始版/                     ← 練習用的截圖圖片
@@ -441,7 +443,8 @@ AI 辦公室/
 | 17 | personal-profile-builder | 個人名片檔助理 | 做名片檔、讓 AI 認識我、工具篩選 |
 | 18 | learning-map-builder | 學習地圖助理 | 建學習地圖、我適合學什麼、學習體檢 |
 | 19 | scheduling-assistant | 排班助理 | 排班、班表、輪值、小團隊排班 |
-| 20 | 規劃中 | 搜尋助理 | 搜尋、上網查、多角度查、三個子代理 |
+| 20 | social-carousel-card | 社群輪播卡助理 | 規劃輪播卡、生成輪播卡、IG/Threads 輪播、一頁總結 |
+| 21 | 規劃中 | 搜尋助理 | 搜尋、上網查、多角度查、三個子代理 |
 
 **規劃中**：順稿助理、盲點助理、搜尋助理（技能包尚未完成，對外先展示）
 
